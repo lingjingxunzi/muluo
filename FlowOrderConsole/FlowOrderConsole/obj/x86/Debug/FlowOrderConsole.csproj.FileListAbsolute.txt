@@ -1,0 +1,11 @@
+C:\FlowOrderConsole\FlowOrderConsole\bin\Debug\FlowOrderConsole.exe
+C:\FlowOrderConsole\FlowOrderConsole\bin\Debug\FlowOrderConsole.pdb
+C:\FlowOrderConsole\FlowOrderConsole\obj\x86\Debug\FlowOrderConsole.exe
+C:\FlowOrderConsole\FlowOrderConsole\obj\x86\Debug\FlowOrderConsole.pdb
+E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\bin\Debug\log4net.config
+E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\bin\Debug\FlowOrderConsole.exe.config
+E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\bin\Debug\FlowOrderConsole.exe
+E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\bin\Debug\FlowOrderConsole.pdb
+E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\bin\Debug\log4net.dll
+E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\obj\x86\Debug\FlowOrderConsole.exe
+E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\obj\x86\Debug\FlowOrderConsole.pdb

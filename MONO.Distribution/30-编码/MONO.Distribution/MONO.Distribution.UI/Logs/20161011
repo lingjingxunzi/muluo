@@ -1,0 +1,138 @@
+
+----------------------header--------------------------
+时间：2016-10-11 09:39:58,767 线程ID:[6580] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：26] - 错误描述：http://localhost:9012/Order/SxdCallBack.aspx?passParm=D-b4f88916f290f39c&serialNo=&result=1&msg=手动失败
+时间：2016-10-11 09:43:41,332 线程ID:[6580] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：29] - 错误描述：参数个数:0
+时间：2016-10-11 09:43:41,333 线程ID:[6580] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：30] - 错误描述：serialNo:
+时间：2016-10-11 09:43:41,333 线程ID:[6580] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：31] - 错误描述：result:
+时间：2016-10-11 09:43:41,333 线程ID:[6580] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：32] - 错误描述：msg:
+时间：2016-10-11 09:43:41,333 线程ID:[6580] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：33] - 错误描述：passParm:
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 09:48:09,204 线程ID:[7492] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：26] - 错误描述：http://localhost:9012/Order/SxdCallBack.aspx?passParm=D-b4f88916f290f39c&serialNo=&result=1&msg=手动失败
+时间：2016-10-11 09:48:10,811 线程ID:[7492] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：29] - 错误描述：参数个数:0
+时间：2016-10-11 09:48:11,063 线程ID:[7492] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：30] - 错误描述：serialNo:
+时间：2016-10-11 09:48:11,306 线程ID:[7492] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：31] - 错误描述：result:
+时间：2016-10-11 09:48:11,737 线程ID:[7492] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：32] - 错误描述：msg:
+时间：2016-10-11 09:48:12,481 线程ID:[7492] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：33] - 错误描述：passParm:
+时间：2016-10-11 09:53:56,565 线程ID:[9816] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：26] - 错误描述：http://localhost:9012/Order/SxdCallBack.aspx?passParm=D-b4f88916f290f39c&serialNo=&result=1&msg=手动失败
+时间：2016-10-11 09:53:57,800 线程ID:[9816] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：29] - 错误描述：参数个数:0
+时间：2016-10-11 09:53:58,011 线程ID:[9816] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：30] - 错误描述：serialNo:
+时间：2016-10-11 09:53:58,207 线程ID:[9816] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：31] - 错误描述：result:
+时间：2016-10-11 09:53:58,423 线程ID:[9816] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：32] - 错误描述：msg:
+时间：2016-10-11 09:53:59,175 线程ID:[9816] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：33] - 错误描述：passParm:
+时间：2016-10-11 09:54:18,188 线程ID:[1068] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：26] - 错误描述：http://localhost:9012/Order/SxdCallBack.aspx?passParm=D-b4f88916f290f39c&serialNo=&result=1&msg=手动失败
+时间：2016-10-11 09:54:19,199 线程ID:[1068] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：29] - 错误描述：参数个数:0
+时间：2016-10-11 09:54:19,391 线程ID:[1068] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：30] - 错误描述：serialNo:
+时间：2016-10-11 09:54:19,563 线程ID:[1068] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：31] - 错误描述：result:
+时间：2016-10-11 09:54:19,718 线程ID:[1068] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：32] - 错误描述：msg:
+时间：2016-10-11 09:54:19,896 线程ID:[1068] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：33] - 错误描述：passParm:
+时间：2016-10-11 09:54:37,962 线程ID:[1068] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：90] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行修改操作.
+时间：2016-10-11 10:15:12,696 线程ID:[1068] 日志级别：ERROR 出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：63] - 错误描述：返回执行错误！
+时间：2016-10-11 10:15:12,697 线程ID:[1068] 日志级别：ERROR 出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：64] - 错误描述：未将对象引用设置到对象的实例。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 10:16:49,864 线程ID:[6068] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【wangxing】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 10:29:40,476 线程ID:[10052] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 10:30:41,004 线程ID:[10052] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 11:30:07,068 线程ID:[4224] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 11:31:54,651 线程ID:[9288] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 11:32:19,186 线程ID:[8584] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 11:35:32,286 线程ID:[9288] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 11:36:07,714 线程ID:[4648] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-10-11 11:40:02,206 线程ID:[5900] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 11:40:47,728 线程ID:[9288] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 11:41:52,891 线程ID:[4648] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 11:42:06,732 线程ID:[3060] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-10-11 11:42:06,812 线程ID:[3060] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 11:42:45,069 线程ID:[608] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 11:59:20,959 线程ID:[9204] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 11:59:41,222 线程ID:[9204] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-10-11 11:59:41,232 线程ID:[9204] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2016-10-11 12:01:33,055 线程ID:[8344] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 12:01:56,251 线程ID:[1988] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-10-11 12:02:40,676 线程ID:[1988] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 12:05:48,307 线程ID:[4436] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 12:06:14,211 线程ID:[4436] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 12:06:29,128 线程ID:[4436] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-10-11 12:07:07,890 线程ID:[9020] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-10-11 12:07:43,593 线程ID:[9020] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：42] - 错误描述：违反了 PRIMARY KEY 约束“PK_FD_FLOWDISTRIBUTIONRECORDS”。不能在对象“dbo.FD_FlowDistributionRecords”中插入重复键。重复键值为 (1109678d-3f18-452c-a9ee-4e9bc38c3fca)。
+语句已终止。
+时间：2016-10-11 12:07:46,006 线程ID:[9020] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 12:08:59,246 线程ID:[7684] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 12:09:20,167 线程ID:[9880] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 12:15:48,487 线程ID:[9616] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 12:16:00,074 线程ID:[9632] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 12:20:36,086 线程ID:[10180] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2016-10-11 12:20:54,568 线程ID:[10180] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2016-10-11 12:20:54,573 线程ID:[10180] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-10-11 12:22:16,639 线程ID:[10100] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 13:39:09,731 线程ID:[4404] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 14:01:06,897 线程ID:[8656] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 14:01:41,131 线程ID:[8992] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-10-11 14:15:04,165 线程ID:[7684] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------

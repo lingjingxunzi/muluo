@@ -1,0 +1,15 @@
+
+----------------------header--------------------------
+时间：2017-03-06 11:14:53,549 线程ID:[10588] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-03-06 11:14:57,292 线程ID:[10588] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-03-06 11:14:57,356 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-7bf47eeb08596e2d.txt
+时间：2017-03-06 11:15:11,960 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-03-06 11:15:11,963 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-03-06T11:15:11.961+08:00</Datetime><Authorization><AppKey>d848ecf03b1a46d497e3ebaa4bf82058</AppKey><Sign>2f27bbc830e8295a85a31c019a71372edcb01cccd68315ce103427129d50934a</Sign></Authorization></Request>
+时间：2017-03-06 11:15:11,963 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://cqdata.4ggogo.com/web-in/auth.html
+时间：2017-03-06 11:15:12,864 线程ID:[10588] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-03-06 11:15:13,680 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJmbG93LXBsYXRmb3JtIiwiYXVkIjoiZDg0OGVjZjAzYjFhNDZkNDk3ZTNlYmFhNGJmODIwNTg6OjoiLCJleHAiOjE0ODg3NzE5MTJ9.E1GYK_Mk7AByin03Lk3BL9AwIeT5k7qSdwyHS9XgNNG8MUWNGAvXvTnYQl9aGTip
+时间：2017-03-06 11:15:17,754 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：1c00d605e46e5ac2990f6d01a5b663169e70a5b360755f4a8fecd6d4e11a983f
+时间：2017-03-06 11:15:18,087 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-03-06T11:15:11.961+08:00</Datetime><ChargeData><Mobile >18883234565</Mobile><ProductId >gl_mwsq_10M</ProductId ><SerialNum>D-7bf47eeb08596e2d</SerialNum></ChargeData></Request>
+时间：2017-03-06 11:15:20,203 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：远程服务器返回错误: (400) 错误的请求。
+时间：2017-03-06 11:15:24,358 线程ID:[1496] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：
+时间：2017-03-06 11:15:25,298 线程ID:[10588] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....

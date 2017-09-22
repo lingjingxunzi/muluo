@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="FlowBaseInfo" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="FlowBaseInfo" type="MONO.Distribution.Model.BaseInfo.FlowBaseInfo,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FlowBaseInfoResult" class="FlowBaseInfo">
+      <result property="Name" column="Name"/>
+      <result property="FlowKey" column="FlowKey"/>
+      <result property="From" column="From"/>
+      <result property="Size" column="Size"/>
+      <result property="StandardPrice" column="StandardPrice"/>
+      <result property="Range" column="Range"/>
+      <result property="PlatformCode" column="PlatformCode"/>
+      <result property="Status" column="Status"/>
+      <result property="GRange" column="GRange"/>
+      <result property="ChannelStatus" column="ChannelStatus"/>
+      <result property="IsInterParallel" column="IsInterParallel"/>
+      <result property="IsRecyle" column="IsRecyle"/>
+      <result property="EnumFrom" column="From" select="SelectEnumerationByKey" lazyLoad="false"/>
+      <result property="EnumRange" column="Range" select="SelectEnumerationByKey" lazyLoad="false"/>
+      <result property="EnumGRange" column="GRange" select="SelectEnumerationByKey" lazyLoad="false"/>
+    </resultMap>
+
+    <resultMap id="FlowBaseInfo_Type" class="FlowBaseInfo">
+      <result property="Name" column="Name"/>
+      <result property="Range" column="Range"/>
+      <result property="From" column="From"/>
+    </resultMap>
+    <resultMap id="FlowBaseInfoForShowName" class="FlowBaseInfo">
+      <result property="Name" column="Name"/>
+      
+    </resultMap>
+  </resultMaps>
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertFlowBaseInfo' parameterClass='FlowBaseInfo'>
+      INSERT INTO FD_FlowBaseInfo
+      (
+      Name,
+      [From],
+      [Size],
+      StandardPrice,
+      PlatformCode,
+      [Range],
+      Status,
+      GRange,
+      ChannelStatus,
+      IsInterParallel,
+      IsRecyle
+      )
+      VALUES
+      (
+      #Name#,
+      #From#,
+      #Size#,
+      #StandardPrice#,
+      #PlatformCode#,
+      #Range#,
+      #Status#,
+      #GRange#,
+      'Y',
+      #IsInterParallel#,
+      #IsRecyle#
+      <selectKey property="FlowKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as bigint) AS id </selectKey>
+      )
+    </insert>
+
+    <update id='UpdateFlowBaseInfo' parameterClass='FlowBaseInfo'>
+      UPDATE FD_FlowBaseInfo
+      SET
+      <isNotEmpty prepend=" " property="From">[From]=#From#</isNotEmpty>
+      <isNotEmpty prepend=", " property="Name">Name=#Name#</isNotEmpty>
+      <isNotEmpty prepend="," property="GRange">GRange=#GRange#</isNotEmpty>
+      <isNotEmpty prepend="," property="Size">[Size]=#Size#</isNotEmpty>
+      <isNotEmpty prepend="," property="StandardPrice">StandardPrice=#StandardPrice#</isNotEmpty>
+      <isNotEmpty prepend="," property="PlatformCode" >PlatformCode=#PlatformCode#</isNotEmpty>
+      <isNotEmpty prepend="," property="Range">[Range]=#Range#</isNotEmpty>
+      <isNotEmpty prepend="," property="Status">[Status]=#Status#</isNotEmpty>
+      <isNotEmpty prepend="," property="ChannelStatus">ChannelStatus=#ChannelStatus#</isNotEmpty>
+      <isNotEmpty prepend="," property="IsRecyle">IsRecyle=#IsRecyle#</isNotEmpty>
+      <isNotEmpty prepend="," property="IsInterParallel">IsInterParallel=#IsInterParallel#</isNotEmpty>
+      WHERE
+      [FlowKey] = #FlowKey#
+    </update>
+
+    <delete id='DeleteFlowBaseInfo' parameterClass='FlowBaseInfo'>
+      DELETE FROM FD_FlowBaseInfo
+      WHERE
+      [FlowKey] = #FlowKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectFlowBaseInfoList" parameterClass="FlowBaseInfo"   resultMap="FlowBaseInfoResult">
+      <![CDATA[SELECT 
+      Name,
+         FlowKey,
+         [From],
+         [Size] ,
+         StandardPrice,
+         [Range],
+      PlatformCode,   
+      Status,
+      GRange,
+      ChannelStatus,
+      IsInterParallel,
+      IsRecyle
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY FlowKey DESC) AS RowNumber,*
+          FROM FD_FlowBaseInfo
+          WHERE  (IsDel is null or IsDel != 0)
+          <isNotEmpty prepend=" AND" property="From">[From]=#From#</isNotEmpty>
+          <isGreaterThan  compareValue="0"  prepend="AND" property="Size">[Size]=#Size#</isGreaterThan>
+          <isGreaterThan compareValue="0" prepend="AND" property="StandardPrice">StandardPrice=#StandardPrice#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="PlatformCode" >PlatformCode=#PlatformCode#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Range">[Range]=#Range#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Status">[Status]=#Status#</isNotEmpty>
+          <isNotEmpty prepend="ANd" property="Name">Name like '%'+#Name#+'%'</isNotEmpty>
+          <isNotEmpty prepend="AND" property="GRange">GRange  =#GRange#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="ChannelStatus">ChannelStatus=#ChannelStatus#</isNotEmpty>
+          <isNotNull prepend="" property="FlowkeyListForQuery" >
+            <iterate prepend="AND" property="FlowkeyListForQuery"
+        open="(" close=")" conjunction="OR">
+              FlowKey=#FlowkeyListForQuery[]#
+            </iterate>
+          </isNotNull>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_FlowBaseInfo
+        </isEqual>
+      </dynamic>
+      where (IsDel is null or IsDel != 0)
+      <dynamic >
+        <isNotEmpty prepend=" AND" property="From">[From]=#From#</isNotEmpty>
+        <isGreaterThan  compareValue="0"  prepend="AND" property="Size">[Size]=#Size#</isGreaterThan>
+        <isGreaterThan compareValue="0" prepend="AND" property="StandardPrice">StandardPrice=#StandardPrice#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="PlatformCode" >PlatformCode=#PlatformCode#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Range">[Range]=#Range#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status">[Status]=#Status#</isNotEmpty>
+        <isNotEmpty prepend="ANd" property="Name">Name like '%'+#Name#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" property="GRange">GRange  =#GRange#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="ChannelStatus">ChannelStatus=#ChannelStatus#</isNotEmpty>
+        <isNotNull prepend="" property="FlowkeyListForQuery" >
+          <iterate prepend="AND" property="FlowkeyListForQuery"
+      open="(" close=")" conjunction="OR">
+            FlowKey=#FlowkeyListForQuery[]#
+          </iterate>
+        </isNotNull>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectFlowBaseInfoCount" parameterClass="FlowBaseInfo" resultClass="int">
+      Select count(*)
+      FROM FD_FlowBaseInfo
+      WHERE (IsDel is null or IsDel != 0)
+      <dynamic>
+        <isNotEmpty prepend=" AND" property="From">[From]=#From#</isNotEmpty>
+        <isGreaterThan  compareValue="0"  prepend="AND" property="Size">[Size]=#Size#</isGreaterThan>
+        <isGreaterThan compareValue="0" prepend="AND" property="StandardPrice">StandardPrice=#StandardPrice#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="PlatformCode" >PlatformCode=#PlatformCode#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Range">[Range]=#Range#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status">[Status]=#Status#</isNotEmpty>
+        <isNotEmpty prepend="ANd" property="Name">Name like '%'+#Name#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" property="GRange">GRange  =#GRange#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="ChannelStatus">ChannelStatus=#ChannelStatus#</isNotEmpty>
+        <isNotNull prepend="" property="FlowkeyListForQuery" >
+          <iterate prepend="AND" property="FlowkeyListForQuery"
+      open="(" close=")" conjunction="OR">
+            FlowKey=#FlowkeyListForQuery[]#
+          </iterate>
+        </isNotNull>
+      </dynamic>
+    </select>
+
+    <select id='SelectFlowBaseInfoByKey' resultMap='FlowBaseInfoResult' parameterClass='FlowBaseInfo'>
+      SELECT
+      Name,
+      FlowKey,
+      [From],
+      [Size],
+      StandardPrice,
+      [Range],
+      PlatformCode,
+      Status,
+      GRange,
+      ChannelStatus,
+      IsInterParallel,
+      IsRecyle
+      FROM FD_FlowBaseInfo
+      WHERE [FlowKey] = #FlowKey#
+    </select>
+
+
+    <select id='SelectFlowBaseInfoByKeyForShowName' resultMap='FlowBaseInfoForShowName' parameterClass='FlowBaseInfo'>
+      SELECT
+      Name
+      
+      FROM FD_FlowBaseInfo
+      WHERE [FlowKey] = #FlowKey#
+    </select>
+
+    <select id='SelectFlowBaseInfoByFlowCode' resultMap='FlowBaseInfoResult' parameterClass='FlowBaseInfo'>
+      SELECT
+      Name,
+      FlowKey,
+      [From],
+      [Size],
+      StandardPrice,
+      [Range],
+      PlatformCode,
+      Status,
+      GRange,
+      ChannelStatus,
+      IsInterParallel,
+      IsRecyle
+      FROM FD_FlowBaseInfo
+      WHERE [PlatformCode] = #PlatformCode#
+    </select>
+
+
+    <select id='SelectFlowType' resultMap='FlowBaseInfo_Type' parameterClass='FlowBaseInfo'>
+      select * from (
+      select [from], case when  [from] = 'CT' then '电信'  when [from] = 'CM' then '移动'
+      when [from] = 'CU' then '联通' end as [Range],
+      case when LEN(Name)-len(REPLACE( Name ,'.',''))= 2 then
+      SUBSTRING( Name ,0,charindex(right( Name ,charindex('.',reverse( Name ) )-1), Name )-1)
+      else  Name  end  as Name
+      from FD_FlowBaseInfo
+      where (isdel = 0 or isdel is null )
+      <isNotNull prepend="" property="FlowkeyListForQuery" >
+        <iterate prepend="AND" property="FlowkeyListForQuery"
+    open="(" close=")" conjunction="OR">
+          FlowKey=#FlowkeyListForQuery[]#
+        </iterate>
+      </isNotNull>
+      )t
+      group by t.Name, [From],[Range]
+    </select>
+
+  </statements>
+</sqlMap>

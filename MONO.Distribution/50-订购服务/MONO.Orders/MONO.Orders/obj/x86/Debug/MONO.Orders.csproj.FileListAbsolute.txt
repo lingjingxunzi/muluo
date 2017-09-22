@@ -1,0 +1,6 @@
+E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.exe
+E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\obj\x86\Debug\MONO.Orders.ProjectInstaller.resources
+E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\obj\x86\Debug\MONO.Orders.csproj.GenerateResource.Cache
+E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\obj\x86\Debug\MONO.Orders.exe
+E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\obj\x86\Debug\MONO.Orders.pdb
+E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.pdb

@@ -1,0 +1,1816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DD33C8C-0DA0-4CC5-BFBD-3BC7CC4109B6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MONO.Distribution.UI</RootNamespace>
+    <AssemblyName>MONO.Distribution.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBatisNet.Common">
+      <HintPath>..\MONO.Distribution.Libs\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common.Logging.Log4Net">
+      <HintPath>..\MONO.Distribution.Libs\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper">
+      <HintPath>..\MONO.Distribution.Libs\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\MONO.Distribution.Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgentApplication\AgentAccountLogList.aspx" />
+    <Content Include="AgentApplication\AgentBaseInfo.aspx" />
+    <Content Include="AgentApplication\AgentBrowseLogList.aspx" />
+    <Content Include="AgentApplication\FlowBestowed.aspx" />
+    <Content Include="AgentApplication\FlowBestowedBatchCommit.aspx" />
+    <Content Include="AgentApplication\FlowBestowedSingel.aspx" />
+    <Content Include="AgentApplication\FlowBrowseBatch.aspx" />
+    <Content Include="AgentApplication\FlowCardCreate.aspx" />
+    <Content Include="AgentApplication\FlowCardDetails.aspx" />
+    <Content Include="AgentApplication\FlowCardDirect.aspx" />
+    <Content Include="AgentApplication\FlowCardList.aspx" />
+    <Content Include="AgentApplication\FlowCommitFaild.aspx" />
+    <Content Include="AgentApplication\FlowInfoList.aspx" />
+    <Content Include="AgentManage\AgentBrowseLogList.aspx" />
+    <Content Include="AgentManage\AgentFlowAssigned.aspx" />
+    <Content Include="AgentManage\AgentRecharge.aspx" />
+    <Content Include="AgentManage\AgentRechargeAlipay.aspx" />
+    <Content Include="AgentManage\AgentUserAccountChangeEdit.aspx" />
+    <Content Include="AgentManage\AgentUserAccountEdit.aspx" />
+    <Content Include="AgentManage\AgentUserAccountList.aspx" />
+    <Content Include="AgentManage\AgentUserEidt.aspx" />
+    <Content Include="AgentManage\AgentUserList.aspx" />
+    <Content Include="AgentManage\DistributionDetailsForUser.aspx" />
+    <Content Include="AgentManage\FlowGift.aspx" />
+    <Content Include="AgentManage\FlowOrderDetails.aspx" />
+    <Content Include="AgentManage\SystemAccountBondEdit.aspx" />
+    <Content Include="AgentManage\SystemAccountOverDraftEdit.aspx" />
+    <Content Include="AlipayCallBack\RechargeNotifyUrl.aspx" />
+    <Content Include="AlipayCallBack\RechargeReturnUrl.aspx" />
+    <Content Include="BackupOperate\BackupDatabase.aspx" />
+    <Content Include="BackupOperate\UpdateAccountTimer.aspx" />
+    <Content Include="BaseInfo\ChannelManagement.aspx" />
+    <Content Include="BaseInfo\EnumerationEdit.aspx" />
+    <Content Include="BaseInfo\EnumerationList.aspx" />
+    <Content Include="BaseInfo\FlowCarrierEdit.aspx" />
+    <Content Include="BaseInfo\FlowCodeCarrierList.aspx" />
+    <Content Include="BaseInfo\FlowCodeEdit.aspx" />
+    <Content Include="BaseInfo\FlowCodeReviewList.aspx" />
+    <Content Include="BaseInfo\FlowPacketEdit.aspx" />
+    <Content Include="BaseInfo\FlowPakgeList.aspx" />
+    <Content Include="BaseInfo\MobilePhoneBelongEdit.aspx" />
+    <Content Include="BaseInfo\MobilePhoneBelonging.aspx" />
+    <Content Include="ComPage\EnterMobilePhone.aspx" />
+    <Content Include="ComPage\FaildToOperator.aspx" />
+    <Content Include="ComPage\FlowCardExtract.aspx" />
+    <Content Include="Content.aspx" />
+    <Content Include="CSS\reset.css" />
+    <Content Include="CustomerManage\CompanyAccountApplyEdit.aspx" />
+    <Content Include="CustomerManage\CompanyAccountApplyList.aspx" />
+    <Content Include="CustomerManage\CompanyAccountList.aspx" />
+    <Content Include="CustomerManage\FlowOrderQueryList.aspx" />
+    <Content Include="CustomerManage\ScCmOrderQuery.aspx" />
+    <Content Include="DataTrafficOrder.aspx" />
+    <Content Include="FinanceManage\AccessProviderOrderView.aspx" />
+    <Content Include="FinanceManage\AccountApplyReviewEdit.aspx" />
+    <Content Include="FinanceManage\AccountApplyReviews.aspx" />
+    <Content Include="FinanceManage\CostMonthlyView.aspx" />
+    <Content Include="FlowAgent.aspx" />
+    <Content Include="Images\mono-sms4.jpg" />
+    <Content Include="Images\mono-sms4_副本.png" />
+    <Content Include="Images\mono-sms5.png" />
+    <Content Include="InformationViews\AdminInfoView.aspx" />
+    <Content Include="InformationViews\UserInfoList.aspx" />
+    <Content Include="InterfaceRequest\InterfaceIsUnobstructed.aspx" />
+    <Content Include="LoginOut.aspx" />
+    <Content Include="Maps\Agent\CarrierMaintainDetails.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\CarrierMaintainRecords.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\ChannelMsgSettings.xml" />
+    <Content Include="Maps\Customers\AccountApplyAtts.xml" />
+    <Content Include="Maps\Customers\CompanyAccountAddApplys.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\DataSources\PassagewayData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\DataBackups.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FB_BusinessIPBind.xml" />
+    <Content Include="Maps\Sys\PushResultRecords.xml" />
+    <Content Include="Maps\Sys\SystemErrLoginRecord.xml" />
+    <Content Include="Maps\Sys\SystemLock.xml" />
+    <Content Include="Maps\Sys\VerCodeRecord.xml" />
+    <Content Include="Order\CTBDResultCallBack.aspx" />
+    <Content Include="Order\CU0531CallBack.aspx" />
+    <Content Include="Order\DefaultCallBack.aspx" />
+    <Content Include="Order\SxdCallBack.aspx" />
+    <Content Include="Order\XytdCallBack.aspx" />
+    <Content Include="Scripts\apply\customer.apply.upload.js" />
+    <Content Include="Scripts\commonpage\jquery-1.10.1.min.js" />
+    <Content Include="CSS\mobile-style.css" />
+    <Content Include="CSS\select.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\001.jpg" />
+    <Content Include="Images\404.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\btnbg.png" />
+    <Content Include="Images\btnbg1.png" />
+    <Content Include="Images\btnbg2.png" />
+    <Content Include="Images\btnbg3.png" />
+    <Content Include="Images\btnbg4.png" />
+    <Content Include="Images\buttonbg.png" />
+    <Content Include="Images\bz00.jpg" />
+    <Content Include="Images\bz01.jpg" />
+    <Content Include="Images\bz02.jpg" />
+    <Content Include="Images\c01.png" />
+    <Content Include="Images\c02.png" />
+    <Content Include="Images\c03.png" />
+    <Content Include="Images\cbg.png" />
+    <Content Include="Images\clist.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\close1.png" />
+    <Content Include="Images\cloud.png" />
+    <Content Include="Images\d01.png" />
+    <Content Include="Images\d02.png" />
+    <Content Include="Images\d03.png" />
+    <Content Include="Images\d04.png" />
+    <Content Include="Images\d05.png" />
+    <Content Include="Images\d06.png" />
+    <Content Include="Images\d07.png" />
+    <Content Include="Images\diskbg.png" />
+    <Content Include="Images\dp.png" />
+    <Content Include="Images\f01.png" />
+    <Content Include="Images\f02.png" />
+    <Content Include="Images\f03.png" />
+    <Content Include="Images\f04.png" />
+    <Content Include="Images\f05.png" />
+    <Content Include="Images\f06.png" />
+    <Content Include="Images\fjt.png" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\i01.png" />
+    <Content Include="Images\i02.png" />
+    <Content Include="Images\i03.png" />
+    <Content Include="Images\i04.png" />
+    <Content Include="Images\i05.png" />
+    <Content Include="Images\i06.png" />
+    <Content Include="Images\i07.png" />
+    <Content Include="Images\i08.png" />
+    <Content Include="Images\i09.png" />
+    <Content Include="Images\iadd.png" />
+    <Content Include="Images\ibtnbg.png" />
+    <Content Include="Images\ico01.png" />
+    <Content Include="Images\ico02.png" />
+    <Content Include="Images\ico03.png" />
+    <Content Include="Images\ico04.png" />
+    <Content Include="Images\ico05.png" />
+    <Content Include="Images\ico06.png" />
+    <Content Include="Images\icon01.png" />
+    <Content Include="Images\icon02.png" />
+    <Content Include="Images\icon03.png" />
+    <Content Include="Images\icon04.png" />
+    <Content Include="Images\icon05.png" />
+    <Content Include="Images\icon06.png" />
+    <Content Include="Images\icon07.png" />
+    <Content Include="Images\icon08.png" />
+    <Content Include="Images\icon09.png" />
+    <Content Include="Images\icon10.png" />
+    <Content Include="Images\icon11.png" />
+    <Content Include="Images\icon12.png" />
+    <Content Include="Images\icon13.png" />
+    <Content Include="Images\icon14.png" />
+    <Content Include="Images\icon15.png" />
+    <Content Include="Images\icon16.png" />
+    <Content Include="Images\icon17.png" />
+    <Content Include="Images\icon18.png" />
+    <Content Include="Images\img01.png" />
+    <Content Include="Images\img02.png" />
+    <Content Include="Images\img03.png" />
+    <Content Include="Images\img04.png" />
+    <Content Include="Images\img05.png" />
+    <Content Include="Images\img06.png" />
+    <Content Include="Images\img07.png" />
+    <Content Include="Images\img08.png" />
+    <Content Include="Images\img09.png" />
+    <Content Include="Images\img10.png" />
+    <Content Include="Images\img11.png" />
+    <Content Include="Images\img12.png" />
+    <Content Include="Images\img13.png" />
+    <Content Include="Images\img14.png" />
+    <Content Include="Images\img15.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\inputbg.gif" />
+    <Content Include="Images\itabbg.png" />
+    <Content Include="Images\itabbg1.png" />
+    <Content Include="Images\jszc.png" />
+    <Content Include="Images\jtx.png" />
+    <Content Include="Images\l01.png" />
+    <Content Include="Images\l02.png" />
+    <Content Include="Images\l03.png" />
+    <Content Include="Images\l04.png" />
+    <Content Include="Images\lbg.png" />
+    <Content Include="Images\lbg1.png" />
+    <Content Include="Images\lc00.png" />
+    <Content Include="Images\lc01.png" />
+    <Content Include="Images\lc02.png" />
+    <Content Include="Images\lc03.png" />
+    <Content Include="Images\lc04.png" />
+    <Content Include="Images\lc05.png" />
+    <Content Include="Images\lc06.png" />
+    <Content Include="Images\leftico.png" />
+    <Content Include="Images\leftico01.png" />
+    <Content Include="Images\leftico02.png" />
+    <Content Include="Images\leftico03.png" />
+    <Content Include="Images\leftico04.png" />
+    <Content Include="Images\leftline.gif" />
+    <Content Include="Images\leftmenubg.gif" />
+    <Content Include="Images\lefttop.gif" />
+    <Content Include="Images\libg.png" />
+    <Content Include="Images\light.png" />
+    <Content Include="Images\light1.png" />
+    <Content Include="Images\line.gif" />
+    <Content Include="Images\line1.png" />
+    <Content Include="Images\list.gif" />
+    <Content Include="Images\list1.gif" />
+    <Content Include="Images\list2.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loginbg1.png" />
+    <Content Include="Images\loginbg2.png" />
+    <Content Include="Images\loginbg3.png" />
+    <Content Include="Images\loginbg4.png" />
+    <Content Include="Images\logininfo.png" />
+    <Content Include="Images\logininfo1.png" />
+    <Content Include="Images\logininfo2.png" />
+    <Content Include="Images\logininfo3.png" />
+    <Content Include="Images\loginlogo.png" />
+    <Content Include="Images\loginpassword.png" />
+    <Content Include="Images\loginsj.png" />
+    <Content Include="Images\loginuser.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mono-sms.PNG" />
+    <Content Include="Images\mono-sms1.PNG" />
+    <Content Include="Images\mono-sms2.PNG" />
+    <Content Include="Images\mono-sms4.png" />
+    <Content Include="Images\msg.png" />
+    <Content Include="Images\navbg.png" />
+    <Content Include="Images\next.gif" />
+    <Content Include="Images\power_err.png" />
+    <Content Include="Images\pre.gif" />
+    <Content Include="Images\px.gif" />
+    <Content Include="Images\righttop.gif" />
+    <Content Include="Images\rlist.gif" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\sel.png" />
+    <Content Include="Images\sj.png" />
+    <Content Include="Images\sub-menu-icon.png" />
+    <Content Include="Images\sun.png" />
+    <Content Include="Images\t01.png" />
+    <Content Include="Images\t02.png" />
+    <Content Include="Images\t03.png" />
+    <Content Include="Images\t04.png" />
+    <Content Include="Images\t05.png" />
+    <Content Include="Images\tbg.png" />
+    <Content Include="Images\tcbg.gif" />
+    <Content Include="Images\th.gif" />
+    <Content Include="Images\ticon.png" />
+    <Content Include="Images\time.png" />
+    <Content Include="Images\toolbg.gif" />
+    <Content Include="Images\topbg.gif" />
+    <Content Include="Images\topleft.jpg" />
+    <Content Include="Images\topright.jpg" />
+    <Content Include="Images\ub1.png" />
+    <Content Include="Images\uew_icon.png" />
+    <Content Include="Images\uew_icon_hover.png" />
+    <Content Include="Images\ulist.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\userbg.png" />
+    <Content Include="Images\yzmbg.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="Left.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Maps\Agent\CardSampler.xml" />
+    <Content Include="Maps\Agent\FlowActiveCard.xml" />
+    <Content Include="Maps\Agent\FlowActiveCardDetails.xml" />
+    <Content Include="Maps\Agent\FlowActiveHistories.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\FlowDistributionRecords.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\SystemFlowPackets.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\FB_Area.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\FB_Discounts.xml" />
+    <Content Include="Maps\BaseInfo\FB_FlowBaseInfo.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\FB_FlowCode.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\LBF_Mobile_Area.xml" />
+    <Content Include="Maps\Sys\FD_System_Account_Log.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_Enumeration.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_MenuGroups.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_Menus.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_RechargeRecords.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_SystemLogs.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_System_Account.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_System_Users.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_SysUserGroups.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_SysUserInfos.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\MessageTemplate.xml" />
+    <Content Include="Maps\Sys\MsgSendRecord.xml" />
+    <Content Include="Maps\Sys\SystemMsgTemplates.xml" />
+    <Content Include="Maps\Sys\SystemSetting.xml" />
+    <Content Include="Order\GetOrderResultCallBack.aspx" />
+    <Content Include="Order\JTCallBack.aspx" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\commonpage\Ztree-default-css.css" />
+    <Content Include="Scripts\commonpage\ztree.setting.js" />
+    <Content Include="Scripts\hightCharts\dark-unica.js" />
+    <Content Include="Scripts\hightCharts\highcharts.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\js\cloud.js" />
+    <Content Include="Scripts\js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="Scripts\js\jquery.ba-resize.min.js" />
+    <Content Include="Scripts\js\jquery.gvChart-1.0.1.js" />
+    <Content Include="Scripts\js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="Scripts\js\jquery.idTabs.min.js" />
+    <Content Include="Scripts\js\jquery.js" />
+    <Content Include="Scripts\js\jsapi.js" />
+    <Content Include="Scripts\js\Loading.js" />
+    <Content Include="Scripts\js\select-ui.min.js" />
+    <Content Include="Scripts\menuFunction.js" />
+    <Content Include="Scripts\nav.init.js" />
+    <Content Include="Scripts\page.js" />
+    <Content Include="Scripts\src\jquery.gvChart-1.0.1.js" />
+    <Content Include="Scripts\TimePicker\calendar.js" />
+    <Content Include="Scripts\TimePicker\config.js" />
+    <Content Include="Scripts\TimePicker\lang\en.js" />
+    <Content Include="Scripts\TimePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\TimePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\TimePicker\My97DatePicker.htm" />
+    <Content Include="Scripts\TimePicker\readme.txt" />
+    <Content Include="Scripts\TimePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\TimePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\TimePicker\skin\default\down.jpg" />
+    <Content Include="Scripts\TimePicker\skin\default\left.gif" />
+    <Content Include="Scripts\TimePicker\skin\default\navLeft.gif" />
+    <Content Include="Scripts\TimePicker\skin\default\navRight.gif" />
+    <Content Include="Scripts\TimePicker\skin\default\qs.jpg" />
+    <Content Include="Scripts\TimePicker\skin\default\right.gif" />
+    <Content Include="Scripts\TimePicker\skin\default\up.jpg" />
+    <Content Include="Scripts\TimePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\down.jpg" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\left.gif" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\navLeft.gif" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\navRight.gif" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\qs.jpg" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\right.gif" />
+    <Content Include="Scripts\TimePicker\skin\whyGreen\up.jpg" />
+    <Content Include="Scripts\TimePicker\WdatePicker.js" />
+    <Content Include="Scripts\Uploadify\Change Log.txt" />
+    <Content Include="Scripts\Uploadify\jquery.uploadify-3.1.js" />
+    <Content Include="Scripts\Uploadify\jquery.uploadify-3.1.min.js" />
+    <Content Include="Scripts\Uploadify\jquery.uploadify.js" />
+    <Content Include="Scripts\Uploadify\jquery.uploadify.min.js" />
+    <Content Include="Scripts\Uploadify\license.txt" />
+    <Content Include="Scripts\Uploadify\swfobject.js" />
+    <Content Include="Scripts\Uploadify\uploadify-cancel.png" />
+    <Content Include="Scripts\Uploadify\uploadify.css" />
+    <Content Include="Scripts\Uploadify\uploadify.swf" />
+    <Content Include="Scripts\Uploadify\__MACOSX\._Change Log.txt" />
+    <Content Include="Scripts\Uploadify\__MACOSX\._uploadify.swf" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\api.js" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\common.css" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\common_ie6.css" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\apiMenu.gif" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\apiMenu.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\background.jpg" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\chinese.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\close.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\contact-bg.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\english.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\header-bg.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\lightbulb.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\overlay_arrow.gif" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\overlay_arrow.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\overlay_bg.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\overlay_close_IE6.gif" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\zTreeStandard.gif" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\img\zTreeStandard.png" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\jquery.ztree.core.js" />
+    <Content Include="Scripts\zTree_v3-master\api\apiCss\zTreeStyleForApi.css" />
+    <Content Include="Scripts\zTree_v3-master\api\API_cn.html" />
+    <Content Include="Scripts\zTree_v3-master\api\API_en.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\fn.zTree.destroy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\fn.zTree.getZTreeObj.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\fn.zTree.init.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\fn.zTree._z.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.autoParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.contentType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.dataFilter.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.dataType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.otherParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.type.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.async.url.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeAsync.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeCollapse.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeDblClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeDrag.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeDragOpen.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeDrop.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeEditName.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeExpand.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeMouseDown.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeMouseUp.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeRemove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeRename.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.beforeRightClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onAsyncError.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onAsyncSuccess.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onCollapse.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onDblClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onDrag.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onDragMove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onDrop.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onExpand.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onMouseDown.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onMouseUp.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onNodeCreated.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onRemove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onRename.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.callback.onRightClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.check.autoCheckTrigger.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.check.chkboxType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.check.chkDisabledInherit.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.check.chkStyle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.check.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.check.nocheckInherit.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.check.radioType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.keep.leaf.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.keep.parent.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.key.checked.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.key.children.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.key.name.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.key.title.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.key.url.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.simpleData.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.simpleData.idKey.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.simpleData.pIdKey.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.data.simpleData.rootPId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.autoExpandTrigger.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.autoOpenTime.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.borderMax.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.borderMin.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.inner.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.isCopy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.isMove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.maxShowNodeNum.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.minMoveSize.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.next.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.drag.prev.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.editNameSelectAll.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.removeTitle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.renameTitle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.showRemoveBtn.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.edit.showRenameBtn.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.treeId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.treeObj.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.addDiyDom.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.addHoverDom.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.autoCancelSelected.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.dblClickExpand.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.expandSpeed.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.fontCss.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.nameIsHTML.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.removeHoverDom.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.selectedMulti.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.showIcon.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.showLine.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.showTitle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\setting.view.txtSelectedEnable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.checked.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.checkedOld.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.check_Child_State.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.check_Focus.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.children.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.chkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.click.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.diy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.editNameFlag.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.getCheckStatus.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.getIndex.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.getNextNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.getParentNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.getPath.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.getPreNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.halfCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.icon.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.iconClose.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.iconOpen.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.iconSkin.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.isAjaxing.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.isFirstNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.isHidden.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.isHover.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.isLastNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.isParent.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.level.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.name.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.nocheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.open.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.parentTId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.target.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.tId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.url.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\treeNode.zAsync.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.addNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.cancelEditName.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.cancelSelectedNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.checkAllNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.checkNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.copyNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.destroy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.editName.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.expandAll.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.expandNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getChangeCheckedNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getCheckedNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getNodeByParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getNodeByTId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getNodeIndex.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getNodesByFilter.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getNodesByParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getNodesByParamFuzzy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.getSelectedNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.hideNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.hideNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.moveNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.reAsyncChildNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.refresh.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.removeChildNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.removeNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.selectNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.setChkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.setEditable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.setting.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.showNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.showNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.transformToArray.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.transformTozTreeNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\cn\zTreeObj.updateNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\fn.zTree.destroy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\fn.zTree.getZTreeObj.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\fn.zTree.init.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\fn.zTree._z.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.autoParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.contentType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.dataFilter.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.dataType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.otherParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.type.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.async.url.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeAsync.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeCollapse.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeDblClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeDrag.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeDragOpen.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeDrop.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeEditName.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeExpand.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeMouseDown.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeMouseUp.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeRemove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeRename.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.beforeRightClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onAsyncError.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onAsyncSuccess.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onCollapse.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onDblClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onDrag.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onDragMove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onDrop.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onExpand.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onMouseDown.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onMouseUp.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onNodeCreated.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onRemove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onRename.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.callback.onRightClick.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.check.autoCheckTrigger.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.check.chkboxType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.check.chkDisabledInherit.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.check.chkStyle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.check.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.check.nocheckInherit.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.check.radioType.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.keep.leaf.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.keep.parent.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.key.checked.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.key.children.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.key.name.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.key.title.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.key.url.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.simpleData.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.simpleData.idKey.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.simpleData.pIdKey.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.data.simpleData.rootPId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.autoExpandTrigger.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.autoOpenTime.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.borderMax.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.borderMin.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.inner.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.isCopy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.isMove.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.maxShowNodeNum.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.minMoveSize.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.next.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.drag.prev.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.editNameSelectAll.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.enable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.removeTitle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.renameTitle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.showRemoveBtn.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.edit.showRenameBtn.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.treeId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.treeObj.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.addDiyDom.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.addHoverDom.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.autoCancelSelected.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.dblClickExpand.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.expandSpeed.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.fontCss.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.nameIsHTML.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.removeHoverDom.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.selectedMulti.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.showIcon.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.showLine.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.showTitle.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\setting.view.txtSelectedEnable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.checked.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.checkedOld.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.check_Child_State.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.check_Focus.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.children.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.chkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.click.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.diy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.editNameFlag.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.getCheckStatus.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.getIndex.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.getNextNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.getParentNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.getPath.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.getPreNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.halfCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.icon.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.iconClose.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.iconOpen.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.iconSkin.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.isAjaxing.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.isFirstNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.isHidden.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.isHover.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.isLastNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.isParent.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.level.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.name.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.nocheck.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.open.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.parentTId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.target.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.tId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.url.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\treeNode.zAsync.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.addNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.cancelEditName.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.cancelSelectedNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.checkAllNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.checkNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.copyNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.destroy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.editName.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.expandAll.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.expandNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getChangeCheckedNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getCheckedNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getNodeByParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getNodeByTId.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getNodeIndex.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getNodesByFilter.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getNodesByParam.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getNodesByParamFuzzy.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.getSelectedNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.hideNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.hideNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.moveNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.reAsyncChildNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.refresh.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.removeChildNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.removeNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.selectNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.setChkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.setEditable.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.setting.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.showNode.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.showNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.transformToArray.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.transformTozTreeNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\api\en\zTreeObj.updateNode.html" />
+    <Content Include="Scripts\zTree_v3-master\css\awesomeStyle\awesome.css" />
+    <Content Include="Scripts\zTree_v3-master\css\awesomeStyle\img\loading.gif" />
+    <Content Include="Scripts\zTree_v3-master\css\demo.css" />
+    <Content Include="Scripts\zTree_v3-master\css\metroStyle\img\line_conn.png" />
+    <Content Include="Scripts\zTree_v3-master\css\metroStyle\img\loading.gif" />
+    <Content Include="Scripts\zTree_v3-master\css\metroStyle\img\metro.gif" />
+    <Content Include="Scripts\zTree_v3-master\css\metroStyle\img\metro.png" />
+    <Content Include="Scripts\zTree_v3-master\css\metroStyle\metroStyle.css" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\loading.gif" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="Scripts\zTree_v3-master\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\bigdata\common.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\bigdata\diy_async.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\bigdata\page.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\async.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\async_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\click.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\custom_font.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\custom_icon.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\custom_iconSkin.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\expand.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\noicon.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\noline.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\otherMouse.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\searchNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\simpleData.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\standardData.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\update_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\core\url.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\checkbox.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\checkbox_chkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\checkbox_count.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\checkbox_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\checkbox_halfCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\checkbox_nocheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\radio_chkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\radio_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\radio_halfCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\excheck\radio_nocheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\async_edit.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\drag.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\drag_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\drag_super.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\edit.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\edit_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\edit_super.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exedit\multiTree.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exhide\checkbox.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exhide\common.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\exhide\radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\index.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\asyncForAll.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\awesome.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\checkbox_radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\diydom.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\dragWithOther.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\left_menu.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\left_menuForOutLook.gif" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\left_menuForOutLook.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\left_menuForOutLook.png" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\metro.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\oneclick.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\oneroot.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\rightClickMenu.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\select_menu.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\select_menu_checkbox.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\select_menu_radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\cn\super\singlepath.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\bigdata\common.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\bigdata\diy_async.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\bigdata\page.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\async.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\async_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\click.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\custom_font.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\custom_icon.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\custom_iconSkin.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\expand.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\noicon.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\noline.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\otherMouse.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\searchNodes.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\simpleData.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\standardData.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\update_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\core\url.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\checkbox.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\checkbox_chkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\checkbox_count.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\checkbox_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\checkbox_halfCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\checkbox_nocheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\radio_chkDisabled.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\radio_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\radio_halfCheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\excheck\radio_nocheck.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\async_edit.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\drag.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\drag_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\drag_super.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\edit.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\edit_fun.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\edit_super.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exedit\multiTree.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exhide\checkbox.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exhide\common.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\exhide\radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\index.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\asyncForAll.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\awesome.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\checkbox_radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\diydom.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\dragWithOther.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\left_menu.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\left_menuForOutLook.gif" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\left_menuForOutLook.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\left_menuForOutLook.png" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\metro.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\oneclick.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\oneroot.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\rightClickMenu.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\select_menu.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\select_menu_checkbox.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\select_menu_radio.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\singlepath.html" />
+    <Content Include="Scripts\zTree_v3-master\demo\en\super\ztree.html" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.all.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.all.min.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.core.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.core.min.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.excheck.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.excheck.min.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.exedit.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.exedit.min.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.exhide.js" />
+    <Content Include="Scripts\zTree_v3-master\js\jquery.ztree.exhide.min.js" />
+    <Content Include="Scripts\zTree_v3-master\log v3.x.txt" />
+    <Content Include="StatisticsManager\MonthlySaleCharts.aspx" />
+    <Content Include="StatisticsManager\PassagewayCharts.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Sys\BusinessDiscountEdit.aspx" />
+    <Content Include="Sys\BusinessDiscountList.aspx" />
+    <Content Include="Sys\DiscountUpdate.aspx" />
+    <Content Include="Sys\FlowAssigned.aspx" />
+    <Content Include="Sys\FlowAssignedByTree.aspx" />
+    <Content Include="Sys\FlowDiscountList.aspx" />
+    <Content Include="Sys\FlowMonitorList.aspx" />
+    <Content Include="Sys\SystemBackupEdit.aspx" />
+    <Content Include="Sys\SystemBackupList.aspx" />
+    <Content Include="AgentManage\SystemFilling.aspx" />
+    <Content Include="Sys\SystemUserLogList.aspx" />
+    <Content Include="Sys\UserEdit.aspx" />
+    <Content Include="Sys\UserList.aspx" />
+    <Content Include="Sys\UserRemarkEdit.aspx" />
+    <Content Include="Sys\UserSettingEdit.aspx" />
+    <Content Include="Sys\ViewFlowJurisdiction.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="Top.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentApplication\AgentAccountLogList.aspx.cs">
+      <DependentUpon>AgentAccountLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\AgentAccountLogList.aspx.designer.cs">
+      <DependentUpon>AgentAccountLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\AgentBaseInfo.aspx.cs">
+      <DependentUpon>AgentBaseInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\AgentBaseInfo.aspx.designer.cs">
+      <DependentUpon>AgentBaseInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\AgentBrowseLogList.aspx.cs">
+      <DependentUpon>AgentBrowseLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\AgentBrowseLogList.aspx.designer.cs">
+      <DependentUpon>AgentBrowseLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBestowed.aspx.cs">
+      <DependentUpon>FlowBestowed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBestowed.aspx.designer.cs">
+      <DependentUpon>FlowBestowed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBestowedBatchCommit.aspx.cs">
+      <DependentUpon>FlowBestowedBatchCommit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBestowedBatchCommit.aspx.designer.cs">
+      <DependentUpon>FlowBestowedBatchCommit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBestowedSingel.aspx.cs">
+      <DependentUpon>FlowBestowedSingel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBestowedSingel.aspx.designer.cs">
+      <DependentUpon>FlowBestowedSingel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBrowseBatch.aspx.cs">
+      <DependentUpon>FlowBrowseBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowBrowseBatch.aspx.designer.cs">
+      <DependentUpon>FlowBrowseBatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardCreate.aspx.cs">
+      <DependentUpon>FlowCardCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardCreate.aspx.designer.cs">
+      <DependentUpon>FlowCardCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardDetails.aspx.cs">
+      <DependentUpon>FlowCardDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardDetails.aspx.designer.cs">
+      <DependentUpon>FlowCardDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardDirect.aspx.cs">
+      <DependentUpon>FlowCardDirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardDirect.aspx.designer.cs">
+      <DependentUpon>FlowCardDirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardList.aspx.cs">
+      <DependentUpon>FlowCardList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCardList.aspx.designer.cs">
+      <DependentUpon>FlowCardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCommitFaild.aspx.cs">
+      <DependentUpon>FlowCommitFaild.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowCommitFaild.aspx.designer.cs">
+      <DependentUpon>FlowCommitFaild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentApplication\FlowInfoList.aspx.cs">
+      <DependentUpon>FlowInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentApplication\FlowInfoList.aspx.designer.cs">
+      <DependentUpon>FlowInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentBrowseLogList.aspx.cs">
+      <DependentUpon>AgentBrowseLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentBrowseLogList.aspx.designer.cs">
+      <DependentUpon>AgentBrowseLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentFlowAssigned.aspx.cs">
+      <DependentUpon>AgentFlowAssigned.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentFlowAssigned.aspx.designer.cs">
+      <DependentUpon>AgentFlowAssigned.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentRecharge.aspx.cs">
+      <DependentUpon>AgentRecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentRecharge.aspx.designer.cs">
+      <DependentUpon>AgentRecharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentRechargeAlipay.aspx.cs">
+      <DependentUpon>AgentRechargeAlipay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentRechargeAlipay.aspx.designer.cs">
+      <DependentUpon>AgentRechargeAlipay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserAccountChangeEdit.aspx.cs">
+      <DependentUpon>AgentUserAccountChangeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserAccountChangeEdit.aspx.designer.cs">
+      <DependentUpon>AgentUserAccountChangeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserAccountEdit.aspx.cs">
+      <DependentUpon>AgentUserAccountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserAccountEdit.aspx.designer.cs">
+      <DependentUpon>AgentUserAccountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserAccountList.aspx.cs">
+      <DependentUpon>AgentUserAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserAccountList.aspx.designer.cs">
+      <DependentUpon>AgentUserAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserEidt.aspx.cs">
+      <DependentUpon>AgentUserEidt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserEidt.aspx.designer.cs">
+      <DependentUpon>AgentUserEidt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserList.aspx.cs">
+      <DependentUpon>AgentUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\AgentUserList.aspx.designer.cs">
+      <DependentUpon>AgentUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\DistributionDetailsForUser.aspx.cs">
+      <DependentUpon>DistributionDetailsForUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\DistributionDetailsForUser.aspx.designer.cs">
+      <DependentUpon>DistributionDetailsForUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\FlowGift.aspx.cs">
+      <DependentUpon>FlowGift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\FlowGift.aspx.designer.cs">
+      <DependentUpon>FlowGift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\FlowOrderDetails.aspx.cs">
+      <DependentUpon>FlowOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\FlowOrderDetails.aspx.designer.cs">
+      <DependentUpon>FlowOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\SystemAccountBondEdit.aspx.cs">
+      <DependentUpon>SystemAccountBondEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\SystemAccountBondEdit.aspx.designer.cs">
+      <DependentUpon>SystemAccountBondEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\SystemAccountOverDraftEdit.aspx.cs">
+      <DependentUpon>SystemAccountOverDraftEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\SystemAccountOverDraftEdit.aspx.designer.cs">
+      <DependentUpon>SystemAccountOverDraftEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlipayCallBack\RechargeNotifyUrl.aspx.cs">
+      <DependentUpon>RechargeNotifyUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlipayCallBack\RechargeNotifyUrl.aspx.designer.cs">
+      <DependentUpon>RechargeNotifyUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlipayCallBack\RechargeReturnUrl.aspx.cs">
+      <DependentUpon>RechargeReturnUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlipayCallBack\RechargeReturnUrl.aspx.designer.cs">
+      <DependentUpon>RechargeReturnUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Agent\FilterUserPhoneHandler.ashx.cs">
+      <DependentUpon>FilterUserPhoneHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Agent\GetCompanyInfoHandler.ashx.cs">
+      <DependentUpon>GetCompanyInfoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ChartsData\GetDateDIsplay.ashx.cs">
+      <DependentUpon>GetDateDIsplay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ChartsData\GetPassagewayDataHandler.ashx.cs">
+      <DependentUpon>GetPassagewayDataHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ChartsData\MonthlySaleHandler.ashx.cs">
+      <DependentUpon>MonthlySaleHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ComPage\ActiveAgainHandler.ashx.cs">
+      <DependentUpon>ActiveAgainHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ComPage\SendToOtherHandler.ashx.cs">
+      <DependentUpon>SendToOtherHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Login\FunctionMenuHandler.ashx.cs">
+      <DependentUpon>FunctionMenuHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Login\GetCurrentAccountHandler.ashx.cs">
+      <DependentUpon>GetCurrentAccountHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Login\LoginHandler.ashx.cs">
+      <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Login\ValidateCode.ashx.cs">
+      <DependentUpon>ValidateCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Menu\GetMenuInfoHandler.ashx.cs">
+      <DependentUpon>GetMenuInfoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Order\GetCTBDResultHandler.ashx.cs">
+      <DependentUpon>GetCTBDResultHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Sys\GetFlowJurisdictionInfoByKey.ashx.cs">
+      <DependentUpon>GetFlowJurisdictionInfoByKey.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Sys\GetSystemEnableFlowInfo.ashx.cs">
+      <DependentUpon>GetSystemEnableFlowInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ZtreeAsync\ChannelListHandler.ashx.cs">
+      <DependentUpon>ChannelListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BackupOperate\BackupDatabase.aspx.cs">
+      <DependentUpon>BackupDatabase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackupOperate\BackupDatabase.aspx.designer.cs">
+      <DependentUpon>BackupDatabase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackupOperate\UpdateAccountTimer.aspx.cs">
+      <DependentUpon>UpdateAccountTimer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackupOperate\UpdateAccountTimer.aspx.designer.cs">
+      <DependentUpon>UpdateAccountTimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ChannelManagement.aspx.cs">
+      <DependentUpon>ChannelManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ChannelManagement.aspx.designer.cs">
+      <DependentUpon>ChannelManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\EnumerationEdit.aspx.cs">
+      <DependentUpon>EnumerationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\EnumerationEdit.aspx.designer.cs">
+      <DependentUpon>EnumerationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\EnumerationList.aspx.cs">
+      <DependentUpon>EnumerationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\EnumerationList.aspx.designer.cs">
+      <DependentUpon>EnumerationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCarrierEdit.aspx.cs">
+      <DependentUpon>FlowCarrierEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCarrierEdit.aspx.designer.cs">
+      <DependentUpon>FlowCarrierEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCodeCarrierList.aspx.cs">
+      <DependentUpon>FlowCodeCarrierList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCodeCarrierList.aspx.designer.cs">
+      <DependentUpon>FlowCodeCarrierList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCodeEdit.aspx.cs">
+      <DependentUpon>FlowCodeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCodeEdit.aspx.designer.cs">
+      <DependentUpon>FlowCodeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCodeReviewList.aspx.cs">
+      <DependentUpon>FlowCodeReviewList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\FlowCodeReviewList.aspx.designer.cs">
+      <DependentUpon>FlowCodeReviewList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\FlowPacketEdit.aspx.cs">
+      <DependentUpon>FlowPacketEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\FlowPacketEdit.aspx.designer.cs">
+      <DependentUpon>FlowPacketEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\FlowPakgeList.aspx.cs">
+      <DependentUpon>FlowPakgeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\FlowPakgeList.aspx.designer.cs">
+      <DependentUpon>FlowPakgeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\MobilePhoneBelongEdit.aspx.cs">
+      <DependentUpon>MobilePhoneBelongEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\MobilePhoneBelongEdit.aspx.designer.cs">
+      <DependentUpon>MobilePhoneBelongEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\MobilePhoneBelonging.aspx.cs">
+      <DependentUpon>MobilePhoneBelonging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\MobilePhoneBelonging.aspx.designer.cs">
+      <DependentUpon>MobilePhoneBelonging.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComPage\EnterMobilePhone.aspx.cs">
+      <DependentUpon>EnterMobilePhone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComPage\EnterMobilePhone.aspx.designer.cs">
+      <DependentUpon>EnterMobilePhone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComPage\FaildToOperator.aspx.cs">
+      <DependentUpon>FaildToOperator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComPage\FaildToOperator.aspx.designer.cs">
+      <DependentUpon>FaildToOperator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComPage\FlowCardExtract.aspx.cs">
+      <DependentUpon>FlowCardExtract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComPage\FlowCardExtract.aspx.designer.cs">
+      <DependentUpon>FlowCardExtract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content.aspx.cs">
+      <DependentUpon>Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content.aspx.designer.cs">
+      <DependentUpon>Content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\CompanyAccountApplyEdit.aspx.cs">
+      <DependentUpon>CompanyAccountApplyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\CompanyAccountApplyEdit.aspx.designer.cs">
+      <DependentUpon>CompanyAccountApplyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\CompanyAccountApplyList.aspx.cs">
+      <DependentUpon>CompanyAccountApplyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\CompanyAccountApplyList.aspx.designer.cs">
+      <DependentUpon>CompanyAccountApplyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\CompanyAccountList.aspx.cs">
+      <DependentUpon>CompanyAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\CompanyAccountList.aspx.designer.cs">
+      <DependentUpon>CompanyAccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\FlowOrderQueryList.aspx.cs">
+      <DependentUpon>FlowOrderQueryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\FlowOrderQueryList.aspx.designer.cs">
+      <DependentUpon>FlowOrderQueryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\ScCmOrderQuery.aspx.cs">
+      <DependentUpon>ScCmOrderQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\ScCmOrderQuery.aspx.designer.cs">
+      <DependentUpon>ScCmOrderQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataTrafficOrder.aspx.cs">
+      <DependentUpon>DataTrafficOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataTrafficOrder.aspx.designer.cs">
+      <DependentUpon>DataTrafficOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManage\AccessProviderOrderView.aspx.cs">
+      <DependentUpon>AccessProviderOrderView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceManage\AccessProviderOrderView.aspx.designer.cs">
+      <DependentUpon>AccessProviderOrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManage\AccountApplyReviewEdit.aspx.cs">
+      <DependentUpon>AccountApplyReviewEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceManage\AccountApplyReviewEdit.aspx.designer.cs">
+      <DependentUpon>AccountApplyReviewEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManage\AccountApplyReviews.aspx.cs">
+      <DependentUpon>AccountApplyReviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceManage\AccountApplyReviews.aspx.designer.cs">
+      <DependentUpon>AccountApplyReviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManage\CostMonthlyView.aspx.cs">
+      <DependentUpon>CostMonthlyView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceManage\CostMonthlyView.aspx.designer.cs">
+      <DependentUpon>CostMonthlyView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlowAgent.aspx.cs">
+      <DependentUpon>FlowAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlowAgent.aspx.designer.cs">
+      <DependentUpon>FlowAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlowAgents\AgentBase.cs" />
+    <Compile Include="FlowAgents\AgentManager.cs" />
+    <Compile Include="FlowAgents\OrderBalance.cs" />
+    <Compile Include="FlowAgents\OrderPackge.cs" />
+    <Compile Include="FlowAgents\OrderQuery.cs" />
+    <Compile Include="FlowAgents\OrderQueryTrans.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InformationViews\AdminInfoView.aspx.cs">
+      <DependentUpon>AdminInfoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformationViews\AdminInfoView.aspx.designer.cs">
+      <DependentUpon>AdminInfoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InformationViews\UserInfoList.aspx.cs">
+      <DependentUpon>UserInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformationViews\UserInfoList.aspx.designer.cs">
+      <DependentUpon>UserInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceRequest\InterfaceIsUnobstructed.aspx.cs">
+      <DependentUpon>InterfaceIsUnobstructed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceRequest\InterfaceIsUnobstructed.aspx.designer.cs">
+      <DependentUpon>InterfaceIsUnobstructed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\CTBDResultCallBack.aspx.cs">
+      <DependentUpon>CTBDResultCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\CTBDResultCallBack.aspx.designer.cs">
+      <DependentUpon>CTBDResultCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\CU0531CallBack.aspx.cs">
+      <DependentUpon>CU0531CallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\CU0531CallBack.aspx.designer.cs">
+      <DependentUpon>CU0531CallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\DefaultCallBack.aspx.cs">
+      <DependentUpon>DefaultCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\DefaultCallBack.aspx.designer.cs">
+      <DependentUpon>DefaultCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\GetOrderResultCallBack.aspx.cs">
+      <DependentUpon>GetOrderResultCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\GetOrderResultCallBack.aspx.designer.cs">
+      <DependentUpon>GetOrderResultCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\JTCallBack.aspx.cs">
+      <DependentUpon>JTCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\JTCallBack.aspx.designer.cs">
+      <DependentUpon>JTCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\SxdCallBack.aspx.cs">
+      <DependentUpon>SxdCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\SxdCallBack.aspx.designer.cs">
+      <DependentUpon>SxdCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\XytdCallBack.aspx.cs">
+      <DependentUpon>XytdCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\XytdCallBack.aspx.designer.cs">
+      <DependentUpon>XytdCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticsManager\MonthlySaleCharts.aspx.cs">
+      <DependentUpon>MonthlySaleCharts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatisticsManager\MonthlySaleCharts.aspx.designer.cs">
+      <DependentUpon>MonthlySaleCharts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsManager\PassagewayCharts.aspx.cs">
+      <DependentUpon>PassagewayCharts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatisticsManager\PassagewayCharts.aspx.designer.cs">
+      <DependentUpon>PassagewayCharts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\BusinessDiscountEdit.aspx.cs">
+      <DependentUpon>BusinessDiscountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\BusinessDiscountEdit.aspx.designer.cs">
+      <DependentUpon>BusinessDiscountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\BusinessDiscountList.aspx.cs">
+      <DependentUpon>BusinessDiscountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\BusinessDiscountList.aspx.designer.cs">
+      <DependentUpon>BusinessDiscountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\DiscountUpdate.aspx.cs">
+      <DependentUpon>DiscountUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\DiscountUpdate.aspx.designer.cs">
+      <DependentUpon>DiscountUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FlowAssigned.aspx.cs">
+      <DependentUpon>FlowAssigned.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\FlowAssigned.aspx.designer.cs">
+      <DependentUpon>FlowAssigned.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FlowAssignedByTree.aspx.cs">
+      <DependentUpon>FlowAssignedByTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\FlowAssignedByTree.aspx.designer.cs">
+      <DependentUpon>FlowAssignedByTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FlowDiscountList.aspx.cs">
+      <DependentUpon>FlowDiscountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\FlowDiscountList.aspx.designer.cs">
+      <DependentUpon>FlowDiscountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FlowMonitorList.aspx.cs">
+      <DependentUpon>FlowMonitorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\FlowMonitorList.aspx.designer.cs">
+      <DependentUpon>FlowMonitorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SystemBackupEdit.aspx.cs">
+      <DependentUpon>SystemBackupEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\SystemBackupEdit.aspx.designer.cs">
+      <DependentUpon>SystemBackupEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SystemBackupList.aspx.cs">
+      <DependentUpon>SystemBackupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\SystemBackupList.aspx.designer.cs">
+      <DependentUpon>SystemBackupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentManage\SystemFilling.aspx.cs">
+      <DependentUpon>SystemFilling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentManage\SystemFilling.aspx.designer.cs">
+      <DependentUpon>SystemFilling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SystemUserLogList.aspx.cs">
+      <DependentUpon>SystemUserLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\SystemUserLogList.aspx.designer.cs">
+      <DependentUpon>SystemUserLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserRemarkEdit.aspx.cs">
+      <DependentUpon>UserRemarkEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserRemarkEdit.aspx.designer.cs">
+      <DependentUpon>UserRemarkEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserSettingEdit.aspx.cs">
+      <DependentUpon>UserSettingEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserSettingEdit.aspx.designer.cs">
+      <DependentUpon>UserSettingEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\ViewFlowJurisdiction.aspx.cs">
+      <DependentUpon>ViewFlowJurisdiction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\ViewFlowJurisdiction.aspx.designer.cs">
+      <DependentUpon>ViewFlowJurisdiction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplyImages\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MONO.Distribution.Alipay\MONO.Distribution.Alipay.csproj">
+      <Project>{F7CB09F5-06CE-4C07-9675-2FE0FE7983DF}</Project>
+      <Name>MONO.Distribution.Alipay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MONO.Distribution.BLL\MONO.Distribution.BLL.csproj">
+      <Project>{EFAB0D9C-51DC-4228-AE83-FD4C7D348214}</Project>
+      <Name>MONO.Distribution.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MONO.Distribution.Common\MONO.Distribution.Common.csproj">
+      <Project>{64DB0DB4-C6A3-4D6E-9B98-5250CE49A471}</Project>
+      <Name>MONO.Distribution.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MONO.Distribution.Model\MONO.Distribution.Model.csproj">
+      <Project>{C15BAAEB-5F9A-4438-9A4A-18265AB73363}</Project>
+      <Name>MONO.Distribution.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MONO.Distribution.UIProcess\MONO.Distribution.UIProcess.csproj">
+      <Project>{04DB89D5-40CC-452E-AE98-F93BFDB5D752}</Project>
+      <Name>MONO.Distribution.UIProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MONO.Distribution.Utility\MONO.Distribution.Utility.csproj">
+      <Project>{5A18002C-5F6C-49A1-A631-7D8A28954076}</Project>
+      <Name>MONO.Distribution.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="properties.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="providers.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sqlmap.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\Login\LoginHandler.ashx" />
+    <Content Include="Ashx\Login\ValidateCode.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\Login\FunctionMenuHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\Menu\GetMenuInfoHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\Agent\GetCompanyInfoHandler.ashx" />
+    <Content Include="Ashx\ComPage\ActiveAgainHandler.ashx" />
+    <Content Include="Ashx\ComPage\SendToOtherHandler.ashx" />
+    <Content Include="Ashx\Agent\FilterUserPhoneHandler.ashx" />
+    <Content Include="Ashx\Login\GetCurrentAccountHandler.ashx" />
+    <Content Include="Ashx\ZtreeAsync\ChannelListHandler.ashx" />
+    <Content Include="Ashx\ChartsData\GetPassagewayDataHandler.ashx" />
+    <Content Include="Ashx\Sys\GetFlowJurisdictionInfoByKey.ashx" />
+    <Content Include="Ashx\Sys\GetSystemEnableFlowInfo.ashx" />
+    <Content Include="Ashx\ChartsData\MonthlySaleHandler.ashx" />
+    <Content Include="Ashx\ChartsData\GetDateDIsplay.ashx" />
+    <Content Include="Ashx\Order\GetCTBDResultHandler.ashx" />
+    <None Include="Scripts\Uploadify\check-exists.php" />
+    <None Include="Scripts\Uploadify\index.php" />
+    <None Include="Scripts\Uploadify\uploadify.php" />
+    <None Include="Scripts\zTree_v3-master\.gitattributes" />
+    <None Include="Scripts\zTree_v3-master\.gitignore" />
+    <None Include="Scripts\zTree_v3-master\css\awesomeStyle\awesome.less" />
+    <None Include="Scripts\zTree_v3-master\css\awesomeStyle\fa.less" />
+    <None Include="Scripts\zTree_v3-master\demo\cn\asyncData\getNodes.php" />
+    <None Include="Scripts\zTree_v3-master\demo\cn\asyncData\getNodesForBigData.php" />
+    <None Include="Scripts\zTree_v3-master\demo\en\asyncData\getNodes.php" />
+    <None Include="Scripts\zTree_v3-master\demo\en\asyncData\getNodesForBigData.php" />
+    <None Include="Scripts\zTree_v3-master\README.md" />
+    <None Include="Scripts\zTree_v3-master\zTree.v3.jquery.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9012</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

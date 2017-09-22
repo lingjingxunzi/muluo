@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="E:\Publishs\40-短信接口" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="NoAccess.htm" publishTime="05/12/2016 13:55:38" />
+    <file relUrl="Web.config" publishTime="05/12/2016 15:14:24" />
+    <file relUrl="bin/MONO.Message.UI.pdb" publishTime="05/13/2016 14:36:05" />
+    <file relUrl="MessageSend.aspx" publishTime="04/27/2016 10:17:38" />
+    <file relUrl="Index.aspx" publishTime="04/27/2016 10:17:37" />
+    <file relUrl="FileNotFound.htm" publishTime="05/12/2016 13:55:16" />
+    <file relUrl="bin/MONO.Message.UI.dll" publishTime="05/13/2016 14:36:05" />
+    <file relUrl="Global.asax" publishTime="04/27/2016 10:16:36" />
+  </publishProfile>
+</publishData>

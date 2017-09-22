@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="SysUserInfos" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="SysUserInfos" type="MONO.Distribution.Model.Sys.SysUserInfos,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_SysUserInfosResult" class="SysUserInfos">
+      <result property="UserInfoKey" column="UserInfoKey"/>
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="Name" column="NAME"/>
+      <result property="WorkNumber" column="WORKNUMBER"/>
+      <result property="Sex" column="SEX"/>
+      <result property="IDNumber" column="IDNUMBER"/>
+      <result property="Mobile" column="MOBILE"/>
+      <result property="CompanyTelephone" column="COMPANYTELEPHONE"/>
+      <result property="Post" column="POST"/>
+      <result property="Mail" column="MAIL"/>
+      <result property="Remark" column="REMARK"/>
+      <!--<result property="EnumSex" column="Sex" select ="SelectEnumerationByKey" lazyLoad="false"/>-->
+      <!--<result property="CompanyInfo" column="CompayInfoKey" select="SelectCompanyInfoByKey" lazyLoad="false"/>-->
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertSysUserInfo' parameterClass='SysUserInfos'>
+      INSERT INTO FD_SYSUSERINFOS
+      (
+      SysUserKey,
+      NAME,
+      WORKNUMBER,
+      SEX,
+      IDNUMBER,
+      MOBILE,
+      COMPANYTELEPHONE,
+      POST,
+      MAIL,
+      REMARK
+      )
+      VALUES
+      (
+      #SysUserKey#,
+      #Name#,
+      #WorkNumber#,
+      #Sex#,
+      #IDNumber#,
+      #Mobile#,
+      #CompanyTelephone#,
+      #Post#,
+      #Mail#,
+      #Remark#
+      <selectKey property="UserInfoKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as bigint) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateSysUserInfo' parameterClass='SysUserInfos'>
+      UPDATE FD_SYSUSERINFOS
+      SET
+      <isNotEmpty prepend=" " property="Name">NAME=#Name#</isNotEmpty>
+      <isNotEmpty prepend="," property="WorkNumber">WORKNUMBER=#WorkNumber#</isNotEmpty>
+      <isNotEmpty prepend="," property="Sex">SEX=#Sex#</isNotEmpty>
+      <isNotEmpty prepend="," property="IDNumber">IDNUMBER=#IDNumber#</isNotEmpty>
+      <isNotEmpty prepend="," property="Mobile">MOBILE=#Mobile#</isNotEmpty>
+      <isNotEmpty prepend="," property="Post">POST=#Post#</isNotEmpty>
+      <isNotEmpty prepend="," property="Mail">MAIL=#Mail#</isNotEmpty>
+      <isNotEmpty prepend="," property="Remark">REMARK=#Remark#</isNotEmpty>
+
+      WHERE
+      [UserInfoKey] = #UserInfoKey#
+    </update>
+
+    <delete id='DeleteSysUserInfo' parameterClass='SysUserInfos'>
+      DELETE FROM FD_SYSUSERINFOS
+      WHERE
+      [UserInfoKey] = #UserInfoKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectSysUserInfoList" parameterClass="SysUserInfos"  resultMap="FB_SysUserInfosResult">
+      <![CDATA[SELECT     
+      UserInfoKey,
+      SysUserKey,
+         NAME,
+         WORKNUMBER,
+         SEX,
+         IDNUMBER,
+         MOBILE,
+         COMPANYTELEPHONE,
+         POST,
+         MAIL,
+         REMARK 
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY SystemUserKey DESC) AS RowNumber,*
+          FROM FD_SYSUSERINFOS
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="Name">NAME like '%'+#Name#+'%'</isNotEmpty>
+          <isNotEmpty prepend="AND" property="WorkNumber">WORKNUMBER=#WorkNumber#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Sex">SEX=#Sex#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="IDNumber">IDNUMBER=#IDNumber#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Mobile">MOBILE=#Mobile#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Post">POST=#Post#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Mail">MAIL=#Mail#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Remark">REMARK=#Remark#</isNotEmpty>
+          )T
+        </isEqual>
+
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_SYSUSERINFOS
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="Name">NAME like '%'+#Name#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" property="WorkNumber">WORKNUMBER=#WorkNumber#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Sex">SEX=#Sex#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="IDNumber">IDNUMBER=#IDNumber#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Mobile">MOBILE=#Mobile#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Post">POST=#Post#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Mail">MAIL=#Mail#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Remark">REMARK=#Remark#</isNotEmpty>
+
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectSysUserInfoCount" parameterClass="SysUserInfos" resultClass="int">
+      Select count(*)
+      FROM FD_SYSUSERINFOS
+      WHERE 1=1
+      <dynamic >
+        <isNotNull prepend="AND" property="Name">NAME=#Name#</isNotNull>
+        <isNotNull prepend="AND" property="WorkNumber">WORKNUMBER=#WorkNumber#</isNotNull>
+        <isNotNull prepend="AND" property="Sex">SEX=#Sex#</isNotNull>
+        <isNotNull prepend="AND" property="IDNumber">IDNUMBER=#IDNumber#</isNotNull>
+        <isNotNull prepend="AND" property="Mobile">MOBILE=#Mobile#</isNotNull>
+        <isNotNull prepend="AND" property="Post">POST=#Post#</isNotNull>
+        <isNotNull prepend="AND" property="Mail">MAIL=#Mail#</isNotNull>
+        <isNotNull prepend="AND" property="Remark">REMARK=#Remark#</isNotNull>
+      </dynamic>
+    </select>
+
+
+    <select id='SelectSysUserInfoByKey' resultMap='FB_SysUserInfosResult' parameterClass='SysUserInfos'>
+      SELECT
+      UserInfoKey,
+      SysUserKey,
+      NAME,
+      WORKNUMBER,
+      SEX,
+      IDNUMBER,
+      MOBILE,
+      COMPANYTELEPHONE,
+      POST,
+      MAIL,
+      REMARK
+      FROM FD_SYSUSERINFOS
+      WHERE
+      [UserInfoKey] = #UserInfoKey#
+    </select>
+
+    <select id='SelectSysUserInfoByUserKey' resultMap='FB_SysUserInfosResult' parameterClass='SysUserInfos'>
+      SELECT
+      UserInfoKey,
+      SysUserKey,
+      NAME,
+      WORKNUMBER,
+      SEX,
+      IDNUMBER,
+      MOBILE,
+      COMPANYTELEPHONE,
+      POST,
+      MAIL,
+      REMARK
+      FROM FD_SYSUSERINFOS
+      WHERE
+      [SysUserKey] = #SysUserKey#
+    </select>
+
+    
+  </statements>
+</sqlMap>

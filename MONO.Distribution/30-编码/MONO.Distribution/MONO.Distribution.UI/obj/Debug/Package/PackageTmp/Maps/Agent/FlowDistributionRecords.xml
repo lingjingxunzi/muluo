@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="FlowDistributionRecords" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="FlowDistributionRecords" type="MONO.Distribution.Model.Agent.FlowDistributionRecords,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FlowDistributionRecordsResult" class="FlowDistributionRecords">
+      <result property="DistributionRecordKey" column="DistributionRecordKey"/>
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="CompanyFlowPacketKey" column="CompanyFlowPacketKey"/>
+      <result property="MobilePhone" column="MobilePhone"/>
+      <result property="OrderStatus" column="OrderStatus"/>
+      <result property="OrderNo" column="OrderNo"/>
+      <result property="ResultMsg" column="ResultMsg"/>
+      <result property="CreateTime" column="CreateTime"/>
+      <result property="UpdateTime" column="UpdateTime"/>
+      <result property="Code" column="Code"/>
+      <result property="Carrier" column="Carrier"/>
+      <result property="ResultMsg" column="ResultMsg"/>
+      <result property="BatchNo" column="BatchNo"/>
+      <result property="PushTo" column="PushTo"/>
+      <result property="PushToKey" column="PushToKey"/>
+      <result property="DistributionType" column="DistributionType"/>
+      <result property="OrderType" column="OrderType"/>
+      <result property="BackUrl" column="BackUrl"/>
+      <result property="SystemFlowPackets" column="CompanyFlowPacketKey" select="SelectSystemFlowPacketByKey" lazyLoad="false" />
+      <result property="SystemUsers" column="SysUserKey" select="SelectSystemUserByKey" lazyLoad="false"/>
+      <result property="EnumStatus" column="OrderStatus" lazyLoad="false" select="SelectEnumerationByKey"/>
+    </resultMap>
+    <resultMap id="FlowDistributionRecords_Query" class="FlowDistributionRecords">
+      <result property="DistributionRecordKey" column="DistributionRecordKey"/>
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="CompanyFlowPacketKey" column="CompanyFlowPacketKey"/>
+      <result property="MobilePhone" column="MobilePhone"/>
+      <result property="OrderStatus" column="OrderStatus"/>
+      <result property="OrderNo" column="OrderNo"/>
+      <result property="ResultMsg" column="ResultMsg"/>
+      <result property="CreateTime" column="CreateTime"/>
+      <result property="BatchNo" column="BatchNo"/>
+      <result property="SystemFlowPackets" column="CompanyFlowPacketKey" select="SelectSystemFlowPacketByKeyForFlowBaseInfo" lazyLoad="false" />
+      <result property="EnumStatus" column="OrderStatus" lazyLoad="false" select="SelectEnumerationByKeyForBaseInfo"/>
+    </resultMap>
+    <resultMap id="FlowDistributionFeeResult" class="FlowDistributionRecords">
+      <result property="DistributionRecordKey" column="DistributionRecordKey"/>
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="CompanyFlowPacketKey" column="CompanyFlowPacketKey"/>
+      <result property="MobilePhone" column="MobilePhone"/>
+      <result property="OrderStatus" column="OrderStatus"/>
+      <result property="ResultMsg" column="ResultMsg"/>
+      <result property="CreateTime" column="CreateTime"/>
+      <result property="UpdateTime" column="UpdateTime"/> 
+      <result property="ResultMsg" column="ResultMsg"/>
+      <result property="BatchNo" column="BatchNo"/> 
+      <result property="SystemFlowPackets" column="CompanyFlowPacketKey" select="SelectSystemFlowPacketByKey" lazyLoad="false" />
+      <result property="SystemUsers" column="SysUserKey" select="SelectSystemUserByKey" lazyLoad="false"/>
+      <result property="EnumStatus" column="OrderStatus" lazyLoad="false" select="SelectEnumerationByKey"/>
+      <result property="SystemAccountLog" column="DistributionRecordKey" lazyLoad="false" select="SelectAccountLogBySeq"></result>
+    </resultMap>
+  </resultMaps>
+
+
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertDistributionRecord' parameterClass='FlowDistributionRecords'>
+      INSERT INTO FD_FlowDistributionRecords
+      (
+      DistributionRecordKey,
+      <isGreaterThan compareValue='0' prepend=' ' property='SysUserKey'>
+        SysUserKey,
+      </isGreaterThan>
+      CompanyFlowPacketKey,
+      MobilePhone,
+      OrderStatus,
+      OrderNo,
+      CreateTime,
+      UpdateTime,
+      Code,
+      Carrier,
+      ResultMsg,
+      BatchNo,
+      PushTo,
+      DistributionType,
+      BackUrl,
+      OrderType
+      )
+      VALUES
+      (
+      #DistributionRecordKey#,
+      <isGreaterThan compareValue='0' prepend=' ' property='SysUserKey'>
+        #SysUserKey#,
+      </isGreaterThan>
+      #CompanyFlowPacketKey#,
+      #MobilePhone#,
+      #OrderStatus#,
+      #OrderNo  #,
+      getdate(),
+      GetDate(),
+      #Code#,
+      #Carrier#,
+      #ResultMsg#,
+      #BatchNo#,
+      #PushTo#,
+      #DistributionType#,
+      #BackUrl#,
+      #OrderType#
+      )
+    </insert>
+
+
+    <update id='UpdateDistributionRecord' parameterClass='FlowDistributionRecords'>
+      UPDATE FD_FlowDistributionRecords
+      SET updatetime = getdate()
+      <isNotEmpty prepend=" ," property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+      <isNotEmpty prepend="," property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
+      <isNotEmpty prepend="," property="Carrier" >Carrier=#Carrier#</isNotEmpty>
+      <isNotEmpty prepend="," property="Code" >Code=#Code#</isNotEmpty>
+      <isNotEmpty prepend="," property="OrderNo" >OrderNo=#OrderNo#</isNotEmpty>
+      <isNotEmpty prepend="," property="PushTo" >PushTo=#PushTo#</isNotEmpty>
+      <isNotEmpty prepend="," property="PushToKey">PushToKey=#PushToKey#</isNotEmpty>
+      <isNotEmpty prepend="," property="DistributionType">DistributionType=#DistributionType#</isNotEmpty>
+      WHERE
+      [DistributionRecordKey] = #DistributionRecordKey#
+    </update>
+
+    <delete id='DeleteDistributionRecord' parameterClass='FlowDistributionRecords'>
+      DELETE FROM FD_FlowDistributionRecords
+      WHERE
+      [DistributionRecordKey] = #DistributionRecordKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectDistributionRecordList" parameterClass  ="FlowDistributionRecords"  resultMap="FlowDistributionRecordsResult"  >
+      <![CDATA[SELECT 
+         DistributionRecordKey,
+         SysUserKey,
+         CompanyFlowPacketKey,
+         MobilePhone,
+         OrderStatus,
+         OrderNo,
+        Code,
+      Carrier,
+         Carrier,
+         ResultMsg,  
+         CreateTime,
+         UpdateTime,
+      ResultMsg ,
+      BatchNo,PushTo,
+      PushToKey,
+      DistributionType,
+      BackUrl,
+      OrderType
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY CreateTime DESC) AS RowNumber,*
+          FROM FD_FlowDistributionRecords
+          WHERE 1=1
+          <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+          <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+          <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+          <isNotNull prepend="" property="SystemUserList" >
+            <iterate prepend="AND" property="SystemUserList"
+  open="(" close=")" conjunction="OR">
+              SysUserKey=#SystemUserList[]#
+            </iterate>
+          </isNotNull>
+
+          <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+            <![CDATA[Convert(varchar(100), CreateTime,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+          </isNotEmpty>
+          <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+            <![CDATA[Convert(varchar(100), CreateTime,25) <= Convert(varchar(100),convert(datetime,#EndTime#)+1,25)]]>
+          </isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_FlowDistributionRecords
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+        <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isNotNull prepend="" property="SystemUserList" >
+          <iterate prepend="AND" property="SystemUserList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SystemUserList[]#
+          </iterate>
+        </isNotNull>
+
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+      order by CreateTime desc
+    </select>
+
+    <select id="SelectDistributionRecordCount" parameterClass="FlowDistributionRecords" resultClass="int">
+      Select count(*)
+      FROM FD_FlowDistributionRecords
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+        <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+
+        <isNotNull prepend="" property="SystemUserList" >
+          <iterate prepend="AND" property="SystemUserList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SystemUserList[]#
+          </iterate>
+        </isNotNull>
+      </dynamic>
+    </select>
+
+    <select id="SelectDistributionRecordListForQueryBySysUserKey" parameterClass="FlowDistributionRecords"  resultMap="FlowDistributionRecords_Query"  >
+      <![CDATA[SELECT 
+         DistributionRecordKey,
+         SysUserKey,
+         CompanyFlowPacketKey,
+         MobilePhone,
+         OrderStatus,
+         OrderNo,        
+         ResultMsg,
+         BatchNo,
+         CreateTime
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY CreateTime DESC) AS RowNumber,*
+          FROM FD_FlowDistributionRecords
+          WHERE 1=1
+          <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+          <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+          <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+          <isNotNull prepend="" property="SystemUserList" >
+            <iterate prepend="AND" property="SystemUserList"
+  open="(" close=")" conjunction="OR">
+              SysUserKey=#SystemUserList[]#
+            </iterate>
+          </isNotNull>
+          <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+            <![CDATA[Convert(varchar(100), CreateTime,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+          </isNotEmpty>
+          <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+            <![CDATA[Convert(varchar(100), CreateTime,25) <= Convert(varchar(100),convert(datetime,#EndTime#)+1,25)]]>
+          </isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_FlowDistributionRecords
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+        <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isNotNull prepend="" property="SystemUserList" >
+          <iterate prepend="AND" property="SystemUserList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SystemUserList[]#
+          </iterate>
+        </isNotNull>
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+      order by CreateTime desc
+    </select>
+
+    <select id="SelectDistributionRecordByKey" parameterClass="FlowDistributionRecords"  resultMap="FlowDistributionRecordsResult">
+      Select
+      DistributionRecordKey,
+      SysUserKey,
+      CompanyFlowPacketKey,
+      MobilePhone,
+      OrderStatus,
+      OrderNo,
+      ResultMsg,
+      UpdateTime,
+      CreateTime,
+      ResultMsg,
+      BatchNo,
+      Code,
+      Carrier,
+      PushTo,
+      PushToKey,
+      DistributionType,
+      BackUrl,
+      OrderType
+      FROM FD_FlowDistributionRecords
+      WHERE DistributionRecordKey=#DistributionRecordKey#
+    </select>
+
+    <select id="SelectDistributionRecordByUserKey" parameterClass="FlowDistributionRecords"  resultMap="FlowDistributionRecordsResult">
+      Select
+      DistributionRecordKey,
+      SysUserKey,
+      CompanyFlowPacketKey,
+      MobilePhone,
+      OrderStatus,
+      OrderNo,
+      ResultMsg,
+      UpdateTime,
+      CreateTime,
+      Code,
+      Carrier,
+      ResultMsg,
+      BatchNo,
+      PushTo,
+      PushToKey,
+      DistributionType,
+      BackUrl,
+      OrderType
+      FROM FD_FlowDistributionRecords
+      WHERE SysUserKey=#SysUserKey#
+    </select>
+
+
+    <select id="SelectActiveTotalCount"  parameterClass="int"  resultClass="int">
+      select  count(DistributionRecordKey)
+      from FD_FlowDistributionRecords
+      where SysUserKey = #Value#
+    </select>
+
+    <select id="SelectActiveSussessCount"  parameterClass="int"  resultClass="int">
+      select  count(DistributionRecordKey)
+      from FD_FlowDistributionRecords
+      where SysUserKey = #Value# and OrderStatus='CG'
+    </select>
+
+    <select id="SelectActiveFaildCount"  parameterClass="int"  resultClass="int">
+      select  count(DistributionRecordKey)
+      from FD_FlowDistributionRecords
+      where SysUserKey = #Value# and OrderStatus='SB'
+    </select>
+
+    <select id="SelectActiveWaittingCount"  parameterClass="int"  resultClass="int">
+      select  count(DistributionRecordKey)
+      from FD_FlowDistributionRecords
+      where SysUserKey = #Value# and OrderStatus='OrderCommit'
+    </select>
+
+    <select id="SelectActiveCostCount"  parameterClass="int"  resultClass="int">
+      select  sum(sfp.Price)
+      from FD_FlowDistributionRecords fdbr
+      left join FD_SystemFlowPackets sfp on sfp.SystemFlowPacketKey = fdbr.CompanyFlowPacketKey
+      where fdbr.SysUserKey = #value#  and fdbr.OrderStatus !='SB'
+    </select>
+
+    <select id="SelectTransIdIsExistsCount"  parameterClass="string"  resultMap="FlowDistributionRecordsResult" >
+      Select DistributionRecordKey,
+      SysUserKey,
+      CompanyFlowPacketKey,
+      MobilePhone,
+      OrderStatus,
+      OrderNo,
+      ResultMsg,
+      UpdateTime,
+      CreateTime,
+      Code,
+      Carrier,
+      ResultMsg,
+      BatchNo,
+      PushTo,
+      PushToKey,
+      DistributionType,
+      BackUrl,
+      OrderType
+      FROM FD_FlowDistributionRecords
+      WHERE BatchNo=#Value#
+    </select>
+
+
+
+    <select id="SelectDistributionRecordForIntergalList" parameterClass  ="FlowDistributionRecords"  resultMap="FlowDistributionFeeResult"  >
+      <![CDATA[SELECT 
+         DistributionRecordKey,
+         SysUserKey,
+         CompanyFlowPacketKey,
+         MobilePhone,
+         OrderStatus,
+         OrderNo,
+        Code,
+      Carrier,
+         Carrier,
+         ResultMsg,  
+         CreateTime,
+         UpdateTime,
+      ResultMsg ,
+      BatchNo,PushTo,
+      PushToKey,
+      DistributionType,
+      BackUrl,
+      OrderType
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY CreateTime DESC) AS RowNumber,*
+          FROM FD_FlowDistributionRecords
+          WHERE 1=1
+          <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+          <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+          <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+          <isNotNull prepend="" property="SystemUserList" >
+            <iterate prepend="AND" property="SystemUserList"
+  open="(" close=")" conjunction="OR">
+              SysUserKey=#SystemUserList[]#
+            </iterate>
+          </isNotNull>
+
+          <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+            <![CDATA[Convert(varchar(100), CreateTime,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+          </isNotEmpty>
+          <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+            <![CDATA[Convert(varchar(100), CreateTime,25) <= Convert(varchar(100),convert(datetime,#EndTime#)+1,25)]]>
+          </isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_FlowDistributionRecords
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+        <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isNotNull prepend="" property="SystemUserList" >
+          <iterate prepend="AND" property="SystemUserList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SystemUserList[]#
+          </iterate>
+        </isNotNull>
+
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+      order by CreateTime desc
+    </select>
+
+    <select id="SelectDistributionRecordForIntergalCount" parameterClass="FlowDistributionRecords" resultClass="int">
+      Select count(*)
+      FROM FD_FlowDistributionRecords
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0" property="CompanyFlowPacketKey">CompanyFlowPacketKey=#CompanyFlowPacketKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+        <isNotEmpty  prepend="AND"  property="OrderNo">OrderNo=#OrderNo#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(date, CreateTime,25) <= Convert(date,convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+
+        <isNotNull prepend="" property="SystemUserList" >
+          <iterate prepend="AND" property="SystemUserList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SystemUserList[]#
+          </iterate>
+        </isNotNull>
+      </dynamic>
+    </select>
+
+  </statements>
+</sqlMap>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="SystemAccount" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="SystemAccount" type="MONO.Distribution.Model.Sys.SystemAccount,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_Company_AccountResult" class="SystemAccount">
+      <result property="CompanyAccountKey" column="CompanyAccountKey"/>
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="TotalAccount" column="TotalAccount"/>
+      <result property="LeftAccount" column="LeftAccount"/>
+      <result property="Bond" column="Bond"/>
+      <result property="OverDraft" column="OverDraft"/>
+      <result property="SystemUsers" column="SysUserKey" select="SelectSystemUserByKey" lazyLoad="false"/>
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id='Pro_SystemAccountParam' class='SystemAccount'>
+      <!--<parameter property="SysUserKey" column=""></parameter>
+      <parameter property="BB" column=""></parameter>
+      <parameter property="ChargeType" column=""></parameter>
+      <parameter property="OperId" column=""></parameter>
+      <parameter property="Content" column=""></parameter>
+      <parameter property="seq" column=""></parameter>-->
+    </parameterMap>
+  </parameterMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertSystemAccount' parameterClass='SystemAccount'>
+      INSERT INTO FD_System_Account
+      (
+      SysUserKey,
+      TotalAccount,
+      LeftAccount,
+      Bond,
+      OverDraft
+      )
+      VALUES
+      (
+      #SysUserKey#,
+      #TotalAccount#,
+      #LeftAccount#,
+      0,
+      2000
+      <selectKey property="CompanyAccountKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as int) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateSystemAccount' parameterClass='SystemAccount'>
+      UPDATE FD_System_Account
+      SET
+      TotalAccount = #TotalAccount# ,LeftAccount=#LeftAccount#
+      WHERE
+      [CompanyAccountKey] = #CompanyAccountKey#
+    </update>
+
+    <update id='UpdateSystemAccountForBond' parameterClass='SystemAccount'>
+      UPDATE FD_System_Account
+      SET Bond=#Bond#
+      WHERE
+      [CompanyAccountKey] = #CompanyAccountKey#
+    </update>
+
+    <update id='UpdateSystemAccountForDraft' parameterClass='SystemAccount'>
+      UPDATE FD_System_Account
+      SET OverDraft=#OverDraft#
+      WHERE
+      [CompanyAccountKey] = #CompanyAccountKey#
+    </update>
+
+    <delete id='DeleteSystemAccount' parameterClass='SystemAccount'>
+      DELETE FROM FD_System_Account
+      WHERE
+      [CompanyAccountKey] = #CompanyAccountKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectSystemAccountList" parameterClass="SystemAccount"   resultMap="FB_Company_AccountResult">
+      <![CDATA[SELECT 
+         CompanyAccountKey,
+         SysUserKey,
+      TotalAccount,
+      LeftAccount,
+      Bond,
+      OverDraft
+          ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY SysUserKey DESC) AS RowNumber,*
+          FROM FD_System_Account
+          WHERE 1=1
+          <isGreaterThan prepend="and" property="SysUserKey" compareValue="0">SysUserKey=#SysUserKey#</isGreaterThan>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_System_Account
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="and" property="SysUserKey" compareValue="0">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+
+    <select id="SelectSystemAccountCount" parameterClass="SystemAccount" resultClass="int">
+      Select count(*)
+      FROM FD_System_Account
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan prepend="and" property="SysUserKey" compareValue="0">SysUserKey=#SysUserKey#</isGreaterThan>
+
+      </dynamic>
+    </select>
+
+    <select id="SelectSystemAccountByKey" parameterClass="int" resultMap="FB_Company_AccountResult">
+      Select
+      CompanyAccountKey,
+      SysUserKey,
+      TotalAccount,
+      LeftAccount,
+      Bond,
+      OverDraft
+      FROM FD_System_Account
+      WHERE CompanyAccountKey=#CompanyAccountKey#
+    </select>
+
+    <select id="SelectSystemAccountByUserKey" parameterClass="SystemAccount" resultMap="FB_Company_AccountResult">
+      Select
+      CompanyAccountKey,
+      SysUserKey,
+      TotalAccount,
+      LeftAccount,
+      Bond,
+      OverDraft
+      FROM FD_System_Account
+      WHERE  SysUserKey = #SysUserKey#
+    </select>
+
+
+
+
+
+
+    <procedure id="ExecEnterpriseUserAcount" parameterMap="Pro_SystemAccountParam" resultClass='int' >
+      PRO_EnterpriseUserAcount
+    </procedure>
+
+    <procedure id="ExecUpdateCompanyAccount" parameterMap="Pro_SystemAccountParam" resultClass='int' >
+      PRO_UpdateCompanyAccount
+    </procedure>
+  </statements>
+</sqlMap>

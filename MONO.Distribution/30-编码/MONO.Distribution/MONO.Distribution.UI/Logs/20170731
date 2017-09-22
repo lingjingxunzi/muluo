@@ -1,0 +1,55 @@
+
+----------------------header--------------------------
+时间：2017-07-31 15:24:31,318 线程ID:[16644] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731152431&sig=534217004929CE33FCC7795F10DEC83D&orderid=42134
+时间：2017-07-31 15:24:31,389 线程ID:[16644] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:24:31,478 线程ID:[16644] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+时间：2017-07-31 15:24:31,511 线程ID:[16644] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgents.OrderQueryTrans property:[(null)][行号：94] - 错误描述：无法将类型为“System.Int32”的对象强制转换为类型“MONO.Distribution.Model.Agent.FlowDistributionRecords”。
+时间：2017-07-31 15:25:38,713 线程ID:[16828] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731152538&sig=3335AB37D4B63D94885229634E810426&orderid=42134
+时间：2017-07-31 15:25:48,202 线程ID:[16828] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:26:18,971 线程ID:[16828] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+时间：2017-07-31 15:26:32,598 线程ID:[16828] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgents.OrderQueryTrans property:[(null)][行号：94] - 错误描述：无法将类型为“System.Int32”的对象强制转换为类型“MONO.Distribution.Model.Agent.FlowDistributionRecords”。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-07-31 15:29:14,251 线程ID:[16376] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731152914&sig=38D32EFE2675C44D95F534F531FA19AE&orderid=42134
+时间：2017-07-31 15:29:14,268 线程ID:[16376] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:29:14,282 线程ID:[16376] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+时间：2017-07-31 15:30:28,455 线程ID:[16828] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731153028&sig=D5A691AD0C1906EEF04B1E59843A1CA4&orderid=20170522180818254
+时间：2017-07-31 15:30:28,460 线程ID:[16828] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:30:28,462 线程ID:[16828] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+时间：2017-07-31 15:31:28,376 线程ID:[15704] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731153128&sig=1F5F21FAEDB0E4C8D586E0619AE07973&orderid=20170522180818254
+时间：2017-07-31 15:31:28,378 线程ID:[15704] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:31:28,381 线程ID:[15704] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-07-31 15:32:12,649 线程ID:[15704] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731153212&sig=00FD7FB9A88263FF34CEF9D0409C5BE7&orderid=20170522180818254
+时间：2017-07-31 15:32:12,656 线程ID:[15704] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:32:12,664 线程ID:[15704] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+时间：2017-07-31 15:32:20,979 线程ID:[17272] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731153220&sig=B4E72C60F0B2A0E5EFB588311A5074B6&orderid=20170522180818254
+时间：2017-07-31 15:32:20,981 线程ID:[17272] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:32:20,983 线程ID:[17272] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+时间：2017-07-31 15:33:02,835 线程ID:[17272] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731153302&sig=6DF92BF66BF43688FFD5BF2963DE790E&orderid=20170522180818254
+时间：2017-07-31 15:33:11,642 线程ID:[17272] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:33:18,646 线程ID:[17272] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-07-31 15:38:18,808 线程ID:[15704] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731153818&sig=2EDBAEF453389538A04B9961E55FBFA8&orderid=20170522180818254
+时间：2017-07-31 15:38:18,828 线程ID:[15704] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:38:18,842 线程ID:[15704] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-07-31 15:57:15,413 线程ID:[8240] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731155711&sig=8FC0830691C41AC7CB0AB6113B9C103D&orderid=20170728101927723
+时间：2017-07-31 15:57:15,432 线程ID:[8240] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:57:15,606 线程ID:[8240] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+时间：2017-07-31 15:58:11,090 线程ID:[14840] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderquerytrans&userkey=Test_01&timestamp=20170731155811&sig=2EFFC8D32C75212F61205CBE3865C357&orderid=20170728101927723
+时间：2017-07-31 15:58:11,093 线程ID:[14840] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:
+时间：2017-07-31 15:58:11,095 线程ID:[14840] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：128] - 错误描述：FlowAgent:GetJsonData
+
+----------------------footer--------------------------

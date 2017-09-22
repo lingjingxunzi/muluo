@@ -1,0 +1,3 @@
+
+----------------------header--------------------------
+时间：2017-07-17 15:36:40,387 线程ID:[17756] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：31] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={"Code":0000,"Message":SUCCESS,"ExchangeId":CQWT00201707171519262654148599}&TransKey=qxcx20170717151930

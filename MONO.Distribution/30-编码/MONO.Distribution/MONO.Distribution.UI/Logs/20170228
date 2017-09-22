@@ -1,0 +1,10 @@
+
+----------------------header--------------------------
+时间：2017-02-28 09:42:13,795 线程ID:[3796] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2017-02-28 09:43:51,727 线程ID:[4196] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2017-02-28 09:45:18,751 线程ID:[9840] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-02-28 10:28:05,038 线程ID:[6616] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。

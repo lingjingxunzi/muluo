@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="CardSampler" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="CardSampler" type="MONO.Distribution.Model.Agent.CardSampler,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FD_CardSamplerResult" class="CardSampler">
+      <result property="CardSamplerKey" column="CardSamplerKey"/>
+      <result property="TransNo" column="TransNo"/>
+      <result property="FlowKey" column="FlowKey"/>
+      <!--<result property="Menus" column="FlowKey" select="SelectMenuByKey" lazyload="true"/>-->
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertCardSampler' parameterClass='CardSampler'>
+      INSERT INTO FD_CardSampler
+      (
+      TransNo,
+      FlowKey
+      )
+      VALUES
+      (
+      #TransNo#,
+      #FlowKey#
+      <selectKey property="CardSamplerKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as int) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateCardSampler' parameterClass='CardSampler'>
+      UPDATE FD_CardSampler
+      SET
+      <isGreaterThan prepend=" " compareValue="0" property="TransNo">TransNo=#TransNo#</isGreaterThan>
+      <isGreaterThan prepend="," compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+      WHERE
+      [CardSamplerKey] = #CardSamplerKey#
+    </update>
+
+    <delete id='DeleteCardSampler' parameterClass='CardSampler'>
+      DELETE FROM FD_CardSampler
+      WHERE
+      [CardSamplerKey] = #CardSamplerKey#
+    </delete>
+
+    <delete id='DeleteCardSamplerByTransNo' parameterClass='int'>
+      DELETE FROM FD_CardSampler
+      WHERE
+      [TransNo] = #Value#
+    </delete>
+
+
+
+    <!--动态查询语句-->
+    <select id="SelectCardSamplerList" parameterClass="CardSampler"   resultMap="FD_CardSamplerResult">
+      <![CDATA[SELECT 
+      CardSamplerKey,
+      TransNo,
+      FlowKey 
+       ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY CardSamplerKey DESC) AS RowNumber,*
+          FROM FD_CardSampler
+          WHERE 1=1
+          <isGreaterThan prepend="AND" compareValue="0" property="TransNo">TransNo=#TransNo#</isGreaterThan>
+          <isGreaterThan prepend="AND" compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_CardSampler
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="TransNo">TransNo=#TransNo#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectCardSamplerCount" parameterClass="CardSampler" resultClass="int">
+      Select count(*)
+      FROM FD_CardSampler
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="TransNo">TransNo=#TransNo#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectCardSamplerByTransNo" parameterClass="CardSampler" resultMap="FD_CardSamplerResult">
+      Select
+      CardSamplerKey,
+      TransNo,
+      FlowKey
+      FROM FD_CardSampler
+      WHERE TransNo = #TransNo#
+    </select>
+
+    <select id="SelectCardSamplerByKey" parameterClass="CardSampler" resultMap="FD_CardSamplerResult">
+      Select
+      CardSamplerKey,
+      TransNo,
+      FlowKey
+      FROM FD_CardSampler
+      WHERE CardSamplerKey = #CardSamplerKey#
+    </select>
+
+  </statements>
+</sqlMap>

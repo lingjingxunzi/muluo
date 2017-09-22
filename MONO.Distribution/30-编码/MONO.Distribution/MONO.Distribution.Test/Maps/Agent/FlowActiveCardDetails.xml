@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="FlowActiveCardDetails" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="FlowActiveCardDetails" type="MONO.Distribution.Model.Agent.FlowActiveCardDetails,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FlowActiveCardDetailsResult" class="FlowActiveCardDetails">
+      <result property="CardID" column="CardID"/>
+      <result property="TransNo" column="TransNo"/>
+      <result property="Serect" column="Serect"/>
+      <result property="Status" column="Status"/>
+      <result property="MobilePhone" column="MobilePhone"/>
+      <result property="FlowPakegeKey" column="FlowPakegeKey"/>
+      <result property="RechargeTime" column="RechargeTime"/>
+      <result property="FlowActiveCard" column="TransNo" select="SelectFlowActiveCardByKey" lazyLoad="false"/>
+    </resultMap>
+    <resultMap id="FlowActiveCardDetailsIntanceResult" class="FlowActiveCardDetails">
+      <result property="CardID" column="CardID"/>
+      <result property="TransNo" column="TransNo"/>
+      <result property="Serect" column="Serect"/>
+      <result property="Status" column="Status"/>
+      <result property="MobilePhone" column="MobilePhone"/>
+      <result property="FlowPakegeKey" column="FlowPakegeKey"/>
+      <result property="RechargeTime" column="RechargeTime"/>
+    </resultMap>
+  </resultMaps>
+
+
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertFlowCardDetail' parameterClass='FlowActiveCardDetails'>
+      INSERT INTO FD_FlowActiveCardDetails
+      (
+      CardID,
+      TransNo,
+      Serect,
+      Status
+      )
+      VALUES
+      (
+      #CardID#,
+      #TransNo#,
+      #Serect#,
+      #Status#
+      )
+    </insert>
+
+
+    <update id='UpdateFlowCardDetail' parameterClass='FlowActiveCardDetails'>
+      UPDATE FD_FlowActiveCardDetails
+      SET Status=#Status# ,RechargeTime=#RechargeTime#,MobilePhone=#MobilePhone#
+      <isGreaterThan compareValue="0"  prepend="," property="FlowPakegeKey">
+        FlowPakegeKey=#FlowPakegeKey#
+      </isGreaterThan>
+      WHERE
+      [CardID] = #CardID#
+    </update>
+
+    <delete id='DeleteFlowCardDetail' parameterClass='FlowActiveCardDetails'>
+      DELETE FROM FD_FlowActiveCardDetails
+      WHERE
+      [CardID] = #CardID#
+    </delete>
+
+
+    <!--动态查询语句-->
+    <select id="SelectFlowCardDetailList" parameterClass="FlowActiveCardDetails"  resultMap="FlowActiveCardDetailsResult">
+      <![CDATA[SELECT 
+        CardID,
+      TransNo,
+      Serect,
+      Status,
+      MobilePhone,
+      FlowPakegeKey,
+      RechargeTime
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY CardID DESC) AS RowNumber,
+          * FROM FD_FlowActiveCardDetails de
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="CardID">CardID=#CardID#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Serect"> Serect=#Serect#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Status"> Status=#Status#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="MobilePhone">MobilePhone=#MobilePhone#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="TransNo" >TransNo=#TransNo#</isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_FlowActiveCardDetails
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="CardID">CardID=#CardID#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Serect"> Serect=#Serect#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status"> Status=#Status#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="MobilePhone">MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="TransNo" >TransNo=#TransNo#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+
+    <select id="SelectFlowCardDetailCount" parameterClass="FlowActiveCardDetails" resultClass="int">
+      Select count(*)
+      FROM FD_FlowActiveCardDetails
+
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="CardID">CardID=#CardID#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Serect"> Serect=#Serect#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status"> Status=#Status#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="MobilePhone">MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="TransNo" >TransNo=#TransNo#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectFlowCardDetailByKey" parameterClass="FlowActiveCardDetails" resultMap="FlowActiveCardDetailsResult" >
+      SELECT
+      CardID,
+      TransNo,
+      Serect,
+      Status,
+      MobilePhone,
+      FlowPakegeKey,
+      RechargeTime
+      from FD_FlowActiveCardDetails
+      where CardID=#CardID#
+    </select>
+    <select id="SelectFlowCardDetailByParentKey" parameterClass="FlowActiveCardDetails" resultMap="FlowActiveCardDetailsIntanceResult" >
+      SELECT
+      CardID,
+      TransNo,
+      Serect,
+      Status,
+      MobilePhone,
+      FlowPakegeKey,
+      RechargeTime
+      from FD_FlowActiveCardDetails
+      where TransNo=#TransNo#
+    </select>
+
+
+  </statements>
+</sqlMap>

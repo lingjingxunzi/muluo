@@ -1,0 +1,138 @@
+
+----------------------header--------------------------
+时间：2016-07-13 10:29:01,162 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：36] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,lt20,20160713102554683&backurl=http://baidu.com&timestamp=20160713102554&sig=B9DC8D5D0021E719D1820B535B035B14
+时间：2016-07-13 10:29:01,204 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 10:29:17,983 线程ID:[7620] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：36] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,lt20,20160713102554683&backurl=http://baidu.com&timestamp=20160713102554&sig=B9DC8D5D0021E719D1820B535B035B14
+时间：2016-07-13 10:29:17,988 线程ID:[7620] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 10:29:29,178 线程ID:[3256] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：36] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,lt20,20160713102554683&backurl=http://baidu.com&timestamp=20160713102554&sig=B9DC8D5D0021E719D1820B535B035B14
+时间：2016-07-13 10:29:48,867 线程ID:[3256] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-13 10:30:33,972 线程ID:[7620] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：36] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,lt20,20160713102554683&backurl=http://baidu.com&timestamp=20160713102554&sig=B9DC8D5D0021E719D1820B535B035B14
+时间：2016-07-13 10:30:38,035 线程ID:[7620] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 10:30:55,578 线程ID:[7620] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:first
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-13 10:35:51,350 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：36] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,lt20,20160713103535166&backurl=http://baidu.com&timestamp=20160713103535&sig=608B28F3EA1AE094DDFC410DA12B6DE3
+时间：2016-07-13 10:35:51,371 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 10:35:51,533 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:first
+时间：2016-07-13 10:36:15,464 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：36] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,lt20,20160713103535166&backurl=http://baidu.com&timestamp=20160713103535&sig=608B28F3EA1AE094DDFC410DA12B6DE3
+时间：2016-07-13 10:36:18,947 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 10:36:22,111 线程ID:[7344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:first
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-13 10:48:53,493 线程ID:[8360] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=,,20160713104833993&backurl=http://baidu.com&timestamp=20160713104833&sig=E0E70E514C2778C714DEF40A70F1BD0A
+时间：2016-07-13 10:48:53,512 线程ID:[8360] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 10:48:53,656 线程ID:[8360] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:first
+时间：2016-07-13 10:48:53,660 线程ID:[8360] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 10:49:11,141 线程ID:[11152] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,lt20,20160713104902963&backurl=http://baidu.com&timestamp=20160713104902&sig=78CE5AC85F884CDB202B041F8E01A480
+时间：2016-07-13 10:49:11,148 线程ID:[11152] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 10:49:11,152 线程ID:[11152] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:first
+时间：2016-07-13 10:49:11,161 线程ID:[11152] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 10:51:12,768 线程ID:[10840] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-07-13 10:52:41,469 线程ID:[7332] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.Enumerations进行插入操作.
+时间：2016-07-13 11:25:36,917 线程ID:[12008] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-07-13 11:33:59,442 线程ID:[12120] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,CUQ000020,20160713113359409&backurl=http://baidu.com&timestamp=20160713113359&sig=105DF7099C5D2633971C7F32A771C4AE
+时间：2016-07-13 11:33:59,443 线程ID:[12120] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 11:33:59,447 线程ID:[12120] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:first
+时间：2016-07-13 11:33:59,573 线程ID:[12120] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-13 11:39:07,595 线程ID:[10328] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=first&phonecodestr=18523440973,CUQ000020,20160713113907485&backurl=http://baidu.com&timestamp=20160713113907&sig=7EDD54192D02DAC7ED59E9394A345A45
+时间：2016-07-13 11:39:07,621 线程ID:[10328] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 11:39:07,793 线程ID:[10328] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:first
+时间：2016-07-13 11:39:07,815 线程ID:[10328] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 11:39:22,703 线程ID:[10328] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=second&phonecodestr=18523440973,CUQ000020,20160713113922699&backurl=http://baidu.com&timestamp=20160713113922&sig=B27D0A49A46B1CC382C55C2B2D18B014
+时间：2016-07-13 11:39:22,710 线程ID:[10328] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 11:39:22,715 线程ID:[10328] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:second
+时间：2016-07-13 11:39:22,729 线程ID:[10328] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 11:39:58,669 线程ID:[4504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18523440973,CUQ000020,20160713113958665&backurl=http://baidu.com&timestamp=20160713113958&sig=4655D660AF47B8D670AFB687E5DFA599
+时间：2016-07-13 11:39:58,709 线程ID:[4504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 11:39:58,714 线程ID:[4504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:once
+时间：2016-07-13 11:39:58,729 线程ID:[4504] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 11:39:58,737 线程ID:[4504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：114] - 错误描述：sysUserkey：7
+时间：2016-07-13 11:39:58,738 线程ID:[4504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：115] - 错误描述：mobileStr:18523440973,12
+时间：2016-07-13 11:39:58,738 线程ID:[4504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：strTrans:20160713113958665
+时间：2016-07-13 11:39:58,752 线程ID:[4504] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：146] - 错误描述：未将对象引用设置到对象的实例。
+时间：2016-07-13 11:40:35,602 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18523440973,CUQ000020,20160713114030577&backurl=http://baidu.com&timestamp=20160713114030&sig=26D694521BD678216B0A8DBE0E50E3CD
+时间：2016-07-13 11:40:35,607 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：35] - 错误描述：ValidateInfo Start
+时间：2016-07-13 11:40:35,611 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：48] - 错误描述：ValidateInfo:once
+时间：2016-07-13 11:40:35,628 线程ID:[6468] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 11:40:41,920 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：114] - 错误描述：sysUserkey：7
+时间：2016-07-13 11:40:42,576 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：115] - 错误描述：mobileStr:18523440973,12
+时间：2016-07-13 11:40:43,326 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：strTrans:20160713114030577
+时间：2016-07-13 11:41:21,889 线程ID:[6468] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：146] - 错误描述：未将对象引用设置到对象的实例。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-13 11:41:50,471 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18523440973,CUQ000020,20160713114150406&backurl=http://baidu.com&timestamp=20160713114150&sig=8B7EC24D6372289A1767C973D906F3CF
+时间：2016-07-13 11:41:50,491 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：37] - 错误描述：ValidateInfo Start
+时间：2016-07-13 11:41:50,637 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：50] - 错误描述：ValidateInfo:once
+时间：2016-07-13 11:41:50,658 线程ID:[6468] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 11:41:50,660 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：sysUserkey：7
+时间：2016-07-13 11:41:50,661 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：117] - 错误描述：mobileStr:18523440973,12
+时间：2016-07-13 11:41:50,661 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：118] - 错误描述：strTrans:20160713114150406
+时间：2016-07-13 11:41:50,683 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-07-13 11:41:50,696 线程ID:[6468] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2016-07-13 11:47:47,997 线程ID:[7060] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-07-13 14:45:38,339 线程ID:[12516] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-07-13 14:59:29,978 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18382296446,CMQ000010,20160713145929967&backurl=http://baidu.com&timestamp=20160713145929&sig=25168E34A87B1869D74E49096130F31A
+时间：2016-07-13 14:59:29,984 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：37] - 错误描述：ValidateInfo Start
+时间：2016-07-13 14:59:29,988 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：50] - 错误描述：ValidateInfo:once
+时间：2016-07-13 14:59:30,006 线程ID:[12140] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 14:59:30,010 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：sysUserkey：7
+时间：2016-07-13 14:59:30,010 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：117] - 错误描述：mobileStr:18382296446,65
+时间：2016-07-13 14:59:30,010 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：118] - 错误描述：strTrans:20160713145929967
+时间：2016-07-13 14:59:30,029 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-07-13 14:59:30,193 线程ID:[12140] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2016-07-13 15:01:04,728 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18382296446,CMQ000010,20160713150101339&backurl=http://baidu.com&timestamp=20160713150101&sig=EFC8CF75B86FEA745202C3D2AB43B3DE
+时间：2016-07-13 15:01:04,734 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：37] - 错误描述：ValidateInfo Start
+时间：2016-07-13 15:01:04,737 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：50] - 错误描述：ValidateInfo:once
+时间：2016-07-13 15:01:04,744 线程ID:[12440] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 15:01:08,354 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：sysUserkey：7
+时间：2016-07-13 15:01:08,545 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：117] - 错误描述：mobileStr:18382296446,65
+时间：2016-07-13 15:01:09,050 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：118] - 错误描述：strTrans:20160713150101339
+时间：2016-07-13 15:01:59,820 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-07-13 15:01:59,822 线程ID:[12440] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-13 15:10:14,140 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18382296446,CMQ000010,20160713151014063&backurl=http://baidu.com&timestamp=20160713151014&sig=65941190C5FA608616DD7282CB8E87D9
+时间：2016-07-13 15:10:14,396 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：37] - 错误描述：ValidateInfo Start
+时间：2016-07-13 15:10:14,544 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：50] - 错误描述：ValidateInfo:once
+时间：2016-07-13 15:10:14,565 线程ID:[12888] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 15:10:14,569 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：115] - 错误描述：sysUserkey：7
+时间：2016-07-13 15:10:14,574 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：mobileStr:18382296446,65
+时间：2016-07-13 15:10:14,575 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：117] - 错误描述：strTrans:20160713151014063
+时间：2016-07-13 15:10:14,594 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-07-13 15:10:14,606 线程ID:[12888] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2016-07-13 15:11:43,687 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18382296446,CMQ000010,20160713151143682&backurl=http://baidu.com&timestamp=20160713151143&sig=44671F93FF1FA7A793CC9940F2F340A4
+时间：2016-07-13 15:11:43,693 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：37] - 错误描述：ValidateInfo Start
+时间：2016-07-13 15:11:43,698 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：50] - 错误描述：ValidateInfo:once
+时间：2016-07-13 15:11:43,707 线程ID:[10584] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 15:11:43,709 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：115] - 错误描述：sysUserkey：7
+时间：2016-07-13 15:11:43,709 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：mobileStr:18382296446,65
+时间：2016-07-13 15:11:43,709 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：117] - 错误描述：strTrans:20160713151143682
+时间：2016-07-13 15:11:43,719 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-07-13 15:11:43,723 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2016-07-13 15:13:11,432 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18382296446,CMQ000010,20160713151311421&backurl=http://baidu.com&timestamp=20160713151311&sig=EEE31048D403E448839422C7E65941BE
+时间：2016-07-13 15:13:11,438 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：37] - 错误描述：ValidateInfo Start
+时间：2016-07-13 15:13:11,442 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：50] - 错误描述：ValidateInfo:once
+时间：2016-07-13 15:13:11,485 线程ID:[10584] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-13 15:13:11,487 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：115] - 错误描述：sysUserkey：7
+时间：2016-07-13 15:13:11,488 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：mobileStr:18382296446,65
+时间：2016-07-13 15:13:11,488 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：117] - 错误描述：strTrans:20160713151311421
+时间：2016-07-13 15:13:11,504 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-07-13 15:13:11,510 线程ID:[10584] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+
+----------------------footer--------------------------

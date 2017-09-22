@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="BusinessIPBind" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="BusinessIPBind" type="MONO.Distribution.Model.Sys.BusinessIPBind,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_BusinessIPBindResult" class="BusinessIPBind">
+      <result property="IPKey" column="IPKey"/>
+      <result property="IP" column="IP"/>
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="CreateDate" column="CreateDate"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertBusinessIP' parameterClass='BusinessIPBind'>
+      INSERT INTO FB_BusinessIPBind
+      (
+      IP,
+      SysUserKey,
+      CreateDate
+      )
+      VALUES
+      (
+      #IP#,
+      #SysUserKey#,
+      getdate()
+      <selectKey property="IPKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as int) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateBusinessIP' parameterClass='BusinessIPBind'>
+      UPDATE FB_BusinessIPBind
+      SET IP=#IP#
+      <isGreaterThan prepend="," property="" compareValue="0">SysUserKey=#SysUserKey#</isGreaterThan>
+      WHERE [IPKey] = #IPKey#
+    </update>
+
+    <delete id='DeleteBusinessIP' parameterClass='BusinessIPBind'>
+      DELETE FROM FB_BusinessIPBind
+      WHERE
+      [IPKey] = #IPKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectBusinessIPList" parameterClass="BusinessIPBind"  resultMap="FB_BusinessIPBindResult">
+      <![CDATA[SELECT 
+      IPKey,
+      IP,
+      SysUserKey,
+      CreateDate 
+       ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY IPKey DESC) AS RowNumber,
+          * FROM FB_BusinessIPBind
+          WHERE 1=1
+          <isGreaterThan compareValue="0" prepend="AND" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="IP">IP=#IP#</isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FB_BusinessIPBind
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic>
+        <isGreaterThan compareValue="0" prepend="AND" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="IP">IP=#IP#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectBusinessIPCount" parameterClass="BusinessIPBind" resultClass="int">
+      Select count(*)
+      FROM FB_BusinessIPBind
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan compareValue="0" prepend="AND" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="IP">IP=#IP#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectBusinessIPByKey" parameterClass="BusinessIPBind" resultMap="FB_BusinessIPBindResult">
+      Select
+      IPKey,
+      IP,
+      SysUserKey,
+      CreateDate
+      FROM FB_BusinessIPBind
+      WHERE IPKey=#IPKey#
+    </select>
+
+    <select id="SelectBusinessIPByUserKey" parameterClass="BusinessIPBind" resultMap="FB_BusinessIPBindResult">
+      Select
+      IPKey,
+      IP,
+      SysUserKey,
+      CreateDate
+      FROM FB_BusinessIPBind
+      WHERE SysUserKey=#SysUserKey#
+    </select>
+  </statements>
+</sqlMap>
+

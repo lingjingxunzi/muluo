@@ -1,0 +1,41 @@
+
+----------------------header--------------------------
+时间：2016-06-16 11:26:13,598 线程ID:[9392] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-16 11:39:45,673 线程ID:[10996] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-16 11:48:36,302 线程ID:[9692] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-16 11:54:12,384 线程ID:[8556] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-06-16 11:54:34,594 线程ID:[9060] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【second01】发起登录操作。
+时间：2016-06-16 11:54:47,856 线程ID:[10632] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-06-16 11:55:15,626 线程ID:[8188] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.SystemUsers进行插入操作.
+时间：2016-06-16 11:55:36,973 线程ID:[10908] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【1121212】发起登录操作。
+时间：2016-06-16 11:55:48,308 线程ID:[10908] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.SystemUsers进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-16 11:57:15,700 线程ID:[8188] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【1121212】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-16 12:00:21,849 线程ID:[10436] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【1121212】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-16 12:00:57,376 线程ID:[10232] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【1121212】发起登录操作。
+时间：2016-06-16 12:01:28,895 线程ID:[10184] 日志级别：ERROR 出错类：MONO.Distribution.UIProcess.EditPageBase property:[(null)][行号：91] - 错误描述：流量包未选择
+
+----------------------footer--------------------------

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>赠送或激活</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="mobile-style.css">
+</head>
+<body>
+	<div class="mNavHgt">
+    </div>
+	<div class="main">
+		<div class="uNs">
+			<ul>
+				<li>电话号码：<i>18888888888</i></li>
+				<li>暂存流量：<i>20个</i></li>
+			</ul>
+        </div>
+        <div class="oTab mt10">
+            <table>
+            	<tr>
+            		<th>流量包</th>
+            		<th>过期日期</th>
+            		<th>来源</th>
+            		<th>操作</th>
+            	</tr>
+            	<tr>
+            		<td>全国.电信.5M</td>
+            		<td>2016-05-27</td>
+            		<td>交通银行</td>
+            		<td>
+            			<a class="give" onclick="showWin('转送')">转送</a>   
+            			<a class="act" onclick="showWin('激活')">激活</a>   
+            		</td>
+            	</tr>
+            	<tr>
+            		<td>全国.电信.5M</td>
+            		<td>2016-05-27</td>
+            		<td>交通银行</td>
+            		<td>
+            			<a>转送</a>   
+            			<a>激活</a>   
+            		</td>
+            	</tr>
+            	<tr>
+            		<td>全国.电信.5M</td>
+            		<td>2016-05-27</td>
+            		<td>交通银行</td>
+            		<td>
+            			<a>转送</a>   
+            			<a>激活</a>   
+            		</td>
+            	</tr>
+            	<tr>
+            		<td>全国.电信.5M</td>
+            		<td>2016-05-27</td>
+            		<td>交通银行</td>
+            		<td>
+            			<a>转送</a>   
+            			<a>激活</a>   
+            		</td>
+            	</tr>
+            </table>
+        </div>
+        <div class="mNavHgt">
+    	</div>
+        <div class="msMi">
+            <p class="mTi">
+                说明</p>
+            <p class="mt10 gray6">
+                1. 文字详情。<br />
+                2. 文字详情。<br />
+                3. 文字详情。<br />
+ 
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="layer.mobole.js"></script>
+<script type="text/javascript">
+	function showWin(msg) {
+
+	    //当DIV消息框存在时，先移除
+	    if ($(".uiMask").length !== 0 || $(".uiBox").length !== 0) {
+	        $(".uiMask").remove();
+	        $(".uiBox").remove();
+	    }
+
+	    var _div = "";
+	    _div += "<div class='uiMask'>";
+	    _div += "</div>";
+	    _div += "<div class='uiBox' style='width: 240px; margin: -100px 0 0 -120px'>";
+	    _div += "  <div class='uiCon'>";
+	    _div += "    <input type='text' placeholder='请输入电话号码'/>";
+	    _div += "    <p align='center'>";
+	    _div += "      <a  class='butnt btnm' onclick='closeWin()'>确定</a> ";
+	    _div += "      <a  class='butnt btnm2 ml5' onclick='closeWin()'>取消</a>";
+	    _div += "    </p>";
+	    _div += "  </div>";
+	    _div += "</div>";
+
+	    $(document.body).append(_div);
+	}
+	function closeWin(){
+	    $(".uiMask").remove();
+	    $(".uiBox").remove();
+	}
+</script>

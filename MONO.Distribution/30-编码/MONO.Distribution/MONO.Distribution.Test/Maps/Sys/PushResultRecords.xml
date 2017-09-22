@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PushResultRecords" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="PushResultRecords" type="MONO.Distribution.Model.Sys.PushResultRecords,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="PushResultRecordsResult" class="PushResultRecords">
+      <result property="PushResultRecordTempKey" column="PushResultRecordTempKey"/>
+      <result property="PushUrl" column="PushUrl"/>
+      <result property="Result" column="Result"/>
+      <result property="Msg" column="Msg"/>
+      <result property="OrderKey" column="OrderKey"/>
+    </resultMap>
+  </resultMaps>
+
+
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertPushResultRecords' parameterClass='PushResultRecords'>
+      INSERT INTO FD_PushResultRecords_Temp
+      (
+      PushResultRecordTempKey,
+      PushUrl,
+      Result,
+      Msg,
+      OrderKey,
+      CreateTime,
+      BatchNo
+      )
+      VALUES
+      (
+      #PushResultRecordTempKey#,
+      #PushUrl#,
+      #Result#,
+      #Msg#,
+      #OrderKey#,
+      Getdate(),
+      #BatchNo#
+      )
+    </insert>
+
+  </statements>
+</sqlMap>

@@ -1,0 +1,52 @@
+
+----------------------header--------------------------
+时间：2017-04-26 14:46:54,320 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-04-26 14:46:54,407 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-04-26 14:46:54,433 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-04-26 14:46:54,433 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-04-26 14:48:53,584 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CU023CallBack.aspx
+时间：2017-04-26 14:48:53,585 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：47] - 错误描述：GetJsonStr Start
+时间：2017-04-26 14:48:53,587 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：57] - 错误描述：
+时间：2017-04-26 14:48:53,587 线程ID:[12540] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：30] - 错误描述：
+时间：2017-04-26 14:52:36,749 线程ID:[13928] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CU023CallBack.aspx?{respCode:111,orderId:456,transNo:1123}
+时间：2017-04-26 14:52:36,750 线程ID:[13928] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：47] - 错误描述：GetJsonStr Start
+时间：2017-04-26 14:52:36,750 线程ID:[13928] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：57] - 错误描述：
+时间：2017-04-26 14:52:36,750 线程ID:[13928] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：30] - 错误描述：
+时间：2017-04-26 14:53:09,911 线程ID:[14020] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CU023CallBack.aspx?{"respCode":"111","orderId":"456","transNo":"1123"}
+时间：2017-04-26 14:53:09,912 线程ID:[14020] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：47] - 错误描述：GetJsonStr Start
+时间：2017-04-26 14:53:09,912 线程ID:[14020] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：57] - 错误描述：
+时间：2017-04-26 14:53:09,912 线程ID:[14020] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：30] - 错误描述：
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-04-26 14:55:19,728 线程ID:[9864] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-04-26 14:55:19,785 线程ID:[9864] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-04-26 14:55:19,785 线程ID:[9864] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-04-26 14:55:19,785 线程ID:[9864] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-04-26 14:55:22,347 线程ID:[12860] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：35] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=1123&serialNo=456&result=111&msg=111
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-04-26 16:18:40,732 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-04-26 16:18:40,749 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-04-26 16:18:40,749 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-04-26 16:18:40,749 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-04-26 16:18:51,720 线程ID:[13340] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CU023CallBack.aspx
+时间：2017-04-26 16:18:51,720 线程ID:[13340] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：47] - 错误描述：GetJsonStr Start
+时间：2017-04-26 16:18:51,721 线程ID:[13340] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：57] - 错误描述：
+时间：2017-04-26 16:18:51,721 线程ID:[13340] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：30] - 错误描述：
+时间：2017-04-26 16:18:51,721 线程ID:[13340] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：35] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=D-7519a9222df1345e&serialNo=1704261558252021&result=0&msg=0000
+时间：2017-04-26 16:20:01,670 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CU023CallBack.aspx
+时间：2017-04-26 16:20:01,671 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：47] - 错误描述：GetJsonStr Start
+时间：2017-04-26 16:20:01,671 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：57] - 错误描述：
+时间：2017-04-26 16:20:01,671 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：30] - 错误描述：
+时间：2017-04-26 16:20:01,671 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：35] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=D-7519a9222df1345e&serialNo=1704261558252021&result=0&msg=0000
+时间：2017-04-26 16:20:15,110 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CU023CallBack.aspx
+时间：2017-04-26 16:20:15,474 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：47] - 错误描述：GetJsonStr Start
+时间：2017-04-26 16:20:15,474 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：57] - 错误描述：
+时间：2017-04-26 16:20:15,943 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：30] - 错误描述：
+时间：2017-04-26 16:21:02,899 线程ID:[15172] 日志级别：INFO  出错类：OrderService.CallBack.CU023CallBack property:[(null)][行号：35] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=D-7519a9222df1345e&serialNo=1704261558252021&result=0&msg=0000
+
+----------------------footer--------------------------

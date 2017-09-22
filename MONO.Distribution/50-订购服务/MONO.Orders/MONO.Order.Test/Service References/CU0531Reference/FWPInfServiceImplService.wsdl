@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.service.wpip.bcinfo.com/" name="FWPInfServiceImplService" targetNamespace="http://impl.service.wpip.bcinfo.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://impl.service.wpip.bcinfo.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="hasOrderSucc" type="tns:hasOrderSucc" />
+      <xs:element name="hasOrderSuccResponse" type="tns:hasOrderSuccResponse" />
+      <xs:element name="orderSub" type="tns:orderSub" />
+      <xs:element name="orderSubResponse" type="tns:orderSubResponse" />
+      <xs:element name="setNewProductOrderServiceProxy" type="tns:setNewProductOrderServiceProxy" />
+      <xs:element name="setNewProductOrderServiceProxyResponse" type="tns:setNewProductOrderServiceProxyResponse" />
+      <xs:element name="setWoPlusServiceproxy" type="tns:setWoPlusServiceproxy" />
+      <xs:element name="setWoPlusServiceproxyResponse" type="tns:setWoPlusServiceproxyResponse" />
+      <xs:complexType name="orderSub">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:fwpOrderSubReq" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fwpOrderSubReq">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+              <xs:element name="productId" type="xs:int" />
+              <xs:element name="sendMessage" type="xs:int" />
+              <xs:element name="valid2G" type="xs:int" />
+              <xs:element name="valid3G" type="xs:int" />
+              <xs:element name="valid4G" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="channelCode" type="xs:string" />
+          <xs:element minOccurs="0" name="infMethodName" type="xs:string" />
+          <xs:element minOccurs="0" name="infUserName" type="xs:string" />
+          <xs:element minOccurs="0" name="infUserPwd" type="xs:string" />
+          <xs:element minOccurs="0" name="mediaInfo" type="xs:string" />
+          <xs:element minOccurs="0" name="memberId" type="xs:string" />
+          <xs:element minOccurs="0" name="memberPwd" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="paras" nillable="true" type="tns:para" />
+          <xs:element minOccurs="0" name="serialNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="para">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="paraId" type="xs:string" />
+          <xs:element minOccurs="0" name="paraValue" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderSubResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:fwpOrderSubResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fwpOrderSubResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="code" type="xs:string" />
+          <xs:element minOccurs="0" name="desc" type="xs:string" />
+          <xs:element minOccurs="0" name="mediaInfo" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="paras" nillable="true" type="tns:para" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="hasOrderSucc">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:fwpHasOrderSuccReq" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fwpHasOrderSuccReq">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:request">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="hasOrderSuccResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:fwpHasOrderSuccResp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fwpHasOrderSuccResp">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:response">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="hasOrder" type="xs:string" />
+              <xs:element minOccurs="0" name="mobile" type="xs:string" />
+              <xs:element name="netType" type="xs:int" />
+              <xs:element minOccurs="0" name="orderDesc" type="xs:string" />
+              <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+              <xs:element name="productId" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="setNewProductOrderServiceProxy">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:newProductOrderServiceProxy" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="newProductOrderServiceProxy">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endpoint" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setNewProductOrderServiceProxyResponse">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="setWoPlusServiceproxy">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:woPlusBSSGWServiceProxy" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="woPlusBSSGWServiceProxy">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endpoint" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setWoPlusServiceproxyResponse">
+        <xs:sequence />
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="setWoPlusServiceproxy">
+    <wsdl:part name="parameters" element="tns:setWoPlusServiceproxy" />
+  </wsdl:message>
+  <wsdl:message name="setWoPlusServiceproxyResponse">
+    <wsdl:part name="parameters" element="tns:setWoPlusServiceproxyResponse" />
+  </wsdl:message>
+  <wsdl:message name="hasOrderSucc">
+    <wsdl:part name="parameters" element="tns:hasOrderSucc" />
+  </wsdl:message>
+  <wsdl:message name="setNewProductOrderServiceProxyResponse">
+    <wsdl:part name="parameters" element="tns:setNewProductOrderServiceProxyResponse" />
+  </wsdl:message>
+  <wsdl:message name="setNewProductOrderServiceProxy">
+    <wsdl:part name="parameters" element="tns:setNewProductOrderServiceProxy" />
+  </wsdl:message>
+  <wsdl:message name="hasOrderSuccResponse">
+    <wsdl:part name="parameters" element="tns:hasOrderSuccResponse" />
+  </wsdl:message>
+  <wsdl:message name="orderSub">
+    <wsdl:part name="parameters" element="tns:orderSub" />
+  </wsdl:message>
+  <wsdl:message name="orderSubResponse">
+    <wsdl:part name="parameters" element="tns:orderSubResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FWPInfServiceImpl">
+    <wsdl:operation name="orderSub">
+      <wsdl:input name="orderSub" message="tns:orderSub" />
+      <wsdl:output name="orderSubResponse" message="tns:orderSubResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="hasOrderSucc">
+      <wsdl:input name="hasOrderSucc" message="tns:hasOrderSucc" />
+      <wsdl:output name="hasOrderSuccResponse" message="tns:hasOrderSuccResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setNewProductOrderServiceProxy">
+      <wsdl:input name="setNewProductOrderServiceProxy" message="tns:setNewProductOrderServiceProxy" />
+      <wsdl:output name="setNewProductOrderServiceProxyResponse" message="tns:setNewProductOrderServiceProxyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setWoPlusServiceproxy">
+      <wsdl:input name="setWoPlusServiceproxy" message="tns:setWoPlusServiceproxy" />
+      <wsdl:output name="setWoPlusServiceproxyResponse" message="tns:setWoPlusServiceproxyResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FWPInfServiceImplServiceSoapBinding" type="tns:FWPInfServiceImpl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="hasOrderSucc">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="hasOrderSucc">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hasOrderSuccResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderSub">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="orderSub">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="orderSubResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNewProductOrderServiceProxy">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setNewProductOrderServiceProxy">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setNewProductOrderServiceProxyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setWoPlusServiceproxy">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="setWoPlusServiceproxy">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setWoPlusServiceproxyResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FWPInfServiceImplService">
+    <wsdl:port name="FWPInfServiceImplPort" binding="tns:FWPInfServiceImplServiceSoapBinding">
+      <soap:address location="http://ll.17186.cn/inf/services/fwp" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

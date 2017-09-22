@@ -1,0 +1,12 @@
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Message\bin\Debug\MONO.Distribution.Message.dll
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Message\bin\Debug\MONO.Distribution.Message.pdb
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Message\obj\Debug\MONO.Distribution.Message.dll
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Message\obj\Debug\MONO.Distribution.Message.pdb
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Message\bin\Debug\MONO.Distribution.Message.dll.config
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Message\bin\Debug\MONO.Distribution.Message.dll.config
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Message\bin\Debug\MONO.Distribution.Message.dll
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Message\bin\Debug\MONO.Distribution.Message.pdb
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Message\obj\Debug\MONO.Distribution.Message.dll
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Message\obj\Debug\MONO.Distribution.Message.pdb
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Message\obj\Debug\MONO.Distribution.Message.csprojResolveAssemblyReference.cache
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Message\obj\Debug\MONO.Distribution.Message.csprojResolveAssemblyReference.cache

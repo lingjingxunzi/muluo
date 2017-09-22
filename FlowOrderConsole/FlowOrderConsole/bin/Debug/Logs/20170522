@@ -1,0 +1,50 @@
+
+----------------------header--------------------------
+时间：2017-05-22 18:07:07,203 线程ID:[13816] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-05-22 18:07:12,069 线程ID:[13816] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:07:12,220 线程ID:[14788] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-d40d670a911f2efc.txt
+时间：2017-05-22 18:07:20,544 线程ID:[14788] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：{"code":2002,"message":"productId 参数错误"}
+时间：2017-05-22 18:07:20,545 线程ID:[14788] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={"code":2002,"message":"productId 参数错误"}&TransKey=D-d40d670a911f2efc
+
+----------------------header--------------------------
+时间：2017-05-22 18:08:37,551 线程ID:[15936] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-05-22 18:08:44,823 线程ID:[15936] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:08:44,886 线程ID:[13164] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-a6d65828717abbdd.txt
+时间：2017-05-22 18:08:47,701 线程ID:[13164] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：{
+  "status" : "0006",
+  "msg" : "系统错误",
+  "sign" : "154caef9dad740be013c423fef33df98"
+}
+时间：2017-05-22 18:08:47,701 线程ID:[13164] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={
+  "status" : "0006",
+  "msg" : "系统错误",
+  "sign" : "154caef9dad740be013c423fef33df98"
+}&TransKey=D-a6d65828717abbdd
+时间：2017-05-22 18:08:54,831 线程ID:[15936] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:09:04,842 线程ID:[15936] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:09:11,037 线程ID:[13164] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-a6d65828717abbdd.txt
+时间：2017-05-22 18:09:15,046 线程ID:[15936] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:09:32,158 线程ID:[15936] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-05-22 18:11:40,500 线程ID:[14396] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-05-22 18:11:45,375 线程ID:[14396] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:11:45,430 线程ID:[15692] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-a6d65828717abbdd.txt
+时间：2017-05-22 18:11:58,816 线程ID:[14396] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:12:15,050 线程ID:[15692] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：{
+  "status" : "0001",
+  "msg" : "失败:请求交易的产品ID[158|0|0|10MB|0|*]与运营配置套餐不匹配",
+  "srvDateTime" : "20170522181158",
+  "termTransID" : "QXCX20170522181152",
+  "transID" : "F170522181158304",
+  "sign" : "3eae54eeaf0f3de4e566f4a06ba5f946"
+}
+时间：2017-05-22 18:12:15,765 线程ID:[14396] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-05-22 18:12:17,507 线程ID:[15692] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={
+  "status" : "0001",
+  "msg" : "失败:请求交易的产品ID[158|0|0|10MB|0|*]与运营配置套餐不匹配",
+  "srvDateTime" : "20170522181158",
+  "termTransID" : "QXCX20170522181152",
+  "transID" : "F170522181158304",
+  "sign" : "3eae54eeaf0f3de4e566f4a06ba5f946"
+}&TransKey=D-a6d65828717abbdd

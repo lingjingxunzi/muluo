@@ -1,0 +1,61 @@
+
+----------------------header--------------------------
+时间：2016-09-29 11:51:12,084 线程ID:[9156] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-29 12:20:33,213 线程ID:[10656] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-29 12:45:09,696 线程ID:[5804] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-29 13:18:52,876 线程ID:[11412] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-29 13:22:04,869 线程ID:[11412] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-09-29 13:38:29,654 线程ID:[5940] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：190] - 错误描述：再次发送订单为空，订单编号为：000d5513-0575-4be6-a288-3bff6e19510d
+时间：2016-09-29 13:38:48,834 线程ID:[5940] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：190] - 错误描述：再次发送订单为空，订单编号为：000d5513-0575-4be6-a288-3bff6e19510d
+时间：2016-09-29 13:39:22,052 线程ID:[11412] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：190] - 错误描述：再次发送订单为空，订单编号为：000d5513-0575-4be6-a288-3bff6e19510d
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-29 13:40:05,171 线程ID:[10568] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-09-29 13:44:00,574 线程ID:[9800] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：202] - 错误描述：再次发送回调地址：http://www.pettycoder.com/callback/flowcallback?orderId=000d5513-0575-4be6-a288-3bff6e19510d&result=SB&msg=充值失败&transNo=4014699507695736
+时间：2016-09-29 13:44:01,235 线程ID:[9800] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：204] - 错误描述：再次发送返回信息：
+时间：2016-09-29 13:44:25,847 线程ID:[9280] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：202] - 错误描述：再次发送回调地址：http://www.pettycoder.com/callback/flowcallback?orderId=000d5513-0575-4be6-a288-3bff6e19510d&result=SB&msg=充值失败&transNo=4014699507695736
+时间：2016-09-29 13:44:26,027 线程ID:[9280] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：204] - 错误描述：再次发送返回信息：
+时间：2016-09-29 13:44:44,997 线程ID:[9280] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：202] - 错误描述：再次发送回调地址：http://www.pettycoder.com/callback/flowcallback?orderId=000d5513-0575-4be6-a288-3bff6e19510d&result=SB&msg=充值失败&transNo=4014699507695736
+时间：2016-09-29 13:44:48,091 线程ID:[9280] 日志级别：INFO  出错类：MONO.Distribution.UI.CustomerManage.FlowOrderQueryList property:[(null)][行号：204] - 错误描述：再次发送返回信息：
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-29 14:33:53,598 线程ID:[8316] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-29 16:21:25,274 线程ID:[12328] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------

@@ -1,0 +1,12 @@
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Resources\bin\Debug\MONO.Distribution.Resources.dll
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Resources\bin\Debug\MONO.Distribution.Resources.pdb
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.Resource.resources
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.dll
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.pdb
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Resources\bin\Debug\MONO.Distribution.Resources.dll
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Resources\bin\Debug\MONO.Distribution.Resources.pdb
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.Resource.resources
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.dll
+C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.pdb
+E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Resources\obj\Debug\MONO.Distribution.Resources.csproj.GenerateResource.Cache

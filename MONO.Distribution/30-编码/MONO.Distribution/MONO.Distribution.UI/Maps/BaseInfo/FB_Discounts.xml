@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Discounts" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="Discounts" type="MONO.Distribution.Model.BaseInfo.Discounts,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="DiscountsResult" class="Discounts">
+      <result property="DiscountKey" column="DISCOUNTKEY"/>
+      <result property="Deduction" column="DEDUCTION"/>
+      <result property="Status" column="STATUS"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertDiscounts' parameterClass='Discounts'>
+      INSERT INTO FD_Discounts
+      (
+      DEDUCTION,
+      STATUS
+      )
+      VALUES
+      (
+      #Deduction#,
+      #Status#
+      <selectKey property="DiscountKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as bigint) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateDiscounts' parameterClass='Discounts'>
+      UPDATE FD_Discounts
+      SET
+      <isNotEmpty prepend=" " property="Deduction">DEDUCTION=#Deduction#</isNotEmpty>
+      <isNotEmpty prepend="," property="Status">STATUS=#Status#</isNotEmpty>
+      WHERE
+      [DiscountKey] = #DiscountKey#
+    </update>
+
+    <delete id='DeleteDiscounts' parameterClass='Discounts'>
+      DELETE FROM FD_Discounts
+      WHERE
+      [DiscountKey] = #DiscountKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectDiscountsList" parameterClass="Discounts"  resultMap="DiscountsResult">
+      <![CDATA[SELECT 
+      DISCOUNTKEY,
+      DEDUCTION,
+      STATUS 
+       ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY DiscountKey DESC) AS RowNumber,
+          * FROM FD_Discounts
+          WHERE 1=1
+          <isGreaterThan compareValue="0" prepend="AND" property="Deduction">DEDUCTION=#Deduction#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_Discounts
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic>
+        <isGreaterThan compareValue="0" prepend="AND" property="Deduction">DEDUCTION=#Deduction#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectDiscountsCount" parameterClass="Discounts" resultClass="int">
+      Select count(*)
+      FROM FD_Discounts
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan compareValue="0" prepend="AND" property="Deduction">DEDUCTION=#Deduction#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectDiscountsByKey" parameterClass="Discounts" resultMap="DiscountsResult">
+      Select
+      DISCOUNTKEY,
+      DEDUCTION,
+      STATUS
+      FROM FD_Discounts
+      WHERE DiscountKey=#DiscountKey#
+    </select>
+
+    <select id="SelectDiscountsByDeduction" parameterClass="Discounts" resultMap="DiscountsResult">
+      Select
+      DISCOUNTKEY,
+      DEDUCTION,
+      STATUS
+      FROM FD_Discounts
+      WHERE Deduction=#Deduction#
+    </select>
+  </statements>
+</sqlMap>

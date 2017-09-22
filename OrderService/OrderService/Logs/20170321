@@ -1,0 +1,129 @@
+
+----------------------header--------------------------
+时间：2017-03-21 11:56:07,808 线程ID:[11416] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-03-21 11:56:07,832 线程ID:[11416] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-03-21 11:56:07,879 线程ID:[11416] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-03-21 11:56:07,879 线程ID:[11416] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-03-21 12:03:35,839 线程ID:[12440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-03-21 12:03:35,854 线程ID:[12440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:03:35,854 线程ID:[12440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-03-21 12:03:35,854 线程ID:[12440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-03-21 12:05:48,774 线程ID:[12500] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/AggregationFjCallBack.aspx
+时间：2017-03-21 12:05:48,775 线程ID:[12500] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:05:48,776 线程ID:[12500] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：51] - 错误描述：5321541324
+时间：2017-03-21 12:05:48,776 线程ID:[12500] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：56] - 错误描述：5321541324
+时间：2017-03-21 12:05:48,776 线程ID:[12500] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：30] - 错误描述：5321541324
+时间：2017-03-21 12:06:18,435 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/AggregationFjCallBack.aspx
+时间：2017-03-21 12:06:18,435 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:06:18,435 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：51] - 错误描述：5321541324
+时间：2017-03-21 12:06:18,435 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：56] - 错误描述：5321541324
+时间：2017-03-21 12:06:18,435 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：30] - 错误描述：5321541324
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-03-21 12:11:08,639 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/AggregationFjCallBack.aspx
+时间：2017-03-21 12:11:08,657 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:11:08,657 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：51] - 错误描述：5321541324
+时间：2017-03-21 12:11:08,657 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：56] - 错误描述：5321541324
+时间：2017-03-21 12:11:08,658 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：30] - 错误描述：5321541324
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-03-21 12:13:15,357 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/AggregationFjCallBack.aspx
+时间：2017-03-21 12:13:15,372 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:13:15,372 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：51] - 错误描述：5321541324
+时间：2017-03-21 12:13:15,372 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：56] - 错误描述：5321541324
+时间：2017-03-21 12:13:15,372 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：30] - 错误描述：5321541324
+时间：2017-03-21 12:15:12,704 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-03-21 12:15:12,706 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:15:12,706 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-03-21 12:15:12,707 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-03-21 12:15:26,000 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/AggregationFjCallBack.aspx
+时间：2017-03-21 12:15:26,000 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:15:26,000 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：51] - 错误描述：5321541324
+时间：2017-03-21 12:15:26,000 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：56] - 错误描述：5321541324
+时间：2017-03-21 12:15:26,000 线程ID:[12716] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：30] - 错误描述：5321541324
+时间：2017-03-21 12:16:25,263 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CM023NewInterCallBack.aspx
+时间：2017-03-21 12:16:25,264 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：48] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:16:25,264 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：54] - 错误描述：5321541324
+时间：2017-03-21 12:16:25,264 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：59] - 错误描述：5321541324
+时间：2017-03-21 12:16:25,264 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：30] - 错误描述：5321541324
+时间：2017-03-21 12:18:06,128 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/CM023NewInterCallBack.aspx
+时间：2017-03-21 12:18:06,129 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：48] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:18:06,130 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：54] - 错误描述：5321541324
+时间：2017-03-21 12:18:06,130 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：59] - 错误描述：5321541324
+时间：2017-03-21 12:18:06,131 线程ID:[8388] 日志级别：INFO  出错类：OrderService.CallBack.CM023NewInterCallBack property:[(null)][行号：30] - 错误描述：5321541324
+时间：2017-03-21 12:18:51,338 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/AggregationFjCallBack.aspx
+时间：2017-03-21 12:18:51,338 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:18:51,338 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：51] - 错误描述：5321541324
+时间：2017-03-21 12:18:51,338 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：56] - 错误描述：5321541324
+时间：2017-03-21 12:18:51,338 线程ID:[7356] 日志级别：INFO  出错类：OrderService.CallBack.AggregationFjCallBack property:[(null)][行号：30] - 错误描述：5321541324
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-03-21 12:29:17,762 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-03-21 12:29:17,777 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:29:17,777 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-03-21 12:29:17,777 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-03-21 12:29:25,713 线程ID:[3208] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：38] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:29:25,714 线程ID:[3208] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：44] - 错误描述：5321541324
+时间：2017-03-21 12:29:25,714 线程ID:[3208] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：49] - 错误描述：5321541324
+时间：2017-03-21 12:29:25,714 线程ID:[3208] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：28] - 错误描述：5321541324
+时间：2017-03-21 12:31:52,714 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：38] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:31:52,715 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：44] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:31:52,715 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：49] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:31:52,716 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：28] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:31:52,733 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：30] - 错误描述：D-908393492b35bb36
+时间：2017-03-21 12:32:21,439 线程ID:[4176] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：38] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:32:21,440 线程ID:[4176] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：44] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:32:21,440 线程ID:[4176] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：49] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:32:21,440 线程ID:[4176] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：28] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:32:21,440 线程ID:[4176] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：30] - 错误描述：D-908393492b35bb36
+时间：2017-03-21 12:32:37,542 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：38] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:32:37,543 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：44] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:32:37,544 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：49] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:32:42,732 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：28] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:34:06,952 线程ID:[12528] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：30] - 错误描述：D-908393492b35bb36
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-03-21 12:36:36,846 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-03-21 12:36:36,900 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:36:36,901 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-03-21 12:36:36,902 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-03-21 12:36:56,388 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/FujanCMCallBackHandler.ashx
+时间：2017-03-21 12:36:56,389 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:36:56,390 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：51] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:36:56,390 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：56] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:36:56,390 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：31] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:36:56,391 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：33] - 错误描述：D-908393492b35bb36
+时间：2017-03-21 12:36:56,426 线程ID:[10540] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：35] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=D-908393492b35bb36&serialNo=&result=0034&msg=0034
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-03-21 12:37:36,396 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-03-21 12:37:36,412 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:37:36,412 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-03-21 12:37:36,412 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-03-21 12:37:50,306 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：28] - 错误描述：http://localhost:26683/CallBack/JHCMCallBackHandler.ashx
+时间：2017-03-21 12:37:50,307 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：45] - 错误描述：GetJsonStr Start
+时间：2017-03-21 12:37:50,308 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：51] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:37:50,308 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：56] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:37:50,308 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：31] - 错误描述：<request><head><custInteId>QXCX</custInteId><echo></echo><timestamp>20170321113353</timestamp><chargeSign>r6WLF2SDSAJ/8Lg44VF9tw==</chargeSign></head><body><item><orderId>D-908393492b35bb36</orderId><orderType>1</orderType><packCode>100010</packCode><mobile>13883593921</mobile><result>0034</result><desc>0034</desc></item></body></request>
+时间：2017-03-21 12:37:50,309 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：33] - 错误描述：D-908393492b35bb36
+时间：2017-03-21 12:37:50,309 线程ID:[8576] 日志级别：INFO  出错类：OrderService.CallBack.FujanCMCallBackHandler property:[(null)][行号：35] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=D-908393492b35bb36&serialNo=&result=0034&msg=0034
+
+----------------------footer--------------------------

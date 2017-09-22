@@ -1,0 +1,1 @@
+alter table fd_FlowDistributionRecords add BatchNo nvarchar(50);

@@ -1,0 +1,6 @@
+E:\WorkSpace\OrderService\OrderService\bin\OrderService.dll
+E:\WorkSpace\OrderService\OrderService\bin\OrderService.pdb
+E:\WorkSpace\OrderService\OrderService\bin\log4net.dll
+E:\WorkSpace\OrderService\OrderService\obj\Debug\OrderService.dll
+E:\WorkSpace\OrderService\OrderService\obj\Debug\OrderService.pdb
+E:\WorkSpace\OrderService\OrderService\obj\Debug\OrderService.csprojResolveAssemblyReference.cache

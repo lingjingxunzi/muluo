@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="SystemAccountLog" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="SystemAccountLog" type="MONO.Distribution.Model.Sys.SystemAccountLog,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="SystemAccountLogResult" class="SystemAccountLog">
+      <result property="AccountLogKey" column="AccountLogKey"/>
+      <result property="CompanyAccountKey" column="CompanyAccountKey"/>
+      <result property="OperaType" column="OperaType"/>
+      <result property="Integral" column="Integral"/>
+      <result property="OperaDate" column="OperaDate"/>
+      <result property="BeforeIntegral" column="BeforeIntegral"/>
+      <result property="AfterIntegral" column="AfterIntegral"/>
+      <result property="Seq" column="Seq"/>
+      <result property="SystemAccount" column="CompanyAccountKey" select ="SelectSystemAccountByKey" lazyLoad="false"/>
+      <result property="EnumType" column="OperaType" select="SelectEnumerationByKey" lazyLoad="false"/>
+    </resultMap>
+    <resultMap id="SystemAccountLogForIntegralResult" class="SystemAccountLog">
+      <result property="Integral" column="Integral"/>
+    </resultMap>
+  </resultMaps>
+  <!--动态sql语句-->
+  <statements>
+
+    <insert id='InsertAccountLog' parameterClass='SystemAccountLog'>
+      INSERT INTO FD_System_Account_Log_Temp
+      (
+      AccountLogTempKey,
+      CompanyAccountKey,
+      OperaType,
+      Integral,
+      OperaDate,
+      BeforeIntegral,
+      AfterIntegral ,
+      Seq
+      )
+      VALUES
+      (
+      #AccountLogKey#,
+      #CompanyAccountKey#,
+      #OperaType#,
+      #Integral#,
+      GetDate(),
+      #BeforeIntegral#,
+      #AfterIntegral#,
+      #Seq#
+      )
+    </insert>
+
+
+    <update id='UpdateAccountLog' parameterClass='SystemAccountLog'>
+      UPDATE FD_System_Account_Log
+      SET OperaDate=getdate()
+      <isGreaterThan prepend=","  compareValue="0" property="Integral">Integral=#Integral#</isGreaterThan>
+      <isGreaterThan prepend="," compareValue="0" property="BeforeIntegral">BeforeIntegral=#BeforeIntegral#</isGreaterThan>
+      <isGreaterThan prepend="," compareValue="0"  property="AfterIntegral">AfterIntegral=#AfterIntegral#</isGreaterThan>
+      WHERE
+      [AccountLogKey] = #AccountLogKey#
+    </update>
+
+    <delete id='DeleteAccountLog' parameterClass='SystemAccountLog'>
+      DELETE FROM FD_System_Account_Log
+      WHERE
+      [AccountLogKey] = #AccountLogKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectAccountLogList" parameterClass="SystemAccountLog"  resultMap="SystemAccountLogResult">
+      <![CDATA[SELECT 
+         AccountLogKey,
+         CompanyAccountKey,
+         OperaType,
+         Integral,
+         OperaDate,
+         BeforeIntegral,
+         AfterIntegral,
+         Seq
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY OperaDate DESC) AS RowNumber,*
+          FROM FD_System_Account_Log
+          WHERE 1=1
+          <isGreaterThan prepend="AND" compareValue="0" property="CompanyAccountKey">CompanyAccountKey=#CompanyAccountKey#</isGreaterThan>
+          <isGreaterThan prepend="AND"  compareValue="0" property="Integral">Integral=#Integral#</isGreaterThan>
+          <isGreaterThan prepend="AND"  compareValue="0"  property="BeforeIntegral">BeforeIntegral=#BeforeIntegral#</isGreaterThan>
+          <isGreaterThan prepend="AND"  compareValue="0"  property="AfterIntegral">AfterIntegral=#AfterIntegral#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="OperaType">OperaType=#OperaType#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Seq">Seq=#Seq#</isNotEmpty>
+          <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+            <![CDATA[Convert(varchar(100), OperaDate,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+          </isNotEmpty>
+          <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+            <![CDATA[Convert(varchar(100), OperaDate,25) <= Convert(varchar(100),convert(datetime,#EndTime#),25)]]>
+          </isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_System_Account_Log
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="CompanyAccountKey">CompanyAccountKey=#CompanyAccountKey#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0" property="Integral">Integral=#Integral#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0"  property="BeforeIntegral">BeforeIntegral=#BeforeIntegral#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0"  property="AfterIntegral">AfterIntegral=#AfterIntegral#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="OperaType">OperaType=#OperaType#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Seq">Seq=#Seq#</isNotEmpty>
+
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(varchar(100), OperaDate,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(varchar(100), OperaDate,25) <= Convert(varchar(100),convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+      order by OperaDate desc
+    </select>
+
+    <select id="SelectAccountLogCount" parameterClass="SystemAccountLog" resultClass="int">
+      Select count(*)
+      FROM FD_System_Account_Log
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="CompanyAccountKey">CompanyAccountKey=#CompanyAccountKey#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0" property="Integral">Integral=#Integral#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0"  property="BeforeIntegral">BeforeIntegral=#BeforeIntegral#</isGreaterThan>
+        <isGreaterThan prepend="AND"  compareValue="0"  property="AfterIntegral">AfterIntegral=#AfterIntegral#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="OperaType">OperaType=#OperaType#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Seq">Seq=#Seq#</isNotEmpty>
+
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(varchar(100), OperaDate,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(varchar(100), OperaDate,25) <= Convert(varchar(100),convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectAccountLogByKey" parameterClass="SystemAccountLog"  resultMap="SystemAccountLogResult">
+      Select
+      AccountLogKey,
+      CompanyAccountKey,
+      OperaType,
+      Integral,
+      OperaDate,
+      BeforeIntegral,
+      AfterIntegral,
+      Seq
+      FROM FD_System_Account_Log
+      WHERE AccountLogKey=#AccountLogKey#
+    </select>
+
+    <select id="SelectAccountLogByUserKey" parameterClass="SystemAccountLog"  resultMap="SystemAccountLogResult">
+      Select
+      AccountLogKey,
+      CompanyAccountKey,
+      OperaType,
+      Integral,
+      OperaDate,
+      BeforeIntegral,
+      AfterIntegral,
+      Seq
+      FROM FD_System_Account_Log
+      WHERE CompanyAccountKey=#CompanyAccountKey#
+    </select>
+    <select id="SelectAccountLogBySeq" parameterClass="SystemAccountLog"  resultMap="SystemAccountLogForIntegralResult">
+      Select
+      Integral
+      FROM FD_System_Account_Log
+      WHERE Seq=#Seq#
+    </select>
+
+
+
+  </statements>
+</sqlMap>

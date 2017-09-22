@@ -1,0 +1,32 @@
+
+----------------------header--------------------------
+时间：2016-09-05 09:48:52,016 线程ID:[8256] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2016-09-05 09:48:52,112 线程ID:[8256] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：74] - 错误描述：GetJsonStr Start
+时间：2016-09-05 09:48:52,112 线程ID:[8256] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：85] - 错误描述：
+时间：2016-09-05 09:48:52,112 线程ID:[8256] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2016-09-05 09:48:52,113 线程ID:[8256] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：74] - 错误描述：GetJsonStr Start
+时间：2016-09-05 09:48:52,113 线程ID:[8256] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：85] - 错误描述：
+时间：2016-09-05 09:48:52,124 线程ID:[8256] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：40] - 错误描述：值不能为 null。
+参数名: source
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-09-05 10:00:55,626 线程ID:[9092] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2016-09-05 10:00:55,701 线程ID:[9092] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：41] - 错误描述：值不能为 null。
+参数名: input
+时间：2016-09-05 10:01:05,506 线程ID:[7208] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx?data=[{ "TaskID": 652602, "Mobile": "15010316298", "Status": 4, "ReportTime": "2015-12-20 16:35:54.3", "ReportCode": "2:成功" }, { "TaskID": 652603, "Mobile": "15010316299", "Status": 5, "ReportTime": "2015-12-20 16:35:55.3", "ReportCode": "0:失败"}]
+时间：2016-09-05 10:01:05,507 线程ID:[7208] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：44] - 错误描述：FlowKey:OrderService.Models.CallBackModels.SxdCbResult
+时间：2016-09-05 10:01:05,507 线程ID:[7208] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：45] - 错误描述：OrderStatus:4
+
+----------------------header--------------------------
+时间：2016-09-05 10:02:48,225 线程ID:[9912] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2016-09-05 10:02:48,248 线程ID:[9912] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：33] - 错误描述：
+时间：2016-09-05 10:02:48,248 线程ID:[9912] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：42] - 错误描述：值不能为 null。
+参数名: input
+时间：2016-09-05 10:02:54,320 线程ID:[10440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx?data=[{ "TaskID": 652602, "Mobile": "15010316298", "Status": 4, "ReportTime": "2015-12-20 16:35:54.3", "ReportCode": "2:成功" }, { "TaskID": 652603, "Mobile": "15010316299", "Status": 5, "ReportTime": "2015-12-20 16:35:55.3", "ReportCode": "0:失败"}]
+时间：2016-09-05 10:02:54,321 线程ID:[10440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：33] - 错误描述：[{ "TaskID": 652602, "Mobile": "15010316298", "Status": 4, "ReportTime": "2015-12-20 16:35:54.3", "ReportCode": "2:成功" }, { "TaskID": 652603, "Mobile": "15010316299", "Status": 5, "ReportTime": "2015-12-20 16:35:55.3", "ReportCode": "0:失败"}]
+时间：2016-09-05 10:02:54,322 线程ID:[10440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：45] - 错误描述：FlowKey:OrderService.Models.CallBackModels.SxdCbResult
+时间：2016-09-05 10:02:54,322 线程ID:[10440] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：46] - 错误描述：OrderStatus:4
+
+----------------------footer--------------------------

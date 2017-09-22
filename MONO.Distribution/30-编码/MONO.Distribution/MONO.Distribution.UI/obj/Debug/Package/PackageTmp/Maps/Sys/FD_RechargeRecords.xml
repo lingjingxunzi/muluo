@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="RechargeRecords" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="RechargeRecords" type="MONO.Distribution.Model.Sys.RechargeRecords,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_RechargeRecordsResult" class="RechargeRecords">
+      <result property="RechargeKey" column="RechargeKey"/>
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="Amount" column="Amount"/>
+      <result property="PayDate" column="PayDate"/>
+      <result property="Status" column="Status"/>
+      <result property="OperatorId" column="OperatorId"/>
+      <result property="CostType" column="CostType"/>
+      <result property="Remark" column="Remark"/>
+      <result property="Seq" column="Seq"/>
+      <result property="RechargeTo" column="RechargeTo"/>
+      <result property="EnumStatus" column="Status" select="SelectEnumerationByKey" lazyLoad="false"/>
+      <result property="SystemUsers" column="SysUserKey" select="SelectSystemUserByKey" lazyLoad="false"/>
+      <result property="ToSystemUser" column="RechargeTo" select="SelectSystemUserByKey" lazyLoad="false"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertRechargeRecord' parameterClass='RechargeRecords'>
+      INSERT INTO FD_RECHARGERECORDS
+      (
+      RechargeKey,
+
+      SysUserKey,
+      Amount,
+      PayDate,
+      Status,
+      OperatorId,
+      CostType,
+      Seq,
+      Remark,
+      RechargeTo
+      )
+      VALUES
+      (
+      #RechargeKey#,
+
+      #SysUserKey#,
+      #Amount#,
+      GetDate(),
+      #Status#,
+      #OperatorId#,
+      #CostType#,
+      #Seq#,
+      #Remark#,
+      #RechargeTo#
+      )
+    </insert>
+
+
+    <update id='UpdateRechargeRecord' parameterClass='RechargeRecords'>
+      UPDATE FD_RECHARGERECORDS
+      SET Status=#Status#
+      WHERE
+      [RechargeKey] = #RechargeKey#
+    </update>
+
+    <delete id='DeleteRechargeRecord' parameterClass='RechargeRecords'>
+      DELETE FROM FD_RECHARGERECORDS
+      WHERE
+      [RechargeKey] = #RechargeKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectRechargeRecordList" parameterClass="RechargeRecords"  resultMap="FB_RechargeRecordsResult">
+      <![CDATA[SELECT 
+         RechargeKey,         
+         SysUserKey,
+         Amount,
+         PayDate,
+         Status,
+         OperatorId,
+         CostType,
+         Seq,
+         Remark ,
+         RechargeTo
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY PayDate DESC) AS RowNumber,*
+          FROM FD_RECHARGERECORDS
+          WHERE 1=1
+          <isGreaterThan prepend="AND"  compareValue="0" property="Amount">Amount=#Amount#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="Status">Status=#Status#</isNotEmpty>
+          <isNotEmpty prepend="AND"  property="OperatorId">OperatorId=#OperatorId#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="CostType">CostType=#CostType#</isNotEmpty>
+          <isEqual prepend="AND" property="IsAlipay" compareValue="1" >(AlipayStatus= 'YCL' or AlipayStatus is null)</isEqual>
+          <isNotEmpty prepend="AND" property="QueryMonth" > Convert(varchar(100), PayDate,25) like '%'+#QueryMonth#+'%'</isNotEmpty>
+          <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+            <![CDATA[Convert(varchar(100), PayDate,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+          </isNotEmpty>
+          <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+            <![CDATA[Convert(varchar(100), PayDate,25) <= Convert(varchar(100),convert(datetime,#EndTime#),25)]]>
+          </isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_RECHARGERECORDS
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND"  compareValue="0" property="Amount">Amount=#Amount#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Status">Status=#Status#</isNotEmpty>
+        <isGreaterThan prepend="AND"  compareValue="0"  property="OperatorId">OperatorId=#OperatorId#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="CostType">CostType=#CostType#</isNotEmpty>
+        <isEqual prepend="AND" property="IsAlipay" compareValue="1" >(AlipayStatus= 'YCL' or AlipayStatus is null)</isEqual>
+        <isNotEmpty prepend="AND" property="QueryMonth" > Convert(varchar(100), PayDate,25) like '%'+#QueryMonth#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(varchar(100), PayDate,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(varchar(100), PayDate,25) <= Convert(varchar(100),convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+      order by PayDate desc
+    </select>
+
+    <select id="SelectRechargeRecordCount" parameterClass="RechargeRecords" resultClass="int">
+      Select count(*)
+      FROM FD_RECHARGERECORDS
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="CostType">CostType=#CostType#</isNotEmpty>
+        <isGreaterThan prepend="AND"  compareValue="0" property="Amount">Amount=#Amount#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Status">Status=#Status#</isNotEmpty>
+        <isGreaterThan prepend="AND"  compareValue="0"  property="OperatorId">OperatorId=#OperatorId#</isGreaterThan>
+        <isEqual prepend="AND" property="IsAlipay" compareValue="1" >(AlipayStatus= 'YCL' or AlipayStatus is null)</isEqual>
+        <isNotEmpty prepend="AND" property="QueryMonth" > Convert(varchar(100), PayDate,25) like '%'+#QueryMonth#+'%'</isNotEmpty>
+
+        <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
+          <![CDATA[Convert(varchar(100), PayDate,25)>= Convert(varchar(100),convert(datetime,#StartTime#),25)]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" compareValue="1" property="EndTime">
+          <![CDATA[Convert(varchar(100), PayDate,25) <= Convert(varchar(100),convert(datetime,#EndTime#),25)]]>
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectRechargeRecordByKey" parameterClass="RechargeRecords"  resultMap="FB_RechargeRecordsResult">
+      Select
+      RechargeKey,
+      SysUserKey,
+      Amount,
+      PayDate,
+      Status,
+      OperatorId,
+      CostType,
+      Seq,
+      Remark,
+      RechargeTo
+      FROM FD_RECHARGERECORDS
+      WHERE Convert(nvarchar(50),RechargeKey)=Convert(nvarchar(50),#RechargeKey#)
+    </select>
+
+    <select id="SelectRechargeRecordByUserKey" parameterClass="RechargeRecords"  resultMap="FB_RechargeRecordsResult">
+      Select
+      RechargeKey,
+      SysUserKey,
+      Amount,
+      PayDate,
+      Status,
+      OperatorId,
+      CostType,
+      Seq,
+      Remark,
+      RechargeTo
+      FROM FD_RECHARGERECORDS
+      WHERE SysUserKey=#SysUserKey#
+    </select>
+
+    <select id="SelectRechargeRecordBySeq" parameterClass="RechargeRecords"  resultMap="FB_RechargeRecordsResult">
+      Select
+      RechargeKey,
+      SysUserKey,
+      Amount,
+      PayDate,
+      Status,
+      OperatorId,
+      CostType,
+      Seq,
+      Remark,
+      RechargeTo
+      FROM FD_RECHARGERECORDS
+      WHERE Seq=#Seq#
+    </select>
+
+
+  </statements>
+</sqlMap>

@@ -1,0 +1,12 @@
+
+----------------------header--------------------------
+时间：2017-03-01 10:26:55,030 线程ID:[3664] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={\"Result\":\"已提交\",\"Code\":\"0001\",\"SerialNum\":123456,\"SystemNum\":123456}&TransKey=123456
+时间：2017-03-01 10:27:21,722 线程ID:[11104] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={\"Result\":\"已提交\",\"Code\":\"0001\",\"SerialNum\":123456,\"SystemNum\":123456}&TransKey=123456
+时间：2017-03-01 10:28:26,597 线程ID:[11104] 日志级别：ERROR 出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：297] - 错误描述：传入的对象无效，应为“:”或“}”。 (2): {\"Result\":\"已提交\",\"Code\":\"0001\",\"SerialNum\":123456,\"SystemNum\":123456}字符串：{\"Result\":\"已提交\",\"Code\":\"0001\",\"SerialNum\":123456,\"SystemNum\":123456}
+时间：2017-03-01 10:28:37,374 线程ID:[10860] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={Result:已提交,Code:0001,SerialNum:123456,SystemNum:123456}&TransKey=123456
+时间：2017-03-01 10:28:38,778 线程ID:[10860] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：232] - 错误描述：{Result:已提交,Code:0001,SerialNum:123456,SystemNum:123456}
+时间：2017-03-01 10:30:29,903 线程ID:[10860] 日志级别：ERROR 出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：297] - 错误描述：无效的 JSON 基元: 已提交。字符串：{Result:已提交,Code:0001,SerialNum:123456,SystemNum:123456}
+时间：2017-03-01 10:30:46,897 线程ID:[5296] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={Result:"已提交",Code:"0001",SerialNum:"123456",SystemNum:"123456"}&TransKey=123456
+时间：2017-03-01 10:30:49,153 线程ID:[5296] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：232] - 错误描述：{Result:"已提交",Code:"0001",SerialNum:"123456",SystemNum:"123456"}
+
+----------------------footer--------------------------

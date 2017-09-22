@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MobileArea" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="MobileArea" type="MONO.Distribution.Model.BaseInfo.MobileArea,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="MobileAreaResult" class="MobileArea">
+      <result property="MobileAreaKey" column="MobileAreaKey"/>
+      <result property="MobileHead" column="MobileHead"/>
+      <result property="AreaCode" column="AreaCode"/>
+      <result property="AreaKey" column="AreaKey"/>
+      <result property="MobileAras" column="AreaKey" select="SelectAreaByKey" lazyLoad="false"></result>
+    </resultMap>
+
+
+  </resultMaps>
+
+
+  <parameterMaps>
+    <parameterMap id='Pro_GetFlowCodeParameter' class='MobileArea'>
+      <parameter property="mobile" column=""></parameter>
+      <parameter property="flowKey" column=""></parameter>
+    </parameterMap>
+    <parameterMap id='Pro_GetFromParameter' class='MobileArea'>
+      <parameter property="mobile" column=""></parameter>
+    </parameterMap>
+  </parameterMaps>
+
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertMobileArea' parameterClass='MobileArea'>
+      INSERT INTO FD_Mobile_Area
+      (
+      MobileHead,
+      AreaCode,
+      AreaKey
+      )
+      VALUES
+      (
+      #MobileHead#,
+      #AreaCode#,
+      #AreaKey#
+
+      <selectKey property="MobileAreaKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as bigint) AS MobileAreaKey </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateMobileArea' parameterClass='MobileArea'>
+      UPDATE FD_Mobile_Area
+      SET
+
+      <isNotNull prepend="," property="MobileHead">MobileHead=#MobileHead#</isNotNull>
+      <isNotNull prepend="," property="AreaCode">AreaCode=#AreaCode#</isNotNull>
+      <isNotNull prepend="," property="AreaKey">AreaKey=#AreaKey#</isNotNull>
+      WHERE
+      [MobileAreaKey] = #MobileAreaKey#
+    </update>
+
+    <delete id='DeleteMobileArea' parameterClass='MobileArea'>
+      DELETE FROM FD_Mobile_Area
+      WHERE
+      [MobileAreaKey] = #MobileAreaKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectMobileAreaList" parameterClass="MobileArea"   resultMap="MobileAreaResult">
+      <![CDATA[SELECT 
+         MobileAreaKey,
+         MobileHead,
+         AreaCode,
+         AreaKey 
+          ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY MobileAreaKey DESC) AS RowNumber,*
+          FROM FD_Mobile_Area
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="MobileHead">MobileHead=#MobileHead#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="AreaCode">AreaCode=#AreaCode#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="AreaKey">AreaKey=#AreaKey#</isNotEmpty>
+          )T
+        </isEqual>
+
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_Mobile_Area
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="MobileHead">MobileHead=#MobileHead#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="AreaCode">AreaCode=#AreaCode#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="AreaKey">AreaKey=#AreaKey#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectMobileAreaCount" parameterClass="MobileArea" resultClass="int">
+      Select count(*)
+      FROM FD_Mobile_Area
+      WHERE 1=1
+      <dynamic>
+        <isNotEmpty prepend="AND" property="MobileHead">MobileHead=#MobileHead#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="AreaCode">AreaCode=#AreaCode#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="AreaKey">AreaKey=#AreaKey#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id='SelectMobileAreaByKey' resultMap='MobileAreaResult' parameterClass='MobileArea'>
+      SELECT
+      MobileAreaKey,
+      MobileHead,
+      AreaCode,
+      AreaKey 
+      FROM FD_Mobile_Area
+      WHERE
+      [MobileAreaKey] = #MobileAreaKey#
+    </select>
+
+    <select id='SelectMobileAreaByHead' resultMap='MobileAreaResult' parameterClass='MobileArea'>
+      SELECT
+      MobileAreaKey,
+      MobileHead,
+      AreaCode,
+      AreaKey 
+      FROM FD_Mobile_Area
+      WHERE
+      [MobileHead] = #MobileHead#
+    </select>
+
+
+    <procedure id="ExecGetFlowCodeByMobile" parameterMap="Pro_GetFlowCodeParameter" resultClass='string' >
+      PROC_GetFlowCodeByMobile
+    </procedure>
+
+    <procedure id="ExecGetMobileFrom" parameterMap="Pro_GetFromParameter" resultClass='string' >
+      PRO_GetMobileFrom
+    </procedure>
+
+  </statements>
+</sqlMap>

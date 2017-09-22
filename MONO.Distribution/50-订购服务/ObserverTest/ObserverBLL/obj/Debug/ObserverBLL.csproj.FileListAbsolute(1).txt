@@ -1,0 +1,7 @@
+E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverBLL\bin\Debug\ObserverBLL.dll
+E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverBLL\bin\Debug\ObserverBLL.pdb
+E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverBLL\bin\Debug\ObserverOperates.dll
+E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverBLL\bin\Debug\ObserverOperates.pdb
+E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverBLL\obj\Debug\ObserverBLL.csprojResolveAssemblyReference.cache
+E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverBLL\obj\Debug\ObserverBLL.dll
+E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverBLL\obj\Debug\ObserverBLL.pdb

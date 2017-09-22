@@ -1,0 +1,271 @@
+
+----------------------header--------------------------
+时间：2017-09-12 17:58:20,908 线程ID:[13628] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 17:58:20,953 线程ID:[13628] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 17:58:21,019 线程ID:[12144] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-47f982a90d8d9cc1.txt
+时间：2017-09-12 17:58:36,155 线程ID:[12144] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 17:58:37,941 线程ID:[12144] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T17:58:36.439+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>f04746156f1afb90b7bf541de2c49b3cf64b2e4ec1e087c5eb5b7eed262126c3</Sign></Authorization></Request>
+时间：2017-09-12 17:58:38,175 线程ID:[12144] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 17:58:39,147 线程ID:[13628] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 17:58:39,758 线程ID:[12144] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：System.Net.WebException: 基础连接已经关闭: 发送时发生错误。 ---> System.IO.IOException: 无法从传输连接中读取数据: 远程主机强迫关闭了一个现有的连接。。 ---> System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   在 System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   在 System.Net.TlsStream.CallProcessAuthentication(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   在 System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.ConnectStream.WriteHeaders(Boolean async)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools.CM023NewAuthHttpPost(String url, String param) 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\Tools\RequestUrl\HttpWebRequestTools.cs:行号 273
+时间：2017-09-12 18:01:23,831 线程ID:[13628] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-09-12 18:20:04,337 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 18:20:04,364 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:20:14,663 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:20:24,690 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:20:34,703 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:20:44,711 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:20:46,261 线程ID:[11980] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-47f982a90d8d9cc1.txt
+时间：2017-09-12 18:20:57,100 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:20:57,101 线程ID:[11980] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 18:20:58,213 线程ID:[11980] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:20:57.288+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>8a9a0c56bf92c422d8c5341b69aa187fa887573c060ff4632f24007750087fd7</Sign></Authorization></Request>
+时间：2017-09-12 18:20:59,706 线程ID:[11980] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 18:21:08,547 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:21:19,679 线程ID:[8212] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:21:23,476 线程ID:[11980] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmbG93LXBsYXRmb3JtIiwiYXVkIjoiZjE2NDUzMGM2YjlkNDkwNWJmNTFlMzMxMDI2MmMzNGU6OjoiLCJleHAiOjE1MDUyMTM0Njh9.f9J_Oc38L2_jSj295jJodAV1ZH7sapXffRgCmyIEVLE
+时间：2017-09-12 18:21:26,469 线程ID:[11980] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：7cae973436af938d5e00bf58f097ce820586ddf0ef87f5e70f6521846ceacb96
+时间：2017-09-12 18:21:26,729 线程ID:[11980] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:20:57.288+08:00</Datetime><ChargeData><Mobile >13778704208</Mobile><ProductId >ACAZ28545</ProductId ><SerialNum>D-47f982a90d8d9cc2</SerialNum></ChargeData></Request>
+
+----------------------header--------------------------
+时间：2017-09-12 18:35:07,504 线程ID:[12500] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 18:35:07,528 线程ID:[12500] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:35:07,574 线程ID:[11028] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-47f982a90d8d9cc1.txt
+时间：2017-09-12 18:35:22,612 线程ID:[11028] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 18:35:24,364 线程ID:[11028] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:35:23.261+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>b07adb7d2799a35141c04000d1dd6a0fad8cab1085bb6a8a0d74cbb9468dd619</Sign></Authorization></Request>
+时间：2017-09-12 18:35:24,608 线程ID:[11028] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 18:35:31,002 线程ID:[12500] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:35:41,009 线程ID:[12500] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-09-12 18:35:59,965 线程ID:[14464] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 18:35:59,990 线程ID:[14464] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:36:00,016 线程ID:[15048] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-47f982a90d8d9cc1.txt
+时间：2017-09-12 18:36:07,571 线程ID:[15048] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 18:36:09,235 线程ID:[15048] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:36:07.804+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>0c1f37620dff353d9c9aa8c418be1b0c62eb9e28346801719ecc7af80f8c82a8</Sign></Authorization></Request>
+时间：2017-09-12 18:36:09,756 线程ID:[15048] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 18:36:16,004 线程ID:[14464] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:36:28,283 线程ID:[14464] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-09-12 18:43:31,389 线程ID:[15176] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 18:43:31,414 线程ID:[15176] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:43:39,591 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-47f982a90d8d9cc1.txt
+时间：2017-09-12 18:43:39,598 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 18:43:39,601 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:43:39.598+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>6f0f204836011621999b8824fc561527ff68374519a92aef89e34a3c8fcba7e5</Sign></Authorization></Request>
+时间：2017-09-12 18:43:39,601 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 18:43:41,237 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：System.Net.WebException: 基础连接已经关闭: 发送时发生错误。 ---> System.IO.IOException: 无法从传输连接中读取数据: 远程主机强迫关闭了一个现有的连接。。 ---> System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   在 System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   在 System.Net.TlsStream.CallProcessAuthentication(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   在 System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.ConnectStream.WriteHeaders(Boolean async)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools.CM023NewAuthHttpPost(String url, String param) 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\Tools\RequestUrl\HttpWebRequestTools.cs:行号 274
+时间：2017-09-12 18:43:41,237 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：System.Net.WebException: 基础连接已经关闭: 发送时发生错误。 ---> System.IO.IOException: 无法从传输连接中读取数据: 远程主机强迫关闭了一个现有的连接。。 ---> System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   在 System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   在 System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   在 System.Net.TlsStream.CallProcessAuthentication(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   在 System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.Net.ConnectStream.WriteHeaders(Boolean async)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools.CM023NewAuthHttpPost(String url, String param) 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\Tools\RequestUrl\HttpWebRequestTools.cs:行号 285
+   在 FlowOrderConsole.FlowAgents.CM028Request.GetToken() 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\FlowAgents\CM028Request.cs:行号 52
+时间：2017-09-12 18:43:41,237 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：
+时间：2017-09-12 18:43:41,237 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：解析字符串：
+时间：2017-09-12 18:43:41,238 线程ID:[13600] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={"Result":"提交失败","Code":"-1","SerialNum":"0","SystemNum":"0"}&TransKey=D-47f982a90d8d9cc2
+时间：2017-09-12 18:43:41,423 线程ID:[15176] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-09-12 18:45:27,714 线程ID:[6512] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 18:45:27,739 线程ID:[6512] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:45:27,774 线程ID:[14244] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 18:45:39,615 线程ID:[14244] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 18:45:41,541 线程ID:[14244] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:45:39.891+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>bfc5cac98bf1b4e3e927fd6a0f1c06390c45498df586636b6b2eedbcd475912f</Sign></Authorization></Request>
+时间：2017-09-12 18:45:41,775 线程ID:[14244] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 18:45:42,218 线程ID:[6512] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-09-12 18:48:36,600 线程ID:[13992] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 18:48:36,626 线程ID:[13992] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:48:36,659 线程ID:[15188] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 18:48:44,263 线程ID:[15188] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 18:48:44,266 线程ID:[15188] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:48:44.263+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>e373cb61c85224b413631691f7ff4b885e16931267eec58d0221ca27dae0bcbe</Sign></Authorization></Request>
+时间：2017-09-12 18:48:44,266 线程ID:[15188] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+
+----------------------header--------------------------
+时间：2017-09-12 18:51:53,000 线程ID:[13612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 18:51:53,041 线程ID:[13612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:51:53,111 线程ID:[268] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 18:52:02,946 线程ID:[268] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 18:52:04,297 线程ID:[268] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T18:52:03.158+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>ae4bd3850c80e4170b6c1a277241731b355703ce1f1a320015037b3288bf2ee2</Sign></Authorization></Request>
+时间：2017-09-12 18:52:04,473 线程ID:[268] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 18:52:09,010 线程ID:[13612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 18:52:25,243 线程ID:[13612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-09-12 19:09:29,711 线程ID:[1236] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 19:09:29,743 线程ID:[1236] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:09:29,795 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 19:09:39,096 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 19:09:40,781 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:09:39.298+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>eae181ce3fcbcbd23a7da8e59e45b4d5c6f79142f7cd31643c47dd0be6fb0462</Sign></Authorization></Request>
+时间：2017-09-12 19:09:41,112 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 19:09:48,370 线程ID:[1236] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:09:58,669 线程ID:[1236] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:10:13,857 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools property:[(null)][行号：290] - 错误描述：System.Net.WebException: 未能解析此远程名称: 'sc.4ggogo.com'
+   在 System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools.CM023NewAuthHttpPost(String url, String param) 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\Tools\RequestUrl\HttpWebRequestTools.cs:行号 274
+时间：2017-09-12 19:10:13,867 线程ID:[1236] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:10:13,920 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：System.Net.WebException: 未能解析此远程名称: 'sc.4ggogo.com'
+   在 System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools.CM023NewAuthHttpPost(String url, String param) 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\Tools\RequestUrl\HttpWebRequestTools.cs:行号 274
+时间：2017-09-12 19:10:13,945 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：System.Net.WebException: 未能解析此远程名称: 'sc.4ggogo.com'
+   在 System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools.CM023NewAuthHttpPost(String url, String param) 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\Tools\RequestUrl\HttpWebRequestTools.cs:行号 292
+   在 FlowOrderConsole.FlowAgents.CM028Request.GetToken() 位置 E:\WorkSpace\FlowOrderConsole\FlowOrderConsole\FlowAgents\CM028Request.cs:行号 52
+时间：2017-09-12 19:10:13,945 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：
+时间：2017-09-12 19:10:13,946 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：解析字符串：
+时间：2017-09-12 19:10:13,947 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={"Result":"提交失败","Code":"-1","SerialNum":"0","SystemNum":"0"}&TransKey=D-b5426f368e62d9d
+时间：2017-09-12 19:10:23,940 线程ID:[1236] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:10:29,396 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 19:10:32,972 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 19:10:34,751 线程ID:[1236] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:10:34,924 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:10:33.634+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>87f4622c2a424c042389c44d65137235213be50efcde3b8cd691400169c1742a</Sign></Authorization></Request>
+时间：2017-09-12 19:10:35,225 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 19:10:40,637 线程ID:[3868] 日志级别：INFO  出错类：FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools property:[(null)][行号：279] - 错误描述：SecurityProtocol:Tls
+
+----------------------header--------------------------
+时间：2017-09-12 19:15:27,427 线程ID:[12096] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 19:15:27,456 线程ID:[12096] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:15:27,556 线程ID:[8140] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 19:15:36,646 线程ID:[8140] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 19:15:38,410 线程ID:[8140] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:15:36.874+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>5cbb8ba56c5b6ea941ee77a2ff8b3ee161d22f6bb8b2bd0f086b85b3c6f53bfb</Sign></Authorization></Request>
+时间：2017-09-12 19:15:38,748 线程ID:[8140] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 19:15:39,265 线程ID:[12096] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:15:42,430 线程ID:[8140] 日志级别：INFO  出错类：FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools property:[(null)][行号：279] - 错误描述：SecurityProtocol:Ssl3
+
+----------------------header--------------------------
+时间：2017-09-12 19:36:18,533 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 19:36:18,560 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:36:28,693 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:36:38,723 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:36:48,729 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:36:58,736 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:37:08,744 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:37:18,758 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:37:28,766 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:37:38,777 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:37:48,808 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:37:58,840 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:38:03,210 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 19:38:03,214 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 19:38:03,215 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:38:03.214+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>c93caec651c0ebab40b1a0938c3342da670601fc3fd19ebd43f591029eecd2ac</Sign></Authorization></Request>
+时间：2017-09-12 19:38:03,215 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 19:38:07,604 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools property:[(null)][行号：279] - 错误描述：SecurityProtocol:Tls12
+时间：2017-09-12 19:38:07,897 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmbG93LXBsYXRmb3JtIiwiYXVkIjoiZjE2NDUzMGM2YjlkNDkwNWJmNTFlMzMxMDI2MmMzNGU6OjoiLCJleHAiOjE1MDUyMTgwODd9.INSwR9W-gE3Iwlm6f-KnT8gV4fhrVC3L0TkYqv1NJpw
+时间：2017-09-12 19:38:07,897 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：b994be581b8ba1b39afa68a9f6062e0c20ee265435911d9fc0fbcbfe0ed2702f
+时间：2017-09-12 19:38:07,897 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:38:03.214+08:00</Datetime><ChargeData><Mobile >13778704208</Mobile><ProductId >ACAZ28545</ProductId ><SerialNum>D-b5426f368e62d9d</SerialNum></ChargeData></Request>
+时间：2017-09-12 19:38:08,167 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Response>
+  <Datetime>2017-09-12T19:38:07.289+08:00</Datetime>
+  <ChargeData>
+    <SerialNum>D-b5426f368e62d9d</SerialNum>
+    <SystemNum>6313334694456135680</SystemNum>
+  </ChargeData>
+</Response>
+时间：2017-09-12 19:38:08,168 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：解析字符串：<Response>
+  <Datetime>2017-09-12T19:38:07.289+08:00</Datetime>
+  <ChargeData>
+    <SerialNum>D-b5426f368e62d9d</SerialNum>
+    <SystemNum>6313334694456135680</SystemNum>
+  </ChargeData>
+</Response>
+时间：2017-09-12 19:38:08,168 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={"Result":"已提交","Code":"0001","SerialNum":"D-b5426f368e62d9d","SystemNum":"6313334694456135680"}&TransKey=D-b5426f368e62d9d
+时间：2017-09-12 19:38:08,853 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:38:18,874 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:38:28,892 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:38:30,784 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 19:38:30,785 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 19:38:30,785 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:38:30.785+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>a9ed9a1c2476584a1cbfba85007ce4ddbdacf74bc77fb8068c04f8cdd93841f3</Sign></Authorization></Request>
+时间：2017-09-12 19:38:30,785 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 19:38:30,821 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.Tools.RequestUrl.HttpWebRequestTools property:[(null)][行号：279] - 错误描述：SecurityProtocol:Tls12
+时间：2017-09-12 19:38:31,021 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJmbG93LXBsYXRmb3JtIiwiYXVkIjoiZjE2NDUzMGM2YjlkNDkwNWJmNTFlMzMxMDI2MmMzNGU6OjoiLCJleHAiOjE1MDUyMTgxMTB9.zTVm3pvuaNWEmcRsz2gzm0Q6WBIV8LDYt-k7K86U70JLnlaj28RVKKUAcntt1YIh-XmUSEXO-kLmvy0fL-3zRg
+时间：2017-09-12 19:38:31,022 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：2d7d9090b4ccdd388ab77c06ddaa62c4fe4e82eec899fa09be457ac7d9343f49
+时间：2017-09-12 19:38:31,022 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:38:30.785+08:00</Datetime><ChargeData><Mobile >13778704208</Mobile><ProductId >ACAZ28545</ProductId ><SerialNum>D-b5426f368e62d9d</SerialNum></ChargeData></Request>
+时间：2017-09-12 19:38:31,301 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Response>
+  <Datetime>2017-09-12T19:38:30.423+08:00</Datetime>
+  <ChargeData>
+    <SerialNum>D-b5426f368e62d9d</SerialNum>
+    <SystemNum>6313334791457804288</SystemNum>
+  </ChargeData>
+</Response>
+时间：2017-09-12 19:38:31,301 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：解析字符串：<Response>
+  <Datetime>2017-09-12T19:38:30.423+08:00</Datetime>
+  <ChargeData>
+    <SerialNum>D-b5426f368e62d9d</SerialNum>
+    <SystemNum>6313334791457804288</SystemNum>
+  </ChargeData>
+</Response>
+时间：2017-09-12 19:38:31,301 线程ID:[15612] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={"Result":"已提交","Code":"0001","SerialNum":"D-b5426f368e62d9d","SystemNum":"6313334791457804288"}&TransKey=D-b5426f368e62d9d
+时间：2017-09-12 19:38:38,917 线程ID:[13536] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+
+----------------------header--------------------------
+时间：2017-09-12 19:39:17,144 线程ID:[15240] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
+时间：2017-09-12 19:39:17,170 线程ID:[15240] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
+时间：2017-09-12 19:39:17,190 线程ID:[15844] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-b5426f368e62d9b.txt
+时间：2017-09-12 19:39:26,947 线程ID:[15844] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：GetToken:
+时间：2017-09-12 19:39:28,873 线程ID:[15844] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：<Request><Datetime>2017-09-12T19:39:27.237+08:00</Datetime><Authorization><AppKey>f164530c6b9d4905bf51e3310262c34e</AppKey><Sign>fe18342ab4ebedf5e6b29cdf54437a63f70eb198f25267d1551a70d07446d29a</Sign></Authorization></Request>
+时间：2017-09-12 19:39:29,462 线程ID:[15844] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：https://sc.4ggogo.com/web-in/auth.html
+时间：2017-09-12 19:39:31,806 线程ID:[15240] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....

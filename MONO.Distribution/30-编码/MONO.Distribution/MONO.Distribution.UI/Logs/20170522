@@ -1,0 +1,84 @@
+
+----------------------header--------------------------
+时间：2017-05-22 17:58:18,136 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=Test_01&phonecodestr=18349291967,CMQ000010,20170522175818019&backurl=http://baidu.com&timestamp=20170522175818&sig=77A097A8339A9D90E5D2FDB2BCD64131
+时间：2017-05-22 17:58:18,172 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:http://baidu.com
+时间：2017-05-22 17:58:18,173 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：40] - 错误描述：ValidateInfo Start
+时间：2017-05-22 17:58:18,187 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：53] - 错误描述：ValidateInfo:Test_01
+时间：2017-05-22 17:58:39,986 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：32] - 错误描述：商户IP：127.0.0.1
+时间：2017-05-22 17:58:42,240 线程ID:[14504] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：103] - 错误描述：Unable to open connection to "".
+时间：2017-05-22 17:58:43,453 线程ID:[14504] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：119] - 错误描述：FlowAgent:GetJsonData
+时间：2017-05-22 17:59:18,851 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=Test_01&phonecodestr=18349291967,CMQ000010,20170522175918759&backurl=http://baidu.com&timestamp=20170522175918&sig=A7171875E6238DF1F4370D2E9D32D4BF
+时间：2017-05-22 17:59:18,852 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:http://baidu.com
+时间：2017-05-22 17:59:18,852 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：40] - 错误描述：ValidateInfo Start
+时间：2017-05-22 17:59:18,858 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：53] - 错误描述：ValidateInfo:Test_01
+时间：2017-05-22 17:59:22,403 线程ID:[14504] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：32] - 错误描述：商户IP：127.0.0.1
+时间：2017-05-22 17:59:51,151 线程ID:[14504] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：119] - 错误描述：FlowAgent:GetJsonData
+时间：2017-05-22 18:00:18,532 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=Test_01&phonecodestr=18349291967,CMQ000010,20170522180018528&backurl=http://baidu.com&timestamp=20170522180018&sig=97C0D9439FF3DA7F8BFAB129575BC969
+时间：2017-05-22 18:00:18,534 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:http://baidu.com
+时间：2017-05-22 18:00:18,534 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：40] - 错误描述：ValidateInfo Start
+时间：2017-05-22 18:00:18,536 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：53] - 错误描述：ValidateInfo:Test_01
+时间：2017-05-22 18:00:18,536 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：32] - 错误描述：商户IP：127.0.0.1
+时间：2017-05-22 18:00:18,542 线程ID:[15116] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：119] - 错误描述：FlowAgent:GetJsonData
+时间：2017-05-22 18:00:18,544 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：118] - 错误描述：sysUserkey：2
+时间：2017-05-22 18:00:18,545 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：119] - 错误描述：mobileStr:18349291967,5
+时间：2017-05-22 18:00:18,545 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：120] - 错误描述：strTrans:20170522180018528
+时间：2017-05-22 18:00:18,628 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2017-05-22 18:00:18,630 线程ID:[15116] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2017-05-22 18:01:05,596 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=Test_01&phonecodestr=18349291967,CMQ000010,20170522180105594&backurl=http://baidu.com&timestamp=20170522180105&sig=EB7F9FD1D00E69D0E49E1BFBEF5C8622
+时间：2017-05-22 18:01:05,600 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:http://baidu.com
+时间：2017-05-22 18:01:05,601 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：40] - 错误描述：ValidateInfo Start
+时间：2017-05-22 18:01:05,604 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：53] - 错误描述：ValidateInfo:Test_01
+时间：2017-05-22 18:01:12,139 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：32] - 错误描述：商户IP：127.0.0.1
+时间：2017-05-22 18:01:15,507 线程ID:[12344] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：119] - 错误描述：FlowAgent:GetJsonData
+时间：2017-05-22 18:01:16,418 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：118] - 错误描述：sysUserkey：2
+时间：2017-05-22 18:01:16,418 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：119] - 错误描述：mobileStr:18349291967,5
+时间：2017-05-22 18:01:16,418 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：120] - 错误描述：strTrans:20170522180105594
+时间：2017-05-22 18:01:49,093 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2017-05-22 18:01:49,094 线程ID:[12344] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-05-22 18:05:38,946 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=Test_01&phonecodestr=18349291967,CMQ000010,20170522180538926&backurl=http://baidu.com&timestamp=20170522180538&sig=7A7886085ABE5F500F3A2EF01B612EC3
+时间：2017-05-22 18:05:39,023 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:http://baidu.com
+时间：2017-05-22 18:05:39,024 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：40] - 错误描述：ValidateInfo Start
+时间：2017-05-22 18:05:39,138 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：53] - 错误描述：ValidateInfo:Test_01
+时间：2017-05-22 18:05:39,139 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：32] - 错误描述：商户IP：127.0.0.1
+时间：2017-05-22 18:05:39,173 线程ID:[13592] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：119] - 错误描述：FlowAgent:GetJsonData
+时间：2017-05-22 18:05:39,176 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：118] - 错误描述：sysUserkey：2
+时间：2017-05-22 18:05:39,177 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：119] - 错误描述：mobileStr:18349291967,5
+时间：2017-05-22 18:05:39,177 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：120] - 错误描述：strTrans:20170522180538926
+时间：2017-05-22 18:05:39,378 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2017-05-22 18:05:39,391 线程ID:[13592] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2017-05-22 18:08:18,264 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=Test_01&phonecodestr=18349291967,CMQ000010,20170522180818254&backurl=http://baidu.com&timestamp=20170522180818&sig=F022F418C0733026AA75798FD31FD36E
+时间：2017-05-22 18:08:18,272 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：48] - 错误描述：url:http://baidu.com
+时间：2017-05-22 18:08:18,273 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：40] - 错误描述：ValidateInfo Start
+时间：2017-05-22 18:08:18,276 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：53] - 错误描述：ValidateInfo:Test_01
+时间：2017-05-22 18:08:18,276 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：32] - 错误描述：商户IP：127.0.0.1
+时间：2017-05-22 18:08:18,284 线程ID:[15052] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：119] - 错误描述：FlowAgent:GetJsonData
+时间：2017-05-22 18:08:18,285 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：118] - 错误描述：sysUserkey：2
+时间：2017-05-22 18:08:18,285 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：119] - 错误描述：mobileStr:18349291967,5
+时间：2017-05-22 18:08:18,285 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：120] - 错误描述：strTrans:20170522180818254
+时间：2017-05-22 18:08:18,377 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+时间：2017-05-22 18:08:18,377 线程ID:[15052] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：49] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2017-05-22 18:13:14,849 线程ID:[14840] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：31] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={  "status" : "0001",  "msg" : "失败:请求交易的产品ID[158|0|0|10MB|0|*]与运营配置套餐不匹配",  "srvDateTime" : "20170522181158",  "termTransID" : "QXCX20170522181152",  "transID" : "F170522181158304",  "sign" : "3eae54eeaf0f3de4e566f4a06ba5f946"}&TransKey=D-a6d65828717abbdd
+时间：2017-05-22 18:13:16,588 线程ID:[14840] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：260] - 错误描述：{  "status" : "0001",  "msg" : "失败:请求交易的产品ID[158|0|0|10MB|0|*]与运营配置套餐不匹配",  "srvDateTime" : "20170522181158",  "termTransID" : "QXCX20170522181152",  "transID" : "F170522181158304",  "sign" : "3eae54eeaf0f3de4e566f4a06ba5f946"}
+时间：2017-05-22 18:13:20,716 线程ID:[14840] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：268] - 错误描述：YS
+时间：2017-05-22 18:13:39,861 线程ID:[14840] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：49] - 错误描述：0001
+时间：2017-05-22 18:14:56,726 线程ID:[14840] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：49] - 错误描述：0001
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-05-22 18:16:24,792 线程ID:[12400] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：31] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={  "status" : "0001",  "msg" : "失败:请求交易的产品ID[158|0|0|10MB|0|*]与运营配置套餐不匹配",  "srvDateTime" : "20170522181158",  "termTransID" : "QXCX20170522181152",  "transID" : "F170522181158304",  "sign" : "3eae54eeaf0f3de4e566f4a06ba5f946"}&TransKey=D-a6d65828717abbdd
+时间：2017-05-22 18:16:25,396 线程ID:[12400] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：260] - 错误描述：{  "status" : "0001",  "msg" : "失败:请求交易的产品ID[158|0|0|10MB|0|*]与运营配置套餐不匹配",  "srvDateTime" : "20170522181158",  "termTransID" : "QXCX20170522181152",  "transID" : "F170522181158304",  "sign" : "3eae54eeaf0f3de4e566f4a06ba5f946"}
+时间：2017-05-22 18:16:27,503 线程ID:[12400] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：268] - 错误描述：YS
+时间：2017-05-22 18:16:31,482 线程ID:[12400] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：49] - 错误描述：-0001
+时间：2017-05-22 18:16:31,554 线程ID:[12400] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：93] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行修改操作.
+时间：2017-05-22 18:16:32,997 线程ID:[12400] 日志级别：INFO  出错类：MONO.Distribution.BLL.Agent.FlowActiveHistoriesService property:[(null)][行号：352] - 错误描述：回调地址：http://baidu.com?orderId=25e4de88-35a7-42d3-a36c-6ae45b45ec15&result=Temp&msg=-0001&transNo=20170522180818254
+时间：2017-05-22 18:16:34,726 线程ID:[12400] 日志级别：INFO  出错类：MONO.Distribution.BLL.Agent.FlowActiveHistoriesService property:[(null)][行号：354] - 错误描述：回调返回：<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+
+
+----------------------footer--------------------------

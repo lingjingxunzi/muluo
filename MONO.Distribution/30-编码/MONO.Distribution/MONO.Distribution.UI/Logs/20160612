@@ -1,0 +1,32 @@
+
+----------------------header--------------------------
+时间：2016-06-12 08:50:48,463 线程ID:[7400] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-12 09:36:25,526 线程ID:[1496] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-06-12 09:37:02,341 线程ID:[1496] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.DataBackups进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-12 10:06:52,034 线程ID:[8008] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-06-12 10:08:02,539 线程ID:[3944] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.DataBackups进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-12 10:53:58,981 线程ID:[5424] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-06-12 10:54:42,681 线程ID:[5424] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.DataBackups进行插入操作.
+时间：2016-06-12 11:00:56,000 线程ID:[7556] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.DataBackups进行插入操作.
+时间：2016-06-12 11:20:54,143 线程ID:[8264] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.DataBackups进行插入操作.
+时间：2016-06-12 11:22:07,814 线程ID:[9668] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.DataBackups进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-06-12 11:23:33,088 线程ID:[9020] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：74] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2016-06-12 11:23:49,953 线程ID:[9836] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Sys.DataBackups进行插入操作.
+
+----------------------footer--------------------------

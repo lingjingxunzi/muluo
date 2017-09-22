@@ -1,0 +1,22 @@
+﻿正在安装程序集“E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.InstallLog
+   assemblypath = E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.exe
+正在安装服务 Service1...
+已成功安装服务 Service1。
+正在日志 Application 中创建 EventLog 源 Service1...
+正在提交程序集“E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.InstallLog
+   assemblypath = E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.exe
+正在卸载程序集“E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.exe”。
+受影响的参数是:
+   logtoconsole = 
+   logfile = E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.InstallLog
+   assemblypath = E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders\bin\Debug\MONO.Orders.exe
+正在移除 EventLog 源 Service1。
+正在从系统中移除服务 Service1...
+已成功地从系统中移除服务 Service1。
+尝试停止服务 Service1。

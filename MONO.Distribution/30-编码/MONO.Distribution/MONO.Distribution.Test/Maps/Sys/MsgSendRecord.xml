@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MsgSendRecord" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="MsgSendRecord" type="MONO.Distribution.Model.Sys.MsgSendRecord,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FD_MsgSendRecordResult" class="MsgSendRecord">
+      <result property="MsgSendRecordkey" column="MsgSendRecordkey"/>
+      <result property="Content" column="Content"/>
+      <result property="UserPhone" column="UserPhone"/>
+      <result property="CreateTime" column="CreateTime" />
+      <result property="SysUserKey" column="SysUserKey"/>
+      <result property="Status" column="Status"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertMsgSendRecord' parameterClass='MsgSendRecord'>
+      INSERT INTO FD_MsgSendRecord
+      (
+      MsgSendRecordkey,
+      Content,
+      UserPhone,
+      CreateTime,
+      SysUserKey,
+      Status
+      )
+      VALUES
+      (
+      #MsgSendRecordkey#,
+      #Content#,
+      #UserPhone#,
+      getdate(),
+      #SysUserKey#,
+      #Status#
+      )
+    </insert>
+
+
+    <update id='UpdateMsgSendRecord' parameterClass='MsgSendRecord'>
+      UPDATE FD_MsgSendRecord
+      SET
+      <isNotEmpty prepend=" "  property="Content">Content=#Content#</isNotEmpty>
+      <isNotEmpty prepend=","   property="UserPhone">UserPhone=#UserPhone#</isNotEmpty>
+      WHERE
+      [MsgSendRecordkey] = #MsgSendRecordkey#
+    </update>
+
+    <delete id='DeleteMsgSendRecord' parameterClass='MsgSendRecord'>
+      DELETE FROM FD_MsgSendRecord
+      WHERE
+      [MsgSendRecordkey] = #MsgSendRecordkey#
+    </delete>
+
+    <delete id='DeleteMsgSendRecordByContent' parameterClass='int'>
+      DELETE FROM FD_MsgSendRecord
+      WHERE
+      [Content] = #Value#
+    </delete>
+
+
+
+    <!--动态查询语句-->
+    <select id="SelectMsgSendRecordList" parameterClass="MsgSendRecord"   resultMap="FD_MsgSendRecordResult">
+      <![CDATA[SELECT 
+      MsgSendRecordkey,
+      Content,
+      UserPhone ,
+      CreateTime,
+      Status,
+      SysUserKey
+       ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY MsgSendRecordkey DESC) AS RowNumber,*
+          FROM FD_MsgSendRecord
+          WHERE 1=1
+          <isNotEmpty prepend="AND"   property="Content">Content=#Content#</isNotEmpty>
+          <isGreaterThan compareValue="0" prepend="AND"   property="UserPhone">UserPhone=#UserPhone#</isGreaterThan>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_MsgSendRecord
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND"   property="Content">Content=#Content#</isNotEmpty>
+        <isGreaterThan compareValue="0"  prepend="AND"    property="UserPhone">UserPhone=#UserPhone#</isGreaterThan>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectMsgSendRecordCount" parameterClass="MsgSendRecord" resultClass="int">
+      Select count(*)
+      FROM FD_MsgSendRecord
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND"  property="Content">Content=#Content#</isNotEmpty>
+        <isGreaterThan compareValue="0" property="UserPhone">UserPhone=#UserPhone#</isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectMsgSendRecordByKey" parameterClass="MsgSendRecord" resultMap="FD_MsgSendRecordResult">
+      Select
+      MsgSendRecordkey,
+      Content,
+      UserPhone,
+      CreateTime,
+      Status,
+      SysUserKey
+      FROM FD_MsgSendRecord
+      WHERE MsgSendRecordkey = #MsgSendRecordkey#
+    </select>
+
+  </statements>
+</sqlMap>

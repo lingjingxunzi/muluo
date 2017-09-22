@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Areas" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="Areas" type="MONO.Distribution.Model.BaseInfo.Areas,MONO.Distribution.Model"/>
+  </alias>
+
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="AreasResult" class="Areas">
+      <result property="AreaKey" column="AreaKey"/>
+      <result property="Name" column="Name"/>
+      <result property="ParentKey" column="ParentKey"/>
+      <result property="ParentArea" column="ParentKey" select="SelectAreaByKey" lazyLoad="false"/>
+    </resultMap>
+    <resultMap id="AreasResult_Key" class="Areas">
+      <result property="AreaKey" column="AreaKey"/>
+      <result property="Name" column="Name"/>
+      <result property="ParentKey" column="ParentKey"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertArea' parameterClass='Areas'>
+      INSERT INTO FD_Areas
+      (
+      Name,
+      ParentKey
+      )
+      VALUES
+      (
+      #Name#,
+      #ParentKey#
+      <selectKey property="AreaKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as int) AS id </selectKey>
+
+      )
+    </insert>
+
+
+    <update id='UpdateArea' parameterClass='Areas'>
+      UPDATE FD_Areas
+      SET
+      <isNotEmpty prepend=" " compareValue="0" property="Name">Name=#Name#</isNotEmpty>
+
+      <isGreaterThan prepend=" " compareValue="0" property="ParentKey">ParentKey=#ParentKey#</isGreaterThan>
+
+      WHERE
+      [AreaKey] = #AreaKey#
+    </update>
+
+    <delete id='DeleteArea' parameterClass='Areas'>
+      DELETE FROM FD_Areas
+      WHERE
+      [AreaKey] = #AreaKey#
+    </delete>
+
+
+    <!--动态查询语句-->
+    <select id="SelectAreaList" parameterClass="Areas"  resultMap="AreasResult">
+      <![CDATA[SELECT 
+         AreaKey,
+         Name,         
+         ParentKey 
+         
+          ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY AreaKey DESC) AS RowNumber,*
+          FROM FD_Areas
+          WHERE Flag=0
+          <isNotEmpty prepend="AND"  property="Name">Name=#Name#</isNotEmpty>
+          <isNotNull prepend="AND"   property="ParentKey">ParentKey=#ParentKey#</isNotNull>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_Areas
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND"   property="Name">Name=#Name#</isNotEmpty>
+
+        <isNotNull prepend="AND"  property="ParentKey">ParentKey=#ParentKey#</isNotNull>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectAreaCount" parameterClass="Areas" resultClass="int">
+      Select count(*)
+      FROM FD_Areas
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND"   property="Name">Name=#Name#</isNotEmpty>
+
+        <isNotNull prepend="AND"   property="ParentKey">ParentKey=#ParentKey#</isNotNull>
+      </dynamic>
+    </select>
+    <select id="SelectAreaByKey" parameterClass="Areas" resultMap="AreasResult_Key">
+      Select
+      AreaKey,
+      Name,
+      ParentKey
+      FROM FD_Areas
+      WHERE AreaKey=#AreaKey#
+    </select>
+
+    <select id="SelectAreaByKeyAndParent" parameterClass="Areas" resultMap="AreasResult_Key">
+      Select
+      AreaKey,
+      Name,
+      ParentKey
+      FROM FD_Areas
+      WHERE AreaKey=#AreaKey# or ParentKey = #AreaKey#
+    </select>
+
+  </statements>
+</sqlMap>

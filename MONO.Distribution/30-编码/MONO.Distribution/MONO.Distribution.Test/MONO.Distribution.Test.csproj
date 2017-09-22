@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD62C987-C763-4CAB-A08D-24FC267F65B2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MONO.Distribution.Test</RootNamespace>
+    <AssemblyName>MONO.Distribution.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBatisNet.Common, Version=1.6.2.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MONO.Distribution.Libs\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common.Logging.Log4Net">
+      <HintPath>..\MONO.Distribution.Libs\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper, Version=1.6.2.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MONO.Distribution.Libs\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AlipayCallBackTest.aspx" />
+    <Content Include="ChannelMsgTest.aspx" />
+    <Content Include="DeserizeCM023Result.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Maps\Agent\CardSampler.xml" />
+    <Content Include="Maps\Agent\CarrierMaintainDetails.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\CarrierMaintainRecords.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\ChannelMsgSettings.xml" />
+    <Content Include="Maps\Agent\FlowActiveCard.xml" />
+    <Content Include="Maps\Agent\FlowActiveCardDetails.xml" />
+    <Content Include="Maps\Agent\FlowActiveHistories.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\FlowDistributionRecords.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Agent\SystemFlowPackets.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\FB_Area.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\FB_Discounts.xml" />
+    <Content Include="Maps\BaseInfo\FB_FlowBaseInfo.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\FB_FlowCode.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\BaseInfo\LBF_Mobile_Area.xml" />
+    <Content Include="Maps\Customers\AccountApplyAtts.xml" />
+    <Content Include="Maps\Customers\CompanyAccountAddApplys.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\DataSources\PassagewayData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\DataBackups.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FB_BusinessIPBind.xml" />
+    <Content Include="Maps\Sys\FD_Enumeration.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_MenuGroups.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_Menus.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_RechargeRecords.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_SystemLogs.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_System_Account.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_System_Account_Log.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_System_Users.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Maps\Sys\FD_SysUserGroups.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\FD_SysUserInfos.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maps\Sys\MessageTemplate.xml" />
+    <Content Include="Maps\Sys\MsgSendRecord.xml" />
+    <Content Include="Maps\Sys\PushResultRecords.xml" />
+    <Content Include="Maps\Sys\SystemErrLoginRecord.xml" />
+    <Content Include="Maps\Sys\SystemLock.xml" />
+    <Content Include="Maps\Sys\SystemMsgTemplates.xml" />
+    <Content Include="Maps\Sys\SystemSetting.xml" />
+    <Content Include="Maps\Sys\VerCodeRecord.xml" />
+    <Content Include="OrderFlows.aspx" />
+    <Content Include="OrderSuccess.aspx" />
+    <Content Include="TestPhoneFroms.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlipayCallBackTest.aspx.cs">
+      <DependentUpon>AlipayCallBackTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlipayCallBackTest.aspx.designer.cs">
+      <DependentUpon>AlipayCallBackTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChannelMsgTest.aspx.cs">
+      <DependentUpon>ChannelMsgTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChannelMsgTest.aspx.designer.cs">
+      <DependentUpon>ChannelMsgTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeserizeCM023Result.aspx.cs">
+      <DependentUpon>DeserizeCM023Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeserizeCM023Result.aspx.designer.cs">
+      <DependentUpon>DeserizeCM023Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="OrderFlows.aspx.cs">
+      <DependentUpon>OrderFlows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderFlows.aspx.designer.cs">
+      <DependentUpon>OrderFlows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSuccess.aspx.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderSuccess.aspx.designer.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestPhoneFroms.aspx.cs">
+      <DependentUpon>TestPhoneFroms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPhoneFroms.aspx.designer.cs">
+      <DependentUpon>TestPhoneFroms.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MONO.Distribution.BLL\MONO.Distribution.BLL.csproj">
+      <Project>{EFAB0D9C-51DC-4228-AE83-FD4C7D348214}</Project>
+      <Name>MONO.Distribution.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MONO.Distribution.Model\MONO.Distribution.Model.csproj">
+      <Project>{C15BAAEB-5F9A-4438-9A4A-18265AB73363}</Project>
+      <Name>MONO.Distribution.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MONO.Distribution.Utility\MONO.Distribution.Utility.csproj">
+      <Project>{5A18002C-5F6C-49A1-A631-7D8A28954076}</Project>
+      <Name>MONO.Distribution.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="properties.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="providers.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sqlmap.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15958</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

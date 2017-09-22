@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="CarrierMaintainDetails" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="CarrierMaintainDetails" type="MONO.Distribution.Model.Agent.CarrierMaintainDetails,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FD_CarrierMaintainDetailsResult" class="CarrierMaintainDetails">
+      <result property="CarrierMaintainDetailKey" column="CarrierMaintainDetailKey"/>
+      <result property="CarrierMaintainRecordKey" column="CarrierMaintainRecordKey"/>
+      <result property="FlowKey" column="FlowKey"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertCarrierMaintainDetails' parameterClass='CarrierMaintainDetails'>
+      INSERT INTO FD_CarrierMaintainDetails
+      (
+      CarrierMaintainDetailKey,
+      CarrierMaintainRecordKey,
+      FlowKey
+      )
+      VALUES
+      (
+      #CarrierMaintainDetailKey#,
+      #CarrierMaintainRecordKey#,
+      #FlowKey#
+      )
+    </insert>
+
+
+    <update id='UpdateCarrierMaintainDetails' parameterClass='CarrierMaintainDetails'>
+      UPDATE FD_CarrierMaintainDetails
+      SET
+      <isGreaterThan prepend=" " compareValue="0" property="CarrierMaintainRecordKey">CarrierMaintainRecordKey=#CarrierMaintainRecordKey#</isGreaterThan>
+      <isGreaterThan prepend="," compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+      WHERE
+      [CarrierMaintainDetailKey] = #CarrierMaintainDetailKey#
+    </update>
+
+    <delete id='DeleteCarrierMaintainDetails' parameterClass='CarrierMaintainDetails'>
+      DELETE FROM FD_CarrierMaintainDetails
+      WHERE
+      [CarrierMaintainDetailKey] = #CarrierMaintainDetailKey#
+    </delete>
+
+    <delete id='DeleteCarrierMaintainDetailsByKey' parameterClass='int'>
+      DELETE FROM FD_CarrierMaintainDetails
+      WHERE
+      [CarrierMaintainRecordKey] = #Value#
+    </delete>
+
+
+
+    <!--动态查询语句-->
+    <select id="SelectCarrierMaintainDetailsList" parameterClass="CarrierMaintainDetails"   resultMap="FD_CarrierMaintainDetailsResult">
+      <![CDATA[SELECT 
+      CarrierMaintainDetailKey,
+      CarrierMaintainRecordKey,
+      FlowKey 
+       ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY CarrierMaintainDetailKey DESC) AS RowNumber,*
+          FROM FD_CarrierMaintainDetails
+          WHERE 1=1
+          <isGreaterThan prepend="AND" compareValue="0" property="CarrierMaintainRecordKey">CarrierMaintainRecordKey=#CarrierMaintainRecordKey#</isGreaterThan>
+          <isGreaterThan prepend="AND" compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_CarrierMaintainDetails
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="CarrierMaintainRecordKey">CarrierMaintainRecordKey=#CarrierMaintainRecordKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectCarrierMaintainDetailsCount" parameterClass="CarrierMaintainDetails" resultClass="int">
+      Select count(*)
+      FROM FD_CarrierMaintainDetails
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="CarrierMaintainRecordKey">CarrierMaintainRecordKey=#CarrierMaintainRecordKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue="0"  property="FlowKey">FlowKey=#FlowKey#</isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectCarrierMaintainDetailsByKey" parameterClass="CarrierMaintainDetails" resultMap="FD_CarrierMaintainDetailsResult">
+      Select
+      CarrierMaintainDetailKey,
+      CarrierMaintainRecordKey,
+      FlowKey
+      FROM FD_CarrierMaintainDetails
+      WHERE CarrierMaintainDetailKey = #CarrierMaintainDetailKey#
+    </select>
+
+    <select id="SelectCarrierMaintainDetailsByRecordKey" parameterClass="CarrierMaintainDetails" resultMap="FD_CarrierMaintainDetailsResult">
+      Select
+      CarrierMaintainDetailKey,
+      CarrierMaintainRecordKey,
+      FlowKey
+      FROM FD_CarrierMaintainDetails
+      WHERE CarrierMaintainRecordKey = #CarrierMaintainRecordKey#
+    </select>
+
+    <select id="SelectCarrierMaintainDetailsByFlowKey" parameterClass="int" resultMap="FD_CarrierMaintainDetailsResult">
+      select cmd.* from FD_CarrierMaintainDetails cmd
+      left join FD_CarrierMaintainRecords cmr on cmd.CarrierMaintainRecordKey = cmd.CarrierMaintainRecordKey
+      where cmd.FlowKey = #Value# and cmr.RecoveryStatus='ING'
+    </select>
+  </statements>
+</sqlMap>

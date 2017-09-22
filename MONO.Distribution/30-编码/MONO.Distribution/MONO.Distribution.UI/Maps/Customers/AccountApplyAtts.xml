@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="AccountApplyAtts" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="AccountApplyAtts" type="MONO.Distribution.Model.Customers.AccountApplyAtts,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="AccountApplyAttsResult" class="AccountApplyAtts">
+      <result property="AccountApplyAttKey" column="AccountApplyAttKey"/>
+      <result property="AccountAddApplyKey" column="AccountAddApplyKey"/>
+      <result property="ImagePath" column="ImagePath"/>
+      <result property="Name" column="Name"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+
+    <insert id='InsertAccountApplyAtts' parameterClass='AccountApplyAtts'>
+      INSERT INTO FD_AccountApplyAtts
+      (
+      AccountAddApplyKey,
+      Name,
+      ImagePath 
+      )
+      VALUES
+     (
+      #AccountAddApplyKey#,
+      #Name#,
+      #ImagePath#
+      )
+    </insert>
+
+
+    <update id='UpdateAccountApplyAtts' parameterClass='AccountApplyAtts'>
+      UPDATE FD_AccountApplyAtts
+      SET
+      Name=#Name#
+      WHERE
+      [AccountApplyAttKey] = #AccountApplyAttKey#
+    </update>
+
+    <delete id='DeleteAccountApplyAtts' parameterClass='AccountApplyAtts'>
+      DELETE FROM FD_AccountApplyAtts
+      WHERE
+      [AccountApplyAttKey] = #AccountApplyAttKey#
+    </delete>
+
+
+
+    <select id="SelectAccountApplyAttsList" parameterClass="AccountApplyAtts"   resultMap="AccountApplyAttsResult">
+      <![CDATA[SELECT 
+         AccountApplyAttKey,
+         AccountAddApplyKey, 
+         Name,         
+         ImagePath        
+        ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY AccountAddApplyKey DESC) AS RowNumber,
+          * FROM FD_AccountApplyAtts
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="Name"> Name like '%'+#Name#+'%'</isNotEmpty>
+
+          )T
+        </isEqual>
+
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_AccountApplyAtts
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="Name"> Name like '%'+#Name#+'%'</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectAccountApplyAttsCount" parameterClass="AccountApplyAtts" resultClass="int">
+      Select count(*)
+      FROM FD_AccountApplyAtts buy
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="Name"> Name like '%'+#Name#+'%'</isNotEmpty>
+
+      </dynamic>
+    </select>
+
+
+    <select id="SelectAccountApplyAttsByKey" parameterClass="AccountApplyAtts"  resultMap="AccountApplyAttsResult">
+      Select
+      AccountApplyAttKey,
+      AccountAddApplyKey,
+      Name,
+      ImagePath
+      FROM FD_AccountApplyAtts
+      WHERE AccountApplyAttKey=#AccountApplyAttKey#
+    </select>
+
+    <select id="SelectAccountApplyAttsByParentKey" parameterClass="AccountApplyAtts"  resultMap="AccountApplyAttsResult">
+      Select
+      AccountApplyAttKey,
+      AccountAddApplyKey,
+      Name,
+      ImagePath
+      FROM FD_AccountApplyAtts
+      WHERE AccountAddApplyKey=#AccountAddApplyKey#
+    </select>
+
+
+  </statements>
+</sqlMap>

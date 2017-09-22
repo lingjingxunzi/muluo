@@ -1,0 +1,8 @@
+
+----------------------header--------------------------
+时间：2017-08-29 16:29:10,813 线程ID:[7564] 日志级别：INFO  出错类：OrderService.CallBack.CMCallBack property:[(null)][行号：31] - 错误描述：http://localhost:26683/CallBack/CMCallBack.aspx
+时间：2017-08-29 16:29:10,944 线程ID:[7564] 日志级别：INFO  出错类：OrderService.CallBack.CMCallBack property:[(null)][行号：51] - 错误描述：GetJsonStr Start
+时间：2017-08-29 16:29:10,944 线程ID:[7564] 日志级别：INFO  出错类：OrderService.CallBack.CMCallBack property:[(null)][行号：62] - 错误描述：
+时间：2017-08-29 16:29:10,944 线程ID:[7564] 日志级别：INFO  出错类：OrderService.CallBack.CMCallBack property:[(null)][行号：33] - 错误描述：
+
+----------------------footer--------------------------

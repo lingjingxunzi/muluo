@@ -1,0 +1,29 @@
+
+----------------------header--------------------------
+时间：2016-07-15 10:38:42,317 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：45] - 错误描述：http://localhost:9012/FlowAgent.aspx?name=orderpkg&userkey=once&phonecodestr=18382296446,CMQ000010,20160715103842105&backurl=http://baidu.com&timestamp=20160715103842&sig=86DED92BCE5C5E7129ADF4CBA2A3DE70
+时间：2016-07-15 10:38:42,387 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：37] - 错误描述：ValidateInfo Start
+时间：2016-07-15 10:38:42,920 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：50] - 错误描述：ValidateInfo:once
+时间：2016-07-15 10:38:43,070 线程ID:[1324] 日志级别：ERROR 出错类：MONO.Distribution.UI.FlowAgent property:[(null)][行号：112] - 错误描述：FlowAgent:GetJsonData
+时间：2016-07-15 10:38:43,074 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：115] - 错误描述：sysUserkey：7
+时间：2016-07-15 10:38:43,075 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：116] - 错误描述：mobileStr:18382296446,65
+时间：2016-07-15 10:38:43,075 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.UI.FlowAgents.OrderPackge property:[(null)][行号：117] - 错误描述：strTrans:20160715103842105
+时间：2016-07-15 10:38:43,114 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowDistributionRecords进行插入操作.
+时间：2016-07-15 10:38:43,146 线程ID:[1324] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：45] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行插入操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-15 11:29:13,939 线程ID:[5048] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.XytdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/XytdCallBack.aspx?user_id=55&xy_no=4684797183763358462&user_order=1fcfd545ee906ca0&mobile=18382296446&status=0000
+时间：2016-07-15 11:29:13,968 线程ID:[5048] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.XytdCallBack property:[(null)][行号：32] - 错误描述：
+时间：2016-07-15 11:29:49,696 线程ID:[10972] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.XytdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/XytdCallBack.aspx?user_id=55&xy_no=4684797183763358462&user_order=3d0770a46990360b&mobile=18382296446&status=8001
+时间：2016-07-15 11:29:49,696 线程ID:[10972] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.XytdCallBack property:[(null)][行号：32] - 错误描述：
+时间：2016-07-15 11:30:02,281 线程ID:[10972] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：90] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行修改操作.
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2016-07-15 13:51:58,512 线程ID:[12092] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.XytdCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/XytdCallBack.aspx?user_id=55&xy_no=4684797183763358462&user_order=3d0770a46990360b&mobile=18382296446&status=8001
+时间：2016-07-15 13:51:58,527 线程ID:[12092] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.XytdCallBack property:[(null)][行号：32] - 错误描述：
+时间：2016-07-15 13:52:10,736 线程ID:[12092] 日志级别：INFO  出错类：MONO.Distribution.BLL.ServiceBase`1 property:[(null)][行号：90] - 错误描述：框架日志：MONO.Distribution.Model.Agent.FlowActiveHistories进行修改操作.
+
+----------------------footer--------------------------

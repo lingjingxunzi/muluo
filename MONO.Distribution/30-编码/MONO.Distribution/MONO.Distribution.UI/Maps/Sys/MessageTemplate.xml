@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MessageTemplate" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="MessageTemplate" type="MONO.Distribution.Model.Sys.MessageTemplate,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FD_MessageTemplateResult" class="MessageTemplate">
+      <result property="MessageTemplateKey" column="MessageTemplateKey"/>
+      <result property="Content" column="Content"/>
+      <result property="Price" column="Price"/>
+      <result property="MsgType" column="MsgType" />
+      <result property="IndentifyCode" column="IndentifyCode"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertMessageTemplate' parameterClass='MessageTemplate'>
+      INSERT INTO FD_MessageTemplate
+      (
+      Content,
+      Price,
+      MsgType,
+      IndentifyCode
+      )
+      VALUES
+      (
+      #Content#,
+      #Price#,
+      #MsgType#,
+      #IndentifyCode#
+      <selectKey property="MessageTemplateKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as int) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateMessageTemplate' parameterClass='MessageTemplate'>
+      UPDATE FD_MessageTemplate
+      SET
+      <isNotEmpty prepend=" "  property="Content">Content=#Content#</isNotEmpty>
+      <isNotEmpty prepend=","   property="Price">Price=#Price#</isNotEmpty>
+      WHERE
+      [MessageTemplateKey] = #MessageTemplateKey#
+    </update>
+
+    <delete id='DeleteMessageTemplate' parameterClass='MessageTemplate'>
+      DELETE FROM FD_MessageTemplate
+      WHERE
+      [MessageTemplateKey] = #MessageTemplateKey#
+    </delete>
+
+    <delete id='DeleteMessageTemplateByContent' parameterClass='int'>
+      DELETE FROM FD_MessageTemplate
+      WHERE
+      [Content] = #Value#
+    </delete>
+
+
+
+    <!--动态查询语句-->
+    <select id="SelectMessageTemplateList" parameterClass="MessageTemplate"   resultMap="FD_MessageTemplateResult">
+      <![CDATA[SELECT 
+      MessageTemplateKey,
+      Content,
+      Price ,
+      MsgType,
+      IndentifyCode
+       ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY MessageTemplateKey DESC) AS RowNumber,*
+          FROM FD_MessageTemplate
+          WHERE 1=1
+          <isNotEmpty prepend="AND"   property="Content">Content=#Content#</isNotEmpty>
+          <isGreaterThan compareValue="0" prepend="AND"   property="Price">Price=#Price#</isGreaterThan>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_MessageTemplate
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND"   property="Content">Content=#Content#</isNotEmpty>
+        <isGreaterThan compareValue="0"  prepend="AND"    property="Price">Price=#Price#</isGreaterThan>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectMessageTemplateCount" parameterClass="MessageTemplate" resultClass="int">
+      Select count(*)
+      FROM FD_MessageTemplate
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND"  property="Content">Content=#Content#</isNotEmpty>
+        <isGreaterThan compareValue="0" property="Price">Price=#Price#</isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectMessageTemplateByKey" parameterClass="MessageTemplate" resultMap="FD_MessageTemplateResult">
+      Select
+      MessageTemplateKey,
+      Content,
+      Price,
+      MsgType,
+      IndentifyCode
+      FROM FD_MessageTemplate
+      WHERE MessageTemplateKey = #MessageTemplateKey#
+    </select>
+
+  </statements>
+</sqlMap>

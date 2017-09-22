@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="CarrierMaintainRecords" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="CarrierMaintainRecords" type="MONO.Distribution.Model.Agent.CarrierMaintainRecords,MONO.Distribution.Model"/>
+  </alias>
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="CarrierMaintainRecordsResult" class="CarrierMaintainRecords">
+      <result property="CarrierMaintainRecordKey" column="CarrierMaintainRecordKey"/>
+      <result property="StartDate" column="StartDate"/>
+      <result property="EndDate" column="EndDate"/>
+      <result property="RecoveryStatus" column="RecoveryStatus"/>
+      <result property="CarrierMaintainDetailses" column="CarrierMaintainRecordKey" select="SelectCarrierMaintainDetailsByRecordKey" lazyLoad="false"/>
+    </resultMap>
+    <resultMap id="CarrierMaintainRecordsResult_Key" class="CarrierMaintainRecords">
+      <result property="CarrierMaintainRecordKey" column="CarrierMaintainRecordKey"/>
+      <result property="StartDate" column="StartDate"/>
+      <result property="EndDate" column="EndDate"/>
+      <result property="RecoveryStatus" column="RecoveryStatus"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertMaintainRecord' parameterClass='CarrierMaintainRecords'>
+      INSERT INTO FD_CarrierMaintainRecords
+      (
+      StartDate,
+      EndDate,
+      RecoveryStatus
+      )
+      VALUES
+      (
+      #StartDate#,
+      #EndDate#,
+      #RecoveryStatus#
+      )
+    </insert>
+
+
+    <update id='UpdateMaintainRecord' parameterClass='CarrierMaintainRecords'>
+      UPDATE FD_CarrierMaintainRecords
+      SET
+      <isNotEmpty prepend=" " compareValue="0" property="StartDate">StartDate=#StartDate#</isNotEmpty>
+
+      <isGreaterThan prepend=" " compareValue="0" property="EndDate">EndDate=#EndDate#</isGreaterThan>
+
+      WHERE
+      [CarrierMaintainRecordKey] = #CarrierMaintainRecordKey#
+    </update>
+
+    <delete id='DeleteMaintainRecord' parameterClass='CarrierMaintainRecords'>
+      DELETE FROM FD_CarrierMaintainRecords
+      WHERE
+      [CarrierMaintainRecordKey] = #CarrierMaintainRecordKey#
+    </delete>
+
+
+    <!--动态查询语句-->
+    <select id="SelectMaintainRecordList" parameterClass="CarrierMaintainRecords"  resultMap="CarrierMaintainRecordsResult">
+      <![CDATA[SELECT 
+         CarrierMaintainRecordKey,
+         StartDate,         
+         EndDate ,
+         RecoveryStatus         
+          ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY CarrierMaintainRecordKey DESC) AS RowNumber,*
+          FROM FD_CarrierMaintainRecords
+          WHERE  1=1
+
+          <isNotEmpty prepend="AND" property="IsQueryInTime">
+            <![CDATA[ StartDate <= getdate()]]> and  <![CDATA[getdate() <= EndDate]]>
+          </isNotEmpty>
+
+          <isNotEmpty prepend="AND" property="RecoveryStatus">RecoveryStatus=#RecoveryStatus#</isNotEmpty>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_CarrierMaintainRecords
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="IsQueryInTime">
+          <![CDATA[ StartDate <= getdate()]]> and  <![CDATA[getdate() <= EndDate]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RecoveryStatus">RecoveryStatus=#RecoveryStatus#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectMaintainRecordCount" parameterClass="CarrierMaintainRecords" resultClass="int">
+      Select count(*)
+      FROM FD_CarrierMaintainRecords
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="RecoveryStatus">RecoveryStatus=#RecoveryStatus#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsQueryInTime">
+          <![CDATA[ StartDate <= getdate()]]> and  <![CDATA[getdate() <= EndDate]]>
+        </isNotEmpty>
+      </dynamic>
+    </select>
+    <select id="SelectMaintainRecordByKey" parameterClass="CarrierMaintainRecords" resultMap="CarrierMaintainRecordsResult_Key">
+      Select
+      CarrierMaintainRecordKey,
+      StartDate,
+      EndDate
+      FROM FD_CarrierMaintainRecords
+      WHERE CarrierMaintainRecordKey=#CarrierMaintainRecordKey#
+    </select>
+
+  </statements>
+</sqlMap>

@@ -1,0 +1,42 @@
+
+----------------------header--------------------------
+时间：2017-08-09 15:21:54,702 线程ID:[24428] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【123456】发起登录操作。
+时间：2017-08-09 15:21:54,737 线程ID:[24428] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+时间：2017-08-09 15:22:55,011 线程ID:[19936] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【123456】发起登录操作。
+时间：2017-08-09 15:22:55,011 线程ID:[19936] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+时间：2017-08-09 15:25:40,729 线程ID:[21056] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【123456】发起登录操作。
+时间：2017-08-09 15:25:41,360 线程ID:[21056] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-08-09 15:28:47,609 线程ID:[25776] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【123456】发起登录操作。
+时间：2017-08-09 15:28:47,624 线程ID:[25776] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-08-09 15:33:30,072 线程ID:[22744] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【123456】发起登录操作。
+时间：2017-08-09 15:33:30,088 线程ID:[22744] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+时间：2017-08-09 15:34:01,577 线程ID:[21728] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【123456】发起登录操作。
+时间：2017-08-09 15:34:01,577 线程ID:[21728] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-08-09 15:39:28,749 线程ID:[20500] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2017-08-09 15:39:28,764 线程ID:[20500] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+时间：2017-08-09 15:39:52,099 线程ID:[26652] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【admin】发起登录操作。
+时间：2017-08-09 15:39:52,099 线程ID:[26652] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+时间：2017-08-09 15:40:27,135 线程ID:[21900] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2017-08-09 15:40:27,135 线程ID:[21900] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+时间：2017-08-09 15:43:26,950 线程ID:[22100] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2017-08-09 15:43:26,950 线程ID:[22100] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+时间：2017-08-09 15:45:09,274 线程ID:[25832] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：89] - 错误描述：登录：使用账号【Test_01】发起登录操作。
+时间：2017-08-09 15:45:09,290 线程ID:[25832] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Login.LoginHandler property:[(null)][行号：91] - 错误描述：127.0.0.1
+
+----------------------footer--------------------------

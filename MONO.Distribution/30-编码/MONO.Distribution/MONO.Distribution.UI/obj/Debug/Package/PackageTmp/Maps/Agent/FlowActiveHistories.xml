@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="FlowActiveHistories" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="FlowActiveHistories" type="MONO.Distribution.Model.Agent.FlowActiveHistories,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FlowActiveHistoriesResult" class="FlowActiveHistories">
+      <result property="FlowActiveHistoryKey" column="FlowActiveHistoryKey"/>
+      <result property="DistributionRecordKey" column="DistributionRecordKey"/>
+      <result property="Carrier" column="Carrier"/>
+      <result property="Code" column="Code"/>
+      <result property="Orders" column="Orders"/>
+      <result property="Results" column="Results"/>
+      <result property="FlowStatus" column="FlowStatus"/>
+      <result property="UpdateTime" column="UpdateTime"/>
+    </resultMap>
+
+
+  </resultMaps>
+
+
+
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertFlowActiveHistories' parameterClass='FlowActiveHistories'>
+      INSERT INTO FD_FlowActiveHistories
+      (
+      FlowActiveHistoryKey,
+      DistributionRecordKey,
+      Carrier,
+      Code,
+      Orders,
+      Results,
+      UpdateTime,
+      FlowStatus
+      )
+      VALUES
+      (
+      #FlowActiveHistoryKey#,
+      #DistributionRecordKey#,
+      #Carrier#,
+      #Code#,
+      #Orders#,
+      #Results#,
+      getdate(),
+      #FlowStatus#
+      )
+    </insert>
+
+
+    <update id='UpdateFlowActiveHistories' parameterClass='FlowActiveHistories'>
+      UPDATE FD_FlowActiveHistories
+      SET UpdateTime = getdate()
+      <isNotNull prepend="," property="DistributionRecordKey">DistributionRecordKey=#DistributionRecordKey#</isNotNull>
+      <isNotNull prepend="," property="Carrier">Carrier=#Carrier#</isNotNull>
+      <isNotNull prepend="," property="Code">Code=#Code#</isNotNull>
+      <isNotEmpty prepend="," property="FlowStatus">FlowStatus=#FlowStatus#</isNotEmpty>
+      <isNotEmpty prepend="," property="Results">Results=#Results#</isNotEmpty>
+      <isNotEmpty prepend="," property="Orders" >Orders=#Orders#</isNotEmpty>
+      WHERE
+      [FlowActiveHistoryKey] = #FlowActiveHistoryKey#
+    </update>
+
+    <delete id='DeleteFlowActiveHistories' parameterClass='FlowActiveHistories'>
+      DELETE FROM FD_FlowActiveHistories
+      WHERE
+      [FlowActiveHistoryKey] = #FlowActiveHistoryKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectFlowActiveHistoriesList" parameterClass="FlowActiveHistories"   resultMap="FlowActiveHistoriesResult">
+      <![CDATA[SELECT 
+         FlowActiveHistoryKey,
+         DistributionRecordKey,
+         Carrier,
+         Code ,
+      Orders,
+      Results,
+      UpdateTime,
+      FlowStatus
+          ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY FlowActiveHistoryKey DESC) AS RowNumber,*
+          FROM FD_FlowActiveHistories
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="DistributionRecordKey">DistributionRecordKey=#DistributionRecordKey#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Carrier">Carrier=#Carrier#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Code">Code=#Code#</isNotEmpty>
+          )T
+        </isEqual>
+
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_FlowActiveHistories
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="DistributionRecordKey">DistributionRecordKey=#DistributionRecordKey#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Carrier">Carrier=#Carrier#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Code">Code=#Code#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectFlowActiveHistoriesCount" parameterClass="FlowActiveHistories" resultClass="int">
+      Select count(*)
+      FROM FD_FlowActiveHistories
+      WHERE 1=1
+      <dynamic>
+        <isNotEmpty prepend="AND" property="DistributionRecordKey">DistributionRecordKey=#DistributionRecordKey#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Carrier">Carrier=#Carrier#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Code">Code=#Code#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id='SelectFlowActiveHistoriesByKey' resultMap='FlowActiveHistoriesResult' parameterClass='FlowActiveHistories'>
+      SELECT
+      FlowActiveHistoryKey,
+      DistributionRecordKey,
+      Carrier,
+      Code,
+      Orders,
+      Results,
+      UpdateTime,
+      FlowStatus
+      FROM FD_FlowActiveHistories
+      WHERE
+      [FlowActiveHistoryKey] = #FlowActiveHistoryKey#
+    </select>
+
+    <select id='SelectFlowActiveHistoriesByHead' resultMap='FlowActiveHistoriesResult' parameterClass='FlowActiveHistories'>
+      SELECT
+      FlowActiveHistoryKey,
+      DistributionRecordKey,
+     [ Carrier],
+      [Code],
+     [Orders],
+      Results,
+      UpdateTime,
+      FlowStatus
+      FROM FD_FlowActiveHistories
+      WHERE
+      [DistributionRecordKey] = #DistributionRecordKey#
+    </select>
+    <select id='SelectFlowActiveHistoriesByOrderId' resultMap='FlowActiveHistoriesResult' parameterClass='string'>
+      SELECT
+      FlowActiveHistoryKey,
+      DistributionRecordKey,
+      [Carrier],
+      [Code],
+      [Orders],
+      [Results],
+      UpdateTime,
+      [FlowStatus]
+      FROM FD_FlowActiveHistories
+      WHERE
+      [Orders] = #Value#
+    </select>
+  </statements>
+</sqlMap>

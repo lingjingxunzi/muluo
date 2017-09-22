@@ -1,0 +1,12 @@
+
+----------------------header--------------------------
+时间：2017-05-24 14:37:35,688 线程ID:[10168] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：29] - 错误描述：http://localhost:26683/CallBack/SxdCallBack.aspx
+时间：2017-05-24 14:37:35,804 线程ID:[10168] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：67] - 错误描述：GetJsonStr Start
+时间：2017-05-24 14:37:35,811 线程ID:[10168] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：78] - 错误描述：
+时间：2017-05-24 14:37:35,811 线程ID:[10168] 日志级别：INFO  出错类：OrderService.CallBack.SxdCallBack property:[(null)][行号：31] - 错误描述：
+时间：2017-05-24 14:37:55,031 线程ID:[10452] 日志级别：INFO  出错类：OrderService.CallBack.YSCallBack property:[(null)][行号：27] - 错误描述：http://localhost:26683/CallBack/YSCallBack.aspx?terminalID=20148801&factoryID=0000&reqDateTime=20170204111622&termTransID=H2017020409301647402&transID=DD70204093022A86&transType=0&result=0&userNumber=18312500000&billValue=50&sign=10aa07c77d91ef2e7f4cf08db72c5bb1
+时间：2017-05-24 14:37:55,032 线程ID:[10452] 日志级别：INFO  出错类：OrderService.CallBack.YSCallBack property:[(null)][行号：32] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=DD70204093022A86&serialNo=H2017020409301647402&result=0&msg=0
+时间：2017-05-24 14:38:07,459 线程ID:[9500] 日志级别：INFO  出错类：OrderService.CallBack.YSCallBack property:[(null)][行号：27] - 错误描述：http://localhost:26683/CallBack/YSCallBack.aspx?terminalID=20148801&factoryID=0000&reqDateTime=20170204111622&termTransID=H2017020409301647402&transID=DD70204093022A86&transType=0&result=0&userNumber=18312500000&billValue=50&sign=10aa07c77d91ef2e7f4cf08db72c5bb1
+时间：2017-05-24 14:38:12,497 线程ID:[9500] 日志级别：INFO  出错类：OrderService.CallBack.YSCallBack property:[(null)][行号：32] - 错误描述：http://113.207.124.143/Order/SxdCallBack.aspx?passParm=DD70204093022A86&serialNo=H2017020409301647402&result=0&msg=0
+
+----------------------footer--------------------------
