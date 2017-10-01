@@ -91,6 +91,7 @@
     <Compile Include="FlowAgents\CM025Request.cs" />
     <Compile Include="FlowAgents\CM028Request.cs" />
     <Compile Include="FlowAgents\ct023BDRequest.cs" />
+    <Compile Include="FlowAgents\CT023DiffRequest.cs" />
     <Compile Include="FlowAgents\CT023_ARequest.cs" />
     <Compile Include="FlowAgents\CT023_PRequest.cs" />
     <Compile Include="FlowAgents\Cu023Request.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Models\BackupClycleViewModel.cs" />
     <Compile Include="Models\BackupViewModel.cs" />
     <Compile Include="Models\CM023ResultModel.cs" />
+    <Compile Include="Models\CT023RequestModel.cs" />
     <Compile Include="Models\CU0591ResultModel.cs" />
     <Compile Include="Models\OrderModels.cs" />
     <Compile Include="Models\WholeCmParam.cs" />

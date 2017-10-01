@@ -76,6 +76,7 @@
     <Compile Include="FlowAgentViewModels\CM025CommitModels.cs" />
     <Compile Include="FlowAgentViewModels\CT023BDResultModels.cs" />
     <Compile Include="FlowAgentViewModels\CT023ResultModels.cs" />
+    <Compile Include="FlowAgentViewModels\CT023RomaCommitModel.cs" />
     <Compile Include="FlowAgentViewModels\CU023PreOrderResult.cs" />
     <Compile Include="FlowAgentViewModels\CU023PreOrderResultDetails.cs" />
     <Compile Include="FlowAgentViewModels\CU023Result.cs" />

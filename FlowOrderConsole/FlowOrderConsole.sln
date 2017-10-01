@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowOrderConsole", "FlowOrderConsole\FlowOrderConsole.csproj", "{C5C3D34D-F19F-4845-B53E-9844343F8F55}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OrderConsole", "OrderConsole\OrderConsole.vdproj", "{9CFFBAF6-ECDF-4423-9EC2-F74C84A559D6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,8 +13,6 @@ Global
 		{C5C3D34D-F19F-4845-B53E-9844343F8F55}.Debug|x86.Build.0 = Debug|x86
 		{C5C3D34D-F19F-4845-B53E-9844343F8F55}.Release|x86.ActiveCfg = Release|x86
 		{C5C3D34D-F19F-4845-B53E-9844343F8F55}.Release|x86.Build.0 = Release|x86
-		{9CFFBAF6-ECDF-4423-9EC2-F74C84A559D6}.Debug|x86.ActiveCfg = Debug
-		{9CFFBAF6-ECDF-4423-9EC2-F74C84A559D6}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

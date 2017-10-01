@@ -1,27 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="E:\Publishs\60-订购服务" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="Web.config" publishTime="04/26/2017 16:21:48" />
+  <publishProfile publishUrl="C:\Users\surface\Documents\Public" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="09/30/2017 17:19:18" />
     <file relUrl="CallBack/XytdCallBack.aspx" publishTime="07/20/2016 15:37:21" />
     <file relUrl="CallBack/CM025CallBack.aspx" publishTime="09/05/2016 10:58:24" />
     <file relUrl="CallBack/CallBackTest.aspx" publishTime="08/17/2016 15:27:45" />
-    <file relUrl="CallBack/CmAllCallBack.aspx" publishTime="09/20/2016 12:59:56" />
+    <file relUrl="bin/log4net.dll" publishTime="01/13/2016 16:25:35" />
     <file relUrl="Service1.svc" publishTime="07/08/2016 16:24:04" />
     <file relUrl="CallBack/SxdCallBack.aspx" publishTime="09/02/2016 15:59:34" />
-    <file relUrl="CallBack/CU023CallBack.aspx" publishTime="04/10/2017 11:45:44" />
+    <file relUrl="CallBack/AggregationFjCallBack.aspx" publishTime="03/21/2017 11:57:07" />
     <file relUrl="CallBack/CMCallBack.aspx" publishTime="08/29/2017 16:23:52" />
+    <file relUrl="CallBack/CM023NewInterCallBack.aspx" publishTime="02/28/2017 17:13:03" />
+    <file relUrl="CallBack/CT023CallBack.aspx" publishTime="09/30/2017 16:24:52" />
     <file relUrl="log4net.config" publishTime="07/20/2016 15:38:57" />
     <file relUrl="CallBack/CU0531CallBack.aspx" publishTime="09/21/2016 10:03:45" />
     <file relUrl="CallBack/JHCMCallBackHandler.ashx" publishTime="03/21/2017 12:37:30" />
-    <file relUrl="bin/log4net.dll" publishTime="01/13/2016 16:25:35" />
     <file relUrl="CallBack/JtCallBack.aspx" publishTime="07/20/2016 15:55:47" />
     <file relUrl="CallBack/JnCallBack.aspx" publishTime="06/13/2017 11:59:52" />
-    <file relUrl="Global.asax" publishTime="07/20/2016 15:43:49" />
+    <file relUrl="CallBack/CmAllCallBack.aspx" publishTime="09/20/2016 12:59:56" />
+    <file relUrl="bin/OrderService.dll" publishTime="09/30/2017 17:48:57" />
     <file relUrl="CallBack/YSCallBack.aspx" publishTime="05/22/2017 17:36:15" />
-    <file relUrl="CallBack/AggregationFjCallBack.aspx" publishTime="03/21/2017 11:57:07" />
-    <file relUrl="bin/OrderService.pdb" publishTime="08/29/2017 16:29:07" />
+    <file relUrl="bin/OrderService.pdb" publishTime="09/30/2017 17:48:57" />
+    <file relUrl="Global.asax" publishTime="07/20/2016 15:43:49" />
+    <file relUrl="CallBack/CU023CallBack.aspx" publishTime="04/10/2017 11:45:44" />
     <file relUrl="CallBack/XZCallBack.aspx" publishTime="03/09/2017 14:31:00" />
-    <file relUrl="bin/OrderService.dll" publishTime="08/29/2017 16:29:07" />
-    <file relUrl="CallBack/CM023NewInterCallBack.aspx" publishTime="02/28/2017 17:13:03" />
   </publishProfile>
 </publishData>

@@ -27,7 +27,7 @@
     <div class="rightinfo">
         <div class="tools">
             <div class="toolbar">
-                <li onclick="openWindow('新增用户','UserSettingEdit.aspx?Command=Insert','820','550');">
+                <li onclick="openWindow('新增权限','BusinessDiscountEdit.aspx?Command=Insert','820','550');">
                     <span>
                         <img src="/Images/t01.png" /></span>新增权限包</li>
             </div>

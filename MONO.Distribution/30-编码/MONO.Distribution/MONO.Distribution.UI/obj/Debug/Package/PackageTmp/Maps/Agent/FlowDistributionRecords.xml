@@ -168,6 +168,8 @@
           <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
           <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
           <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Carrier"   >Carrier=#Carrier#</isNotEmpty>
+
           <isNotNull prepend="" property="SystemUserList" >
             <iterate prepend="AND" property="SystemUserList"
   open="(" close=")" conjunction="OR">
@@ -196,6 +198,7 @@
         <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
         <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
         <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Carrier"   >Carrier=#Carrier#</isNotEmpty>
 
         <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
           <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
@@ -238,6 +241,7 @@ open="(" close=")" conjunction="OR">
         <isNotEmpty prepend="AND" property="ResultMsg" >ResultMsg=#ResultMsg#</isNotEmpty>
         <isNotEmpty prepend="AND" property="MobilePhone"   >MobilePhone=#MobilePhone#</isNotEmpty>
         <isNotEmpty prepend="AND" property="BatchNo" >BatchNo like '%'+#BatchNo#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Carrier"   >Carrier=#Carrier#</isNotEmpty>
         <isNotEmpty prepend="AND" compareValue="1" property="StartTime">
           <![CDATA[Convert(date, CreateTime,25)>= Convert(date,convert(datetime,#StartTime#),25)]]>
         </isNotEmpty>

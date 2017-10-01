@@ -323,7 +323,7 @@ namespace MONO.Distribution.UI.Order
                     case "CM023_04": cm023ResultModel = new JavaScriptSerializer().Deserialize<CM023ResultModel>(Request.Params["data"]);
                         break;
                     case "CT023_A":
-                        CT023_AModels = new JavaScriptSerializer().Deserialize<CT023ResultModels>(Request.Params["data"]);
+                        CT023_AModels = new JavaScriptSerializer().Deserialize<CT023RomaCommitModel>(Request.Params["data"]);
                         break;
                     case "CT023_P":
                         CT023_PModels = new JavaScriptSerializer().Deserialize<CT023BDResultModels>(Request.Params["data"]);
@@ -401,7 +401,7 @@ namespace MONO.Distribution.UI.Order
         private WholeCMCommit wholeCmCommit;
         private CU0591ResultModel cu0591ResultModel;
         private CM023ResultModel cm023ResultModel;
-        private CT023ResultModels CT023_AModels;
+        private CT023RomaCommitModel CT023_AModels;
         private CT023BDResultModels CT023_PModels;
         private CM023NewResultViewModel CM023Models;
         private XZCommitViewModel xzCommitViewModel;

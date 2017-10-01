@@ -62,6 +62,7 @@
     <Content Include="CallBack\CM025CallBack.aspx" />
     <Content Include="CallBack\CmAllCallBack.aspx" />
     <Content Include="CallBack\CMCallBack.aspx" />
+    <Content Include="CallBack\CT023CallBack.aspx" />
     <Content Include="CallBack\CU023CallBack.aspx" />
     <Content Include="CallBack\CU0531CallBack.aspx" />
     <Content Include="CallBack\JnCallBack.aspx" />
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="CallBack\CMCallBack.aspx.designer.cs">
       <DependentUpon>CMCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallBack\CT023CallBack.aspx.cs">
+      <DependentUpon>CT023CallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallBack\CT023CallBack.aspx.designer.cs">
+      <DependentUpon>CT023CallBack.aspx</DependentUpon>
     </Compile>
     <Compile Include="CallBack\CU023CallBack.aspx.cs">
       <DependentUpon>CU023CallBack.aspx</DependentUpon>
@@ -203,6 +211,7 @@
     <Compile Include="Models\CallBackModels\CM023NewCallBack.cs" />
     <Compile Include="Models\CallBackModels\CM025BackModels.cs" />
     <Compile Include="Models\CallBackModels\CmWholeCallBackModels.cs" />
+    <Compile Include="Models\CallBackModels\CT023BackModel.cs" />
     <Compile Include="Models\CallBackModels\CU023YtkCallBackModels.cs" />
     <Compile Include="Models\CallBackModels\JTCallBackModel.cs" />
     <Compile Include="Models\CallBackModels\SxdCbResult.cs" />

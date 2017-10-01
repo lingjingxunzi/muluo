@@ -124,6 +124,54 @@ namespace FlowOrderConsole.Tools
             }
         }
 
+
+
+        public static String encodeBytesForCqCT(string toEncrypt, string key, string iv)
+        {
+            var bytes = EncryptForCqCT(toEncrypt, key, iv);
+
+            StringBuilder buffer = new StringBuilder();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                buffer.Append((char)(((bytes[i] >> 4) & 0xF) + ((int)'a')));
+                buffer.Append((char)(((bytes[i]) & 0xF) + ((int)'a')));
+            }
+            return buffer.ToString();
+        }
+
+
+        public static byte[] EncryptForCqCT(string toEncrypt, string key, string iv)
+        {
+            byte[] keyArray = UTF8Encoding.Default.GetBytes(key);
+            byte[] ivArray = UTF8Encoding.Default.GetBytes(iv);
+            byte[] toEncryptArray = UTF8Encoding.Default.GetBytes(toEncrypt);
+            RijndaelManaged rDel = new RijndaelManaged();
+            rDel.Key = keyArray;
+            rDel.IV = ivArray;
+            rDel.Mode = CipherMode.CBC;
+            rDel.Padding = PaddingMode.PKCS7;
+            ICryptoTransform cTransform = rDel.CreateEncryptor();
+            byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+            return resultArray;
+        }
+
+ public static string DecryptForCQCT(string toDecrypt, string key, string iv)
+        {
+            
+            byte[] keyArray = UTF8Encoding.UTF8.GetBytes(key);
+            byte[] ivArray = UTF8Encoding.UTF8.GetBytes(iv);
+
+            byte[] toEncryptArray = Convert.FromBase64String(toDecrypt);
+            RijndaelManaged rDel = new RijndaelManaged();
+            rDel.Key = keyArray;
+            rDel.IV = ivArray;
+            rDel.Mode = CipherMode.CBC;
+            rDel.Padding = PaddingMode.PKCS7;           
+            ICryptoTransform cTransform = rDel.CreateDecryptor();
+            byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+            return UTF8Encoding.UTF8.GetString(resultArray);
+        }
+
        
         public static string Encrypt(string pToEncrypt, string sKey)
         {

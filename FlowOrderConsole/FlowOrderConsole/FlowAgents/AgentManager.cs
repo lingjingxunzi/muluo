@@ -24,7 +24,7 @@ namespace FlowOrderConsole.FlowAgents
                         {"YTK", new YtkRequest()},
                         {"CM025",new CM025Request()},
                         {"CMWhole",new WholeCmRequest()},
-                        {"CT023_A",new CT023_ARequest()} ,
+                        {"CT023_A",new CT023DiffRequest()} ,
                         {"CT023_A_O",new CT023_PRequest()},
                         {"CM023New",new CM023NewRequest()},
                         {"CM023",new CM023Request()},

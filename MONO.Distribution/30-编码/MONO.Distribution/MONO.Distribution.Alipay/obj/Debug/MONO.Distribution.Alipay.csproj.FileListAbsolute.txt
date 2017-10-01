@@ -12,3 +12,10 @@ C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Alipay\obj\
 C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Alipay\obj\Debug\MONO.Distribution.Alipay.dll
 C:\Users\admin\Desktop\30-编码\MONO.Distribution\MONO.Distribution.Alipay\obj\Debug\MONO.Distribution.Alipay.pdb
 E:\WorkSpace\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\obj\Debug\MONO.Distribution.Alipay.csprojResolveAssemblyReference.cache
+C:\Users\surface\muluo\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\bin\Debug\MONO.Distribution.Alipay.dll
+C:\Users\surface\muluo\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\bin\Debug\MONO.Distribution.Alipay.pdb
+C:\Users\surface\muluo\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\bin\Debug\MONO.Distribution.Model.dll
+C:\Users\surface\muluo\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\bin\Debug\MONO.Distribution.Model.pdb
+C:\Users\surface\muluo\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\obj\Debug\MONO.Distribution.Alipay.csprojResolveAssemblyReference.cache
+C:\Users\surface\muluo\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\obj\Debug\MONO.Distribution.Alipay.dll
+C:\Users\surface\muluo\MONO.Distribution\30-编码\MONO.Distribution\MONO.Distribution.Alipay\obj\Debug\MONO.Distribution.Alipay.pdb
