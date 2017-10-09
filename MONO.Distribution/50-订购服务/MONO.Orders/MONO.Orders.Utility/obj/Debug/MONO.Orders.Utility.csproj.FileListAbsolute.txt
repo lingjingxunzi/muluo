@@ -1,4 +1,0 @@
-E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders.Utility\bin\Debug\MONO.Orders.Utility.dll
-E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders.Utility\bin\Debug\MONO.Orders.Utility.pdb
-E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders.Utility\obj\Debug\MONO.Orders.Utility.dll
-E:\WorkSpace\MONO.Distribution\50-订购服务\MONO.Orders\MONO.Orders.Utility\obj\Debug\MONO.Orders.Utility.pdb

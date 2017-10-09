@@ -1,7 +1,0 @@
-
-----------------------header--------------------------
-时间：2017-02-23 15:58:47,204 线程ID:[11152] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
-时间：2017-02-23 15:58:52,180 线程ID:[11152] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
-时间：2017-02-23 15:58:57,262 线程ID:[13188] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-ac8244926094a59c.txt
-时间：2017-02-23 15:58:58,682 线程ID:[12068] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：ActivedD-74c3b14b8d0f1c2e.txt
-时间：2017-02-23 15:59:17,484 线程ID:[12068] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：CM_023——02请求参数：<?xml version='1.0' encoding='utf-8' ?><AdvPay><PubInfo><Version>1</Version><EnterpriseCode>2308148751936</EnterpriseCode><VerifyCode>b4eab4c46a9951b5df55cda8159ecc38</VerifyCode></PubInfo><BusiData><CreateTime>1487836757474</CreateTime><ChargePhoneNum>18883234565</ChargePhoneNum><ProductCode>gl_mwsq_10M</ProductCode><ChargeNum>1</ChargeNum></BusiData></AdvPay>

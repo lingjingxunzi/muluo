@@ -1,9 +1,0 @@
-
-----------------------header--------------------------
-时间：2017-03-13 14:34:30,304 线程ID:[11676] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：商户账户更新处理
-时间：2017-03-13 14:34:34,533 线程ID:[11676] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
-时间：2017-03-13 14:34:34,770 线程ID:[12240] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：D-e88ad7f.txt
-时间：2017-03-13 14:35:21,659 线程ID:[11676] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
-时间：2017-03-13 14:35:41,485 线程ID:[11676] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：开始订购....
-时间：2017-03-13 14:35:42,925 线程ID:[12240] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：{"msg": "订购成功", "code": 0, "data": {"money": "2.85", "balance": "-2.85", "order_no": "F1703131435217884565", "discount": "0.95"}}
-时间：2017-03-13 14:35:45,431 线程ID:[12240] 日志级别：INFO  出错类：FlowOrderConsole.BaseCode property:[(null)][行号：105] - 错误描述：http://113.207.124.143/Order/GetOrderResultCallBack.aspx?data={"msg": "订购成功", "code": 0, "data": {"money": "2.85", "balance": "-2.85", "order_no": "F1703131435217884565", "discount": "0.95"}}&TransKey=D-88ad7f111

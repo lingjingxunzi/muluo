@@ -1,7 +1,0 @@
-
-----------------------header--------------------------
-时间：2017-05-02 11:10:21,081 线程ID:[12732] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：26] - 错误描述：http://localhost:9012/Order/SxdCallBack.aspx?passParm=D-447531caf9055f1b&serialNo=1705021058192003&result=0&msg=0000
-时间：2017-05-02 11:11:50,667 线程ID:[12732] 日志级别：ERROR 出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：58] - 错误描述：返回执行错误！
-时间：2017-05-02 11:11:50,667 线程ID:[12732] 日志级别：ERROR 出错类：MONO.Distribution.UI.Order.SxdCallBack property:[(null)][行号：59] - 错误描述：T对象不允许为null
-
-----------------------footer--------------------------

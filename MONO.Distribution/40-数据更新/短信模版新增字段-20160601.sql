@@ -1,1 +1,0 @@
-alter table FD_MessageTemplate add IndentifyCode nvarchar(20)

@@ -1,4 +1,0 @@
-E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverOperates\bin\Debug\ObserverOperates.dll
-E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverOperates\bin\Debug\ObserverOperates.pdb
-E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverOperates\obj\Debug\ObserverOperates.dll
-E:\WorkSpace\MONO.Distribution\50-订购服务\ObserverTest\ObserverOperates\obj\Debug\ObserverOperates.pdb

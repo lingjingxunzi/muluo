@@ -1,7 +1,0 @@
-
-----------------------header--------------------------
-时间：2017-02-17 17:23:00,880 线程ID:[9328] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：30] - 错误描述：http://localhost:9012/Order/GetOrderResultCallBack.aspx?data={"rescode":"0","resmsg":"success","transId":"123456","FlowDisKey":1234587}&TransKey=1213456
-时间：2017-02-17 17:23:02,594 线程ID:[9328] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：226] - 错误描述：{"rescode":"0","resmsg":"success","transId":"123456","FlowDisKey":1234587}
-时间：2017-02-17 17:23:21,090 线程ID:[9328] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.GetOrderResultCallBack property:[(null)][行号：232] - 错误描述：未找到该订单编号的订购信息，订单编号为：1213456
-
-----------------------footer--------------------------

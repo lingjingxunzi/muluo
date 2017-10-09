@@ -1,3 +1,0 @@
-.;sa;123456;MONO.Distribution
-
-Provider=SQLNCLI10;Data Source=.;User ID=sa;Password=123456;Initial Catalog=MONO.Distribution

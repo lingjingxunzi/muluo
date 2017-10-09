@@ -1,1 +1,0 @@
-alter table FD_FlowActiveCard  add SystemFlowPacketKey int;

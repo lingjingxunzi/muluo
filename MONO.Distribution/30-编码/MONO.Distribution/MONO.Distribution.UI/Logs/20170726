@@ -1,8 +1,0 @@
-
-----------------------header--------------------------
-时间：2017-07-26 14:02:30,044 线程ID:[13960] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.CTBDResultCallBack property:[(null)][行号：32] - 错误描述：http://localhost:9012/Order/CTBDResultCallBack.aspx
-时间：2017-07-26 14:02:30,152 线程ID:[13960] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.CTBDResultCallBack property:[(null)][行号：83] - 错误描述：
-时间：2017-07-26 14:02:30,233 线程ID:[13960] 日志级别：INFO  出错类：MONO.Distribution.UI.Order.CTBDResultCallBack property:[(null)][行号：89] - 错误描述：未找到该订单编号的订购信息，订单编号为：
-时间：2017-07-26 14:02:43,669 线程ID:[10252] 日志级别：INFO  出错类：MONO.Distribution.UI.Ashx.Order.GetCTBDResultHandler property:[(null)][行号：23] - 错误描述：http://localhost:9012/Ashx/Order/GetCTBDResultHandler.ashx?ctbddata=
-
-----------------------footer--------------------------

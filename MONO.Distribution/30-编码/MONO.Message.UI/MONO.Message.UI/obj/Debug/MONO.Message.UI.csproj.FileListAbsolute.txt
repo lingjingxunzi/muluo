@@ -1,5 +1,0 @@
-E:\WorkSpace\MONO.Distribution\30-编码\MONO.Message.UI\MONO.Message.UI\bin\MONO.Message.UI.dll
-E:\WorkSpace\MONO.Distribution\30-编码\MONO.Message.UI\MONO.Message.UI\bin\MONO.Message.UI.pdb
-E:\WorkSpace\MONO.Distribution\30-编码\MONO.Message.UI\MONO.Message.UI\obj\Debug\MONO.Message.UI.csprojResolveAssemblyReference.cache
-E:\WorkSpace\MONO.Distribution\30-编码\MONO.Message.UI\MONO.Message.UI\obj\Debug\MONO.Message.UI.dll
-E:\WorkSpace\MONO.Distribution\30-编码\MONO.Message.UI\MONO.Message.UI\obj\Debug\MONO.Message.UI.pdb
