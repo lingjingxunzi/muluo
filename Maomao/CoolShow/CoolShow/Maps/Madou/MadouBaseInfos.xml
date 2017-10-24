@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MadouBaseInfos" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="MadouBaseInfos" type="CoolShow.Model.Business.MadouBaseInfos,CoolShow.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_MadouBaseInfosResult" class="MadouBaseInfos">
+      <result property="MadouBaseInfoKey" column="MadouBaseInfoKey"/>
+      <result property="Nick" column="Nick"/>
+      <result property="AgeRange" column="AgeRange"/>
+      <result property="Occupation" column="Occupation"/>
+      <result property="ImageStyle" column="ImageStyle"/>
+      <result property="JoinDate" column="JoinDate"/>
+      <result property="ExpectedSalary" column="ExpectedSalary"/>
+      <result property="Remark" column="Remark"/>
+      <result property="Wechart" column="Wechart"/>
+    </resultMap>
+  </resultMaps>
+
+
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertBusinesserBaseInfo' parameterClass='MadouBaseInfos'>
+      INSERT INTO MadouBaseInfos
+      (
+      Nick,
+      AgeRange,
+      ImageStyle,
+      JoinDate,
+      QQNumber,
+      Occupation
+      )
+      VALUES
+      (
+      #Nick#,
+      #AgeRange#,
+      #ImageStyle#,
+      #JoinDate#,
+      #QQNumber#,
+      #Occupation#
+
+      )
+    </insert>
+
+
+    <update id='UpdateBusinesserBaseInfo' parameterClass='MadouBaseInfos'>
+      UPDATE MadouBaseInfos
+      SET
+      <isNotEmpty prepend="," property="AgeRange">AgeRange=#AgeRange#</isNotEmpty>
+      <isNotEmpty prepend="," property="Occupation">Occupation=#Occupation#</isNotEmpty>
+      <isNotEmpty prepend="," property="ImageStyle">ImageStyle=#ImageStyle#</isNotEmpty>
+      <isNotEmpty prepend="," property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
+
+
+      WHERE
+      [MadouBaseInfoKey] = #MadouBaseInfoKey#
+    </update>
+
+    <delete id='DeleteBusinesserBaseInfo' parameterClass='MadouBaseInfos'>
+      DELETE FROM  MadouBaseInfos
+      WHERE
+      [MadouBaseInfoKey] = #MadouBaseInfoKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectBusinesserBaseInfoList" parameterClass="MadouBaseInfos"  resultMap="FB_MadouBaseInfosResult">
+      <![CDATA[SELECT 
+          MadouBaseInfoKey,
+          Nick,
+         AgeRange,
+         Occupation,
+         ImageStyle,
+         JoinDate
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY MadouBaseInfoKey DESC) AS RowNumber, *
+          FROM  MadouBaseInfos
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="AgeRange"  > AgeRange=#AgeRange#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="JoinDate"> JoinDate=#JoinDate#</isNotEmpty>
+          <isNotEmpty prepend="AND"  property="ImageStyle">ImageStyle=#ImageStyle#</isNotEmpty>
+
+        </isEqual>
+        )T
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM  MadouBaseInfos
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="AgeRange"  >AgeRange=#AgeRange#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
+        <isNotEmpty prepend="AND"  property="ImageStyle">ImageStyle=#ImageStyle#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectBusinesserBaseInfoCount" parameterClass="MadouBaseInfos" resultClass="int">
+      Select count(*)
+      FROM  MadouBaseInfos
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="AgeRange" compareValue="0">AgeRange=#AgeRange#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectBusinesserBaseInfoByKey" parameterClass="MadouBaseInfos" resultMap="FB_MadouBaseInfosResult">
+      Select
+      MadouBaseInfoKey,
+      Nick,
+      AgeRange,
+      Occupation,
+      ImageStyle,
+      JoinDate,
+      QQNumber
+      FROM  MadouBaseInfos
+      WHERE MadouBaseInfoKey=#MadouBaseInfoKey#
+    </select>
+
+
+    <select id="SelectBusinesserBaseInfoByNick" parameterClass="MadouBaseInfos" resultMap="FB_MadouBaseInfosResult">
+      Select
+      MadouBaseInfoKey,
+      Nick,
+      AgeRange,
+      Occupation,
+      ImageStyle,
+      JoinDate,
+      QQNumber
+      FROM  MadouBaseInfos
+      WHERE Nick=#Nick#
+    </select>
+
+
+
+
+
+
+  </statements>
+</sqlMap>

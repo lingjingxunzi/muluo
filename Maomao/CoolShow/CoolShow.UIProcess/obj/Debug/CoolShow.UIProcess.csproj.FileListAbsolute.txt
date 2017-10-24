@@ -1,0 +1,17 @@
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\obj\Debug\CoolShow.UIProcess.csprojResolveAssemblyReference.cache
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.UIProcess.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.UIProcess.pdb
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.BLL.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.Common.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.DAL.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.Model.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\log4net.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.BLL.pdb
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.Common.pdb
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.DAL.pdb
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\CoolShow.Model.pdb
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\obj\Debug\CoolShow.UIProcess.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\obj\Debug\CoolShow.UIProcess.pdb
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\IBatisNet.DataMapper.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\IBatisNet.Common.dll
+E:\WorkSpace\CoolShow\CoolShow.UIProcess\bin\Debug\Castle.DynamicProxy.dll

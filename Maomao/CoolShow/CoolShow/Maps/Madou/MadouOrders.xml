@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MadouOrders" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="MadouOrders" type="CoolShow.Model.Business.MadouOrders,CoolShow.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_MadouOrdersResult" class="MadouOrders">
+      <result property="MadouOrderKey" column="MadouOrderKey"/>
+      <result property="OrderDate" column="OrderDate"/>
+      <result property="OrderAmout" column="OrderAmout"/>
+      <result property="StoreName" column="StoreName"/>
+      <result property="OrderNumber" column="OrderNumber"/>
+      <result property="OrderStatus" column="OrderStatus"/>
+    
+
+    </resultMap>
+  </resultMaps>
+
+
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertBusinesserBaseInfo' parameterClass='MadouOrders'>
+      INSERT INTO MadouOrders
+      (
+      OrderDate,
+      OrderAmout,
+      OrderNumber,
+      OrderStatus,
+      QQNumber,
+      StoreName
+      )
+      VALUES
+      (
+      #OrderDate#,
+      #OrderAmout#,
+      #OrderNumber#,
+      #OrderStatus#,
+      #QQNumber#,
+      #StoreName#
+       
+      )
+    </insert>
+
+
+    <update id='UpdateBusinesserBaseInfo' parameterClass='MadouOrders'>
+      UPDATE MadouOrders
+      SET
+      <isNotEmpty prepend="," property="OrderAmout">OrderAmout=#OrderAmout#</isNotEmpty>
+      <isNotEmpty prepend="," property="StoreName">StoreName=#StoreName#</isNotEmpty>
+      <isNotEmpty prepend="," property="OrderNumber">OrderNumber=#OrderNumber#</isNotEmpty>
+      <isNotEmpty prepend="," property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+
+     
+      WHERE
+      [MadouOrderKey] = #MadouOrderKey#
+    </update>
+
+    <delete id='DeleteBusinesserBaseInfo' parameterClass='MadouOrders'>
+      DELETE FROM  MadouOrders
+      WHERE
+      [MadouOrderKey] = #MadouOrderKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectBusinesserBaseInfoList" parameterClass="MadouOrders"  resultMap="FB_MadouOrdersResult">
+      <![CDATA[SELECT 
+          MadouOrderKey,
+          OrderDate,
+         OrderAmout,
+         StoreName,
+         OrderNumber,
+         OrderStatus
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY MadouOrderKey DESC) AS RowNumber, *
+          FROM  MadouOrders
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="OrderAmout"  > OrderAmout=#OrderAmout#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="OrderStatus"> OrderStatus=#OrderStatus#</isNotEmpty>
+          <isNotEmpty prepend="AND"  property="OrderNumber">OrderNumber=#OrderNumber#</isNotEmpty>
+
+        </isEqual>
+        )T
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM  MadouOrders
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="OrderAmout"  >OrderAmout=#OrderAmout#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+        <isNotEmpty prepend="AND"  property="OrderNumber">OrderNumber=#OrderNumber#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectBusinesserBaseInfoCount" parameterClass="MadouOrders" resultClass="int">
+      Select count(*)
+      FROM  MadouOrders
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="OrderAmout" compareValue="0">OrderAmout=#OrderAmout#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="OrderStatus">OrderStatus=#OrderStatus#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectBusinesserBaseInfoByKey" parameterClass="MadouOrders" resultMap="FB_MadouOrdersResult">
+      Select
+      MadouOrderKey,
+      OrderDate,
+      OrderAmout,
+      StoreName,
+      OrderNumber,
+      OrderStatus,
+      QQNumber
+      FROM  MadouOrders
+      WHERE MadouOrderKey=#MadouOrderKey#
+    </select>
+
+
+    <select id="SelectBusinesserBaseInfoByOrderDate" parameterClass="MadouOrders" resultMap="FB_MadouOrdersResult">
+      Select
+      MadouOrderKey,
+      OrderDate,
+      OrderAmout,
+      StoreName,
+      OrderNumber,
+      OrderStatus,
+      QQNumber
+      FROM  MadouOrders
+      WHERE OrderDate=#OrderDate#
+    </select>
+
+
+     
+
+
+
+  </statements>
+</sqlMap>

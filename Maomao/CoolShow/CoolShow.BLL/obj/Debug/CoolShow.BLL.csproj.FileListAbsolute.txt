@@ -1,0 +1,15 @@
+E:\WorkSpace\CoolShow\CoolShow.BLL\obj\Debug\CoolShow.BLL.csprojResolveAssemblyReference.cache
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.BLL.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.BLL.pdb
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.Common.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.DAL.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.Model.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\log4net.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.Common.pdb
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.DAL.pdb
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\CoolShow.Model.pdb
+E:\WorkSpace\CoolShow\CoolShow.BLL\obj\Debug\CoolShow.BLL.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\obj\Debug\CoolShow.BLL.pdb
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\IBatisNet.DataMapper.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\IBatisNet.Common.dll
+E:\WorkSpace\CoolShow\CoolShow.BLL\bin\Debug\Castle.DynamicProxy.dll

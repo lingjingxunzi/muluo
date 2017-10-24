@@ -1,0 +1,5 @@
+E:\WorkSpace\CoolShow\CoolShow.Common\bin\Debug\CoolShow.Common.dll
+E:\WorkSpace\CoolShow\CoolShow.Common\bin\Debug\CoolShow.Common.pdb
+E:\WorkSpace\CoolShow\CoolShow.Common\bin\Debug\log4net.dll
+E:\WorkSpace\CoolShow\CoolShow.Common\obj\Debug\CoolShow.Common.dll
+E:\WorkSpace\CoolShow\CoolShow.Common\obj\Debug\CoolShow.Common.pdb

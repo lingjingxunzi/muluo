@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="DataBackups" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="DataBackups" type="MONO.Distribution.Model.Sys.DataBackups,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_DataBackupsResult" class="DataBackups">
+      <result property="DataBackupKey" column="DataBackupKey"/>
+      <result property="BackNumber" column="BackNumber"/>
+      <result property="BackStyle" column="BackStyle"/>
+      <result property="Cycle" column="Cycle"/>
+      <result property="TableName" column="TableName"/>
+      <result property="BackupUrl" column="BackupUrl"/>
+      <result property="BackupTime" column="BackupTime"/>
+      <result property="EnumStyle" column="BackStyle" select="SelectEnumerationByKey" lazyLoad="false"/>
+      <result property="EnumCycle" column="Cycle" select="SelectEnumerationByKey" lazyLoad="false"/>
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+    <parameterMap id='Pro_BackupParam' class='DataBackups'>
+      <parameter property="FileName" column=""></parameter>
+      <parameter property="FilePath" column=""/>
+    </parameterMap>
+    <parameterMap id='Pro_BackupSomeParam' class='DataBackups'>
+      <parameter property="TableNameBack" column=""></parameter>
+      <parameter property="TableName" column=""/>
+    </parameterMap>
+  </parameterMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertDataBackup' parameterClass='DataBackups'>
+      INSERT INTO FD_DataBackups
+      (
+      BackNumber,
+      BackStyle,
+      TableName,
+      BackupUrl,
+      BackupTime,
+      Cycle 
+      )
+      VALUES
+      (
+      #BackNumber#,
+      #BackStyle#,
+      #TableName#,
+      #BackupUrl#,
+      #BackupTime#,
+      #Cycle#
+      )
+    </insert>
+
+
+    <update id='UpdateDataBackup' parameterClass='DataBackups'>
+      UPDATE FD_DataBackups
+      SET
+      <isNotEmpty prepend="," property="BackStyle">BackStyle=#BackStyle#</isNotEmpty>
+      <isNotEmpty prepend="," property="Cycle">Cycle=#Cycle#</isNotEmpty>
+      <isNotEmpty prepend="," property="TableName">TableName=#TableName#</isNotEmpty>
+      <isNotEmpty prepend="," property="BackupUrl">BackupUrl=#BackupUrl#</isNotEmpty>
+
+      <isNotEmpty prepend="," property="Level">LEVEL=#Level#</isNotEmpty>
+      WHERE
+      [DataBackupKey] = #DataBackupKey#
+    </update>
+
+    <delete id='DeleteDataBackup' parameterClass='DataBackups'>
+      DELETE FROM FD_DataBackups
+      WHERE
+      [DataBackupKey] = #DataBackupKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectDataBackupList" parameterClass="DataBackups"  resultMap="FB_DataBackupsResult">
+      <![CDATA[SELECT 
+          DataBackupKey,
+          BackNumber,
+         BackStyle,
+         Cycle,
+         TableName,
+         BackupUrl,
+         BackupTime 
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY TableName DESC) AS RowNumber, *
+          FROM FD_DataBackups
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="BackStyle"  > BackStyle=#BackStyle#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="BackupUrl"> BackupUrl=#BackupUrl#</isNotEmpty>
+          <isNotEmpty prepend="AND"  property="TableName">TableName=#TableName#</isNotEmpty>
+
+        </isEqual>
+        )T
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_DataBackups
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="BackStyle"  >BackStyle=#BackStyle#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="BackupUrl">BackupUrl=#BackupUrl#</isNotEmpty>
+        <isNotEmpty prepend="AND"  property="TableName">TableName=#TableName#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectDataBackupCount" parameterClass="DataBackups" resultClass="int">
+      Select count(*)
+      FROM FD_DataBackups
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="BackStyle" compareValue="0">BackStyle=#BackStyle#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="BackupUrl">BackupUrl=#BackupUrl#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectDataBackupByKey" parameterClass="DataBackups" resultMap="FB_DataBackupsResult">
+      Select
+      DataBackupKey,
+      BackNumber,
+      BackStyle,
+      Cycle,
+      TableName,
+      BackupUrl,
+      BackupTime
+      FROM FD_DataBackups
+      WHERE DataBackupKey=#DataBackupKey#
+    </select>
+
+
+    <select id="SelectDataBackupByBackNumber" parameterClass="DataBackups" resultMap="FB_DataBackupsResult">
+      Select
+      DataBackupKey,
+      BackNumber,
+      BackStyle,
+      Cycle,
+      TableName,
+      BackupUrl,
+      BackupTime
+      FROM FD_DataBackups
+      WHERE BackNumber=#BackNumber#
+    </select>
+
+
+    <select id="SelectTableNames" parameterClass="DataBackups" resultClass="string">
+      SELECT Name FROM SysObjects Where XType='U' ORDER BY Name
+    </select>
+
+
+    <procedure id="BackupSingleTables" parameterMap="Pro_BackupSomeParam" resultClass="string">
+      PRO_BackupSome
+    </procedure>
+
+    <procedure id="ExecFullBackup" parameterMap="Pro_BackupParam" resultClass='string' >
+      PRO_FullBackup
+    </procedure>
+
+
+
+
+  </statements>
+</sqlMap>

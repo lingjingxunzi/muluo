@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MenuGroups" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="MenuGroups" type="MONO.Distribution.Model.Sys.MenuGroups,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FD_MenuGroupsResult" class="MenuGroups">
+      <result property="MenuGroupKey" column="MENUGROUPKEY"/>
+      <result property="GroupKey" column="GROUPKEY"/>
+      <result property="MenuKey" column="MENUKEY"/>
+      <result property="Menus" column="MenuKey" select="SelectMenuByKey" lazyload="true"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertMenuGroup' parameterClass='MenuGroups'>
+      INSERT INTO FD_MenuGroups
+      (
+      GROUPKEY,
+      MENUKEY
+      )
+      VALUES
+      (
+      #GroupKey#,
+      #MenuKey#
+      <selectKey property="MenuGroupKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as bigint) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateMenuGroup' parameterClass='MenuGroups'>
+      UPDATE FD_MenuGroups
+      SET
+      <isGreaterThan prepend=" " compareValue="0" property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+      <isGreaterThan prepend="," compareValue="0"  property="MenuKey">MENUKEY=#MenuKey#</isGreaterThan>
+      WHERE
+      [MenuGroupKey] = #MenuGroupKey#
+    </update>
+
+    <delete id='DeleteMenuGroup' parameterClass='MenuGroups'>
+      DELETE FROM FD_MenuGroups
+      WHERE
+      [MenuGroupKey] = #MenuGroupKey#
+    </delete>
+
+    <delete id='DeleteMenuGroupByGroupKey' parameterClass='int'>
+      DELETE FROM FD_MenuGroups
+      WHERE
+      [GroupKey] = #Value#
+    </delete>
+
+
+
+    <!--动态查询语句-->
+    <select id="SelectMenuGroupList" parameterClass="MenuGroups"   resultMap="FD_MenuGroupsResult">
+      <![CDATA[SELECT 
+      MENUGROUPKEY,
+      GROUPKEY,
+      MENUKEY 
+       ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY MenuGroupKey DESC) AS RowNumber,*
+          FROM FD_MenuGroups
+          WHERE 1=1
+          <isGreaterThan prepend="AND" compareValue="0" property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+          <isGreaterThan prepend="AND" compareValue="0"  property="MenuKey">MENUKEY=#MenuKey#</isGreaterThan>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_MenuGroups
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue="0"  property="MenuKey">MENUKEY=#MenuKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectMenuGroupCount" parameterClass="MenuGroups" resultClass="int">
+      Select count(*)
+      FROM FD_MenuGroups
+      WHERE 1=1
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue="0"  property="MenuKey">MENUKEY=#MenuKey#</isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectMenuGroupByGroupKey" parameterClass="MenuGroups" resultMap="FD_MenuGroupsResult">
+      Select
+      MENUGROUPKEY,
+      GROUPKEY,
+      MENUKEY
+      FROM FD_MenuGroups
+      WHERE GROUPKEY = #GroupKey#
+    </select>
+
+    <select id="SelectMenuGroupByKey" parameterClass="MenuGroups" resultMap="FD_MenuGroupsResult">
+      Select
+      MENUGROUPKEY,
+      GROUPKEY,
+      MENUKEY
+      FROM FD_MenuGroups
+      WHERE MenuGroupKey = #MenuGroupKey#
+    </select>
+
+  </statements>
+</sqlMap>

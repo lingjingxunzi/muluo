@@ -1,0 +1,99 @@
+﻿.deanmadoupic {
+    width: 280px;
+    height: 350px;
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+div {
+    display: block;
+}
+
+ 
+ul li {
+    list-style: none;
+}
+
+ul li, .xl li {
+    list-style: none;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ 
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+body {
+    font-family: Microsoft Yahei;
+}
+
+body, input, button, select, textarea {
+    font: 12px/1.5 Tahoma,Helvetica,'SimSun',sans-serif;
+    color: #444;
+}
+
+* {
+    word-wrap: break-word;
+}
+
+* {
+    word-wrap: break-word;
+}

@@ -1,0 +1,4 @@
+E:\WorkSpace\CoolShow\CoolShow.Model\bin\Debug\CoolShow.Model.dll
+E:\WorkSpace\CoolShow\CoolShow.Model\bin\Debug\CoolShow.Model.pdb
+E:\WorkSpace\CoolShow\CoolShow.Model\obj\Debug\CoolShow.Model.dll
+E:\WorkSpace\CoolShow\CoolShow.Model\obj\Debug\CoolShow.Model.pdb

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F882455F-3150-4D16-9CA3-D45CF2AADD03}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoolShow.DAL</RootNamespace>
+    <AssemblyName>CoolShow.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBatisNet.Common">
+      <HintPath>..\CoolShow.Libs\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common.Logging.Log4Net">
+      <HintPath>..\CoolShow.Libs\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper">
+      <HintPath>..\CoolShow.Libs\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\CoolShow.Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseInfo\EnumerationInfosDao.cs" />
+    <Compile Include="BaseInfo\GroupsDao.cs" />
+    <Compile Include="Business\BusinesserBaseInfosDao.cs" />
+    <Compile Include="Business\BusinesserToOrdersDao.cs" />
+    <Compile Include="DaoBase.cs" />
+    <Compile Include="IDao.cs" />
+    <Compile Include="Interface\BaseInfo\IEnumerationInfosDao.cs" />
+    <Compile Include="Interface\BaseInfo\IGroupsDao.cs" />
+    <Compile Include="Interface\Business\IBusinesserBaseInfosDao.cs" />
+    <Compile Include="Interface\Business\IBusinesserToOrdersDao.cs" />
+    <Compile Include="Interface\Madou\IMadouBaseInfosDao.cs" />
+    <Compile Include="Interface\Madou\IMadouOrdersDao.cs" />
+    <Compile Include="Madou\MadouBaseInfosDao.cs" />
+    <Compile Include="Madou\MadouOrdersDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoolShow.Common\CoolShow.Common.csproj">
+      <Project>{42948B74-AA45-4B69-8FAD-1CC6A0594BC0}</Project>
+      <Name>CoolShow.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CoolShow.Model\CoolShow.Model.csproj">
+      <Project>{543EA52E-F18F-45B3-9778-72D301BA9FB5}</Project>
+      <Name>CoolShow.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

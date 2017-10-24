@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="BusinesserBaseInfos" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="BusinesserBaseInfos" type="CoolShow.Model.Business.BusinesserBaseInfos,CoolShow.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_BusinesserBaseInfosResult" class="BusinesserBaseInfos">
+      <result property="BusinesserBaseInfoKey" column="BusinesserBaseInfoKey"/>
+      <result property="WeChart" column="WeChart"/>
+      <result property="MobilePhone" column="MobilePhone"/>
+      <result property="IdentifyNum" column="IdentifyNum"/>
+      <result property="StoreUrl" column="StoreUrl"/>
+      <result property="JoinDate" column="JoinDate"/>
+      <result property="QQNumber" column="QQNumber"/>
+      <result property="Status" column="Status" />
+
+    </resultMap>
+  </resultMaps>
+
+
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertBusinesserBaseInfo' parameterClass='BusinesserBaseInfos'>
+      INSERT INTO BusinesserBaseInfos
+      (
+      WeChart,
+      MobilePhone,
+      StoreUrl,
+      JoinDate,
+      QQNumber,
+      IdentifyNum,
+      Status
+      )
+      VALUES
+      (
+      #WeChart#,
+      #MobilePhone#,
+      #StoreUrl#,
+      #JoinDate#,
+      #QQNumber#,
+      #IdentifyNum#,
+      #Status#
+      )
+    </insert>
+
+
+    <update id='UpdateBusinesserBaseInfo' parameterClass='BusinesserBaseInfos'>
+      UPDATE BusinesserBaseInfos
+      SET
+      <isNotEmpty prepend="," property="MobilePhone">MobilePhone=#MobilePhone#</isNotEmpty>
+      <isNotEmpty prepend="," property="IdentifyNum">IdentifyNum=#IdentifyNum#</isNotEmpty>
+      <isNotEmpty prepend="," property="StoreUrl">StoreUrl=#StoreUrl#</isNotEmpty>
+      <isNotEmpty prepend="," property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
+
+      <isNotEmpty prepend="," property="Level">LEVEL=#Level#</isNotEmpty>
+      WHERE
+      [BusinesserBaseInfoKey] = #BusinesserBaseInfoKey#
+    </update>
+
+    <delete id='DeleteBusinesserBaseInfo' parameterClass='BusinesserBaseInfos'>
+      DELETE FROM  BusinesserBaseInfos
+      WHERE
+      [BusinesserBaseInfoKey] = #BusinesserBaseInfoKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectBusinesserBaseInfoList" parameterClass="BusinesserBaseInfos"  resultMap="FB_BusinesserBaseInfosResult">
+      <![CDATA[SELECT 
+          BusinesserBaseInfoKey,
+          WeChart,
+         MobilePhone,
+         IdentifyNum,
+         StoreUrl,
+         JoinDate,
+         QQNumber 
+         ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY BusinesserBaseInfoKey DESC) AS RowNumber, *
+          FROM  BusinesserBaseInfos
+          WHERE 1=1
+          <isNotEmpty prepend="AND" property="MobilePhone"  > MobilePhone=#MobilePhone#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="JoinDate"> JoinDate=#JoinDate#</isNotEmpty>
+          <isNotEmpty prepend="AND"  property="StoreUrl">StoreUrl=#StoreUrl#</isNotEmpty>
+
+        </isEqual>
+        )T
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM  BusinesserBaseInfos
+        </isEqual>
+      </dynamic>
+      where 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="MobilePhone"  >MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
+        <isNotEmpty prepend="AND"  property="StoreUrl">StoreUrl=#StoreUrl#</isNotEmpty>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<=#EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+
+    </select>
+
+    <select id="SelectBusinesserBaseInfoCount" parameterClass="BusinesserBaseInfos" resultClass="int">
+      Select count(*)
+      FROM  BusinesserBaseInfos
+      WHERE 1=1
+      <dynamic >
+        <isNotEmpty prepend="AND" property="MobilePhone" compareValue="0">MobilePhone=#MobilePhone#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="SelectBusinesserBaseInfoByKey" parameterClass="BusinesserBaseInfos" resultMap="FB_BusinesserBaseInfosResult">
+      Select
+      BusinesserBaseInfoKey,
+      WeChart,
+      MobilePhone,
+      IdentifyNum,
+      StoreUrl,
+      JoinDate,
+      QQNumber
+      FROM  BusinesserBaseInfos
+      WHERE BusinesserBaseInfoKey=#BusinesserBaseInfoKey#
+    </select>
+
+
+    <select id="SelectBusinesserBaseInfoByWeChart" parameterClass="BusinesserBaseInfos" resultMap="FB_BusinesserBaseInfosResult">
+      Select
+      BusinesserBaseInfoKey,
+      WeChart,
+      MobilePhone,
+      IdentifyNum,
+      StoreUrl,
+      JoinDate,
+      QQNumber
+      FROM  BusinesserBaseInfos
+      WHERE WeChart=#WeChart#
+    </select>
+
+
+    <select id="SelectStoreUrls" parameterClass="BusinesserBaseInfos" resultClass="string">
+      SELECT Name FROM SysObjects Where XType='U' ORDER BY Name
+    </select>
+
+
+
+  </statements>
+</sqlMap>

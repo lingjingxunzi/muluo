@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="SystemUsers" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--实体类映射-->
+  <alias>
+    <typeAlias alias="SystemUsers" type="MONO.Distribution.Model.Sys.SystemUsers,MONO.Distribution.Model"/>
+  </alias>
+
+  <!--字段对应-->
+  <resultMaps>
+    <resultMap id="FB_System_UsersResult" class="SystemUsers">
+      <result property="SysUserKey" column="SYSUSERKEY"/>
+      <result property="GroupKey" column="GROUPKEY"/>
+      <result property="Account" column="ACCOUNT"/>
+      <result property="PWD" column="PWD"/>
+      <result property="Status" column="STATUS"/>
+      <result property="UpdateTime" column="UPDATETIME"/>
+      <result property="Flag" column="FLAG"/>
+      <result property="Nick" column="Nick"/>
+      <result property="Remark" column="Remark"/>
+      <result property="ParentKey" column="ParentKey"/>
+      <result property="SysUserInfos" column="SysUserKey" select="SelectSysUserInfoByUserKey"  lazyLoad="false" />
+      <result property="SysUserGroups" column="GroupKey" select="SelectSysUserGroupByKey"  lazyLoad="false" />
+      <result property="SystemAccount" column="SysUserKey" select="SelectSystemAccountByUserKey" lazyLoad="false"/>
+      <result property="ParentSystemUsers" column="ParentKey" select="SelectSystemUserByKey" lazyLoad="false"/>
+    </resultMap>
+
+    <resultMap id="SystemUsersResult" class="SystemUsers">
+      <result property="SysUserKey" column="SYSUSERKEY"/>
+      <result property="GroupKey" column="GROUPKEY"/>
+      <result property="Account" column="ACCOUNT"/>
+      <result property="PWD" column="PWD"/>
+      <result property="Status" column="STATUS"/>
+      <result property="UpdateTime" column="UPDATETIME"/>
+      <result property="Flag" column="FLAG"/>
+      <result property="Nick" column="Nick"/>
+      <result property="Remark" column="Remark"/>
+      <result property="ParentKey" column="ParentKey"/>
+      <result property="SysUserGroups" column="GroupKey" select="SelectSysUserGroupByKey"  lazyLoad="false" />
+    </resultMap>
+
+    <resultMap id="SystemAccountReport" class="SystemUsers">
+      <result property="SysUserKey" column="SYSUSERKEY"/>
+      <result property="Account" column="ACCOUNT"/>
+      <result property="Nick" column="Nick"/>
+      <result property="SystemAccount" column="SysUserKey" select="SelectSystemAccountByUserKey" lazyLoad="false"/>
+      <result property="ActiveCostCount" column="SysUserKey" select="SelectActiveCostCount" lazyLoad="false"/>
+      <result property="WaittingCount" column="SysUserKey" select="SelectActiveWaittingCount" lazyLoad="false"/>
+      <result property="FaildCount" column="SysUserKey" select="SelectActiveFaildCount" lazyLoad="false"/>
+      <result property="SussessCount" column="SysUserKey" select="SelectActiveSussessCount" lazyLoad="false"/>
+      <result property="TotalCount" column="SysUserKey" select="SelectActiveTotalCount" lazyLoad="false"/>
+    </resultMap>
+    <resultMap id="SystemAccountMonthReport" class="SystemUsers">
+      <result property="SysUserKey" column="SYSUSERKEY"/>
+
+      <result property="Nick" column="Nick"/>
+    </resultMap>
+  </resultMaps>
+
+  <!--动态sql语句-->
+  <statements>
+    <!-- Insert statement.-->
+    <insert id='InsertSystemUser' parameterClass='SystemUsers'>
+      INSERT INTO FD_SYSTEM_USERS
+      (
+      <isGreaterThan property='GroupKey' prepend=' ' compareValue='0'>
+        GROUPKEY,
+      </isGreaterThan>
+      ACCOUNT,
+      PWD,
+      STATUS,
+      FLAG,
+      Nick,
+      ParentKey,
+      Remark
+      )
+      VALUES
+      (
+      <isGreaterThan property='GroupKey' prepend=' ' compareValue='0'>
+        #GroupKey#,
+      </isGreaterThan>
+      #Account#,
+      #PWD#,
+      #Status#,
+      #Flag# ,
+      #Nick#,
+      #ParentKey#,
+      #Remark#
+      <selectKey property="SysUserKey" resultClass="int" type="post"> SELECT cast(@@IDENTITY as int) AS id </selectKey>
+      )
+    </insert>
+
+
+    <update id='UpdateSystemUserCode' parameterClass='SystemUsers'>
+      UPDATE FD_SYSTEM_USERS
+      SET VerCode=#VerCode#
+      WHERE
+      [SysUserKey] = #SysUserKey#
+    </update>
+
+    <update id='UpdateSystemUser' parameterClass='SystemUsers'>
+      UPDATE FD_SYSTEM_USERS
+      SET ParentKey=#ParentKey#
+      <isNotEmpty prepend=" ," property="Account">ACCOUNT=#Account#</isNotEmpty>
+      <isNotEmpty prepend="," property="PWD">PWD=#PWD#</isNotEmpty>
+      <isNotEmpty prepend="," property="Status">STATUS=#Status#</isNotEmpty>
+      <isGreaterThan compareValue="-1" prepend="," property="Flag">Flag=#Flag#</isGreaterThan>
+      <isNotEmpty prepend="," property="Nick">Nick=#Nick#</isNotEmpty>
+      <isNotEmpty prepend="," property="Remark" >Remark=#Remark#</isNotEmpty>
+      WHERE
+      [SysUserKey] = #SysUserKey#
+    </update>
+
+    <delete id='DeleteSystemUser' parameterClass='SystemUsers'>
+      DELETE FROM FD_SYSTEM_USERS
+      WHERE
+      [SysUserKey] = #SysUserKey#
+    </delete>
+
+    <!--动态查询语句-->
+    <select id="SelectSystemUserList" parameterClass="SystemUsers"   resultMap="FB_System_UsersResult">
+      <![CDATA[SELECT 
+         SYSUSERKEY,
+         GROUPKEY,
+         ACCOUNT,
+         PWD,
+         STATUS,
+         UPDATETIME,
+         FLAG ,
+         Nick,
+         ParentKey,
+         Remark
+          ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY SysUserKey DESC) AS RowNumber,*
+          FROM FD_SYSTEM_USERS
+          WHERE (Flag= 0 or Flag is null)
+          <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+          <isGreaterThan prepend="AND" compareValue='0'  property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="Account">ACCOUNT like '%'+#Account#+'%'</isNotEmpty>
+          <isNotEmpty prepend="AND" property="DisAccount">Account=#DisAccount#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="PWD">PWD=#PWD#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+          <isGreaterThan prepend="AND" compareValue="0" property="Flag">FLAG=#Flag#</isGreaterThan>
+          <isEqual prepend="AND" property="Flag" compareValue="0">Flag=#Flag#</isEqual>
+          <isNotNull prepend="" property="SysUserKeyList" >
+            <iterate prepend="AND" property="SysUserKeyList"
+  open="(" close=")" conjunction="OR">
+              SysUserKey=#SysUserKeyList[]#
+            </iterate>
+          </isNotNull>
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_SYSTEM_USERS
+        </isEqual>
+      </dynamic>
+      where (Flag= 0 or Flag is null)
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue='0'  property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Account">ACCOUNT like '%'+#Account#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" property="PWD">PWD=#PWD#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="DisAccount">Account=#DisAccount#</isNotEmpty>
+        <isGreaterThan prepend="AND" compareValue="0" property="Flag">FLAG=#Flag#</isGreaterThan>
+        <isEqual prepend="AND" property="Flag" compareValue="0">Flag=#Flag#</isEqual>
+        <isNotNull prepend="" property="SysUserKeyList" >
+          <iterate prepend="AND" property="SysUserKeyList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SysUserKeyList[]#
+          </iterate>
+        </isNotNull>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<= #EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+
+    <select id="SelectSystemUserCount" parameterClass="SystemUsers" resultClass="int">
+      Select count(*)
+      FROM FD_SYSTEM_USERS
+      WHERE (Flag= 0 or Flag is null)
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue='0'  property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Account">ACCOUNT=#Account#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="PWD">PWD=#PWD#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+        <isNotNull prepend="AND" property="Flag">FLAG=#Flag#</isNotNull>
+        <isNotEmpty prepend="AND" property="DisAccount">Account=#DisAccount#</isNotEmpty>
+        <isNotNull prepend="" property="SysUserKeyList" >
+          <iterate prepend="AND" property="SysUserKeyList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SysUserKeyList[]#
+          </iterate>
+        </isNotNull>
+      </dynamic>
+    </select>
+
+    <select id="SelectSystemUserByKey" parameterClass="SystemUsers" resultMap="SystemUsersResult">
+      Select
+      SYSUSERKEY,
+      GROUPKEY,
+      ACCOUNT,
+      PWD,
+      STATUS,
+      UPDATETIME,
+      FLAG ,
+      Nick,
+      ParentKey,
+      Remark
+      FROM FD_SYSTEM_USERS
+      WHERE  SYSUSERKEY = #SysUserKey#
+    </select>
+
+
+
+
+
+    <select id="SelectByAccount" parameterClass="SystemUsers" resultMap="FB_System_UsersResult">
+      Select
+      SYSUSERKEY,
+      GROUPKEY,
+      ACCOUNT,
+      PWD,
+      STATUS,
+      UPDATETIME,
+      FLAG ,
+      Nick,
+      ParentKey,
+      Remark
+      FROM FD_SYSTEM_USERS
+      WHERE  ACCOUNT = #Account#
+    </select>
+
+
+
+    <select id="SelectSystemChildrensKey"  parameterClass="SystemUsers" resultClass="int">
+      with f as
+      (
+      select SysUserKey from FD_System_Users where SysUserKey=#SysUserKey#  and (flag= 0 or flag is null)
+      union all
+      select a.SysUserKey from FD_System_Users a , f b where a.parentKey=b.SysUserKey
+      )
+      select  * from f
+    </select>
+
+    <select id="SelectSystemChildrensKeyForAllInfo"  parameterClass="SystemUsers" resultMap="SystemUsersResult">
+      with f as
+      (
+      select * from FD_System_Users where SysUserKey=#SysUserKey# and (flag= 0 or flag is null)
+      union all
+      select a.* from FD_System_Users a , f b where a.parentKey=b.SysUserKey
+      )
+      select  *
+      from f
+
+
+    </select>
+
+
+    <select id="SelectSystemUserListForReport" parameterClass="SystemUsers"   resultMap="SystemAccountReport">
+      <![CDATA[SELECT 
+         SYSUSERKEY,
+         GROUPKEY,
+         ACCOUNT,
+         PWD,
+         STATUS,
+         UPDATETIME,
+         FLAG ,
+         Nick,
+         ParentKey,
+         Remark
+          ]]>
+      <dynamic prepend="">
+        <isEqual prepend="" property="IsStartPager" compareValue="true">
+          FROM (SELECT ROW_NUMBER() OVER(ORDER BY SysUserKey DESC) AS RowNumber,*
+          FROM FD_SYSTEM_USERS
+          WHERE (Flag= 0 or Flag is null)
+          <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+          <isGreaterThan prepend="AND" compareValue='0'  property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+          <isNotEmpty prepend="AND" property="Account">ACCOUNT like '%'+#Account#+'%'</isNotEmpty>
+          <isNotEmpty prepend="AND" property="PWD">PWD=#PWD#</isNotEmpty>
+          <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+          <isGreaterThan prepend="AND" compareValue="0" property="Flag">FLAG=#Flag#</isGreaterThan>
+          <isEqual prepend="AND" property="Flag" compareValue="0">Flag=#Flag#</isEqual>
+          <isNotNull prepend="" property="SysUserKeyList" >
+            <iterate prepend="AND" property="SysUserKeyList"
+  open="(" close=")" conjunction="OR">
+              SysUserKey=#SysUserKeyList[]#
+            </iterate>
+          </isNotNull>
+
+          )T
+        </isEqual>
+        <isEqual prepend="" property="IsStartPager" compareValue="false">
+          FROM FD_SYSTEM_USERS
+        </isEqual>
+      </dynamic>
+      where (Flag= 0 or Flag is null)
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue='0'  property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Account">ACCOUNT like '%'+#Account#+'%'</isNotEmpty>
+        <isNotEmpty prepend="AND" property="PWD">PWD=#PWD#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+        <isGreaterThan prepend="AND" compareValue="0" property="Flag">FLAG=#Flag#</isGreaterThan>
+        <isEqual prepend="AND" property="Flag" compareValue="0">Flag=#Flag#</isEqual>
+        <isNotNull prepend="" property="SysUserKeyList" >
+          <iterate prepend="AND" property="SysUserKeyList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SysUserKeyList[]#
+          </iterate>
+        </isNotNull>
+        <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
+          <![CDATA[RowNumber>=#StartRecordIndex#]]>
+        </isGreaterThan>
+        <isGreaterThan prepend="AND" property="EndRecordIndex" compareValue="0">
+          <![CDATA[RowNumber<= #EndRecordIndex#]]>
+        </isGreaterThan>
+      </dynamic>
+    </select>
+
+    <select id="SelectSystemUserCountForReport" parameterClass="SystemUsers" resultClass="int">
+      Select count(*)
+      FROM FD_SYSTEM_USERS
+      WHERE (Flag= 0 or Flag is null)
+      <dynamic >
+        <isGreaterThan prepend="AND" compareValue="0" property="SysUserKey">SysUserKey=#SysUserKey#</isGreaterThan>
+        <isGreaterThan prepend="AND" compareValue='0'  property="GroupKey">GROUPKEY=#GroupKey#</isGreaterThan>
+        <isNotEmpty prepend="AND" property="Account">ACCOUNT=#Account#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="PWD">PWD=#PWD#</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status">STATUS=#Status#</isNotEmpty>
+        <isNotNull prepend="AND" property="Flag">FLAG=#Flag#</isNotNull>
+        <isNotNull prepend="" property="SysUserKeyList" >
+          <iterate prepend="AND" property="SysUserKeyList"
+open="(" close=")" conjunction="OR">
+            SysUserKey=#SysUserKeyList[]#
+          </iterate>
+        </isNotNull>
+      </dynamic>
+    </select>
+
+    <select id="SelectSystemUserListForMonthReport" parameterClass="SystemUsers"   resultMap="SystemAccountMonthReport">
+      select su.SysUserKey,isnull(su.Nick,'') as Nick
+      from FD_FlowDistributionRecords fbr
+      left join FD_System_Users su on su.SysUserKey = fbr.SysUserKey
+      where convert(nvarchar(20),fbr.CreateTime,120) like '%'+#QueryDate#+'%'
+      group by su.SysUserKey,su.Nick
+    </select>
+
+
+    <select id="SelectSystemUserListForMonthList" parameterClass="SystemUsers"   resultClass="decimal">
+      <![CDATA[ select  isnull(Price,0)
+      from (
+      select convert(varchar(10),dateadd(DAY,t2.number,t1.day),120) datt
+      from (select #QueryDate# +'-01' day) t1, (select number from MASTER..spt_values WHERE TYPE='P'
+      AND number>=0 and number<=31) t2 where convert(varchar(10),dateadd(DAY,t2.number,t1.day),120)
+      like substring(convert(varchar,#QueryDate# ,120),1,7)+'%' )Tdate
+      left join (
+      select SUM(price) as Price ,datee from (
+      select CONVERT(nvarchar(10),CreateTime,120) as datee , sfp.Price
+      from FD_FlowDistributionRecords fdr
+      left join FD_System_Users su on su.SysUserKey = fdr.SysUserKey
+      
+      left join FD_SystemFlowPackets sfp on sfp.SystemFlowPacketKey = fdr.CompanyFlowPacketKey
+      left join FD_FlowBaseInfo fbi on fbi.FlowKey = sfp.FlowPacketKey
+      where fdr.SysUserKey = #SysUserKey#  and fbi.name like '%'+ #QueryName# +'%']]>
+      <dynamic >
+        <QueryName prepend="AND"   property="QueryName">  fbi.Name like '%'+#QueryName#+‘%'</QueryName>
+
+      </dynamic>
+      )T2
+      group by datee
+      ) TAll on TAll.datee = Tdate.datt
+      order by datt
+    </select>
+
+
+    <select id="SelectDateForEveryDate" parameterClass="SystemUsers"   resultClass="String">
+      <![CDATA[  select convert(varchar(10),dateadd(DAY,t2.number,t1.day),120) datt
+      from (select #QueryDate# day) t1, (select number from MASTER..spt_values WHERE TYPE='P'
+      AND number>=0 and number<=31) t2 where convert(varchar(10),dateadd(DAY,t2.number,t1.day),120)
+      like substring(convert(varchar,#QueryDate# ,120),1,7)+'%' ]]>
+    </select>
+    
+  </statements>
+</sqlMap>
