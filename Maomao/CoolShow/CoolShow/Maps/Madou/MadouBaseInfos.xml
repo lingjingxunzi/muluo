@@ -3,7 +3,7 @@
 
   <!--实体类映射-->
   <alias>
-    <typeAlias alias="MadouBaseInfos" type="CoolShow.Model.Business.MadouBaseInfos,CoolShow.Model"/>
+    <typeAlias alias="MadouBaseInfos" type="CoolShow.Model.Madou.MadouBaseInfos,CoolShow.Model"/>
   </alias>
 
   <!--字段对应-->
@@ -16,8 +16,15 @@
       <result property="ImageStyle" column="ImageStyle"/>
       <result property="JoinDate" column="JoinDate"/>
       <result property="ExpectedSalary" column="ExpectedSalary"/>
+      <result property="ImageTools" column="ImageTools"/>
       <result property="Remark" column="Remark"/>
-      <result property="Wechart" column="Wechart"/>
+      <result property="Hight" column="Hight"/>
+      <result property="Weight" column="Weight"/>
+      <result property="AreaRegion" column="AreaRegion"/>
+      <result property="WangLevel" column="WangLevel"/>
+      <result property="IsGive" column="IsGive"/>
+      <result property="ImagePath" column="ImagePath"/>
+      <result property="Score" column="Score"/>
     </resultMap>
   </resultMaps>
 
@@ -26,15 +33,15 @@
   <!--动态sql语句-->
   <statements>
     <!-- Insert statement.-->
-    <insert id='InsertBusinesserBaseInfo' parameterClass='MadouBaseInfos'>
+    <insert id='InsertMadouBaseInfo' parameterClass='MadouBaseInfos'>
       INSERT INTO MadouBaseInfos
       (
       Nick,
       AgeRange,
       ImageStyle,
       JoinDate,
-      QQNumber,
-      Occupation
+      ImagePath,
+      Occupation 
       )
       VALUES
       (
@@ -42,41 +49,49 @@
       #AgeRange#,
       #ImageStyle#,
       #JoinDate#,
-      #QQNumber#,
+      #ImagePath#,
       #Occupation#
-
       )
     </insert>
 
 
-    <update id='UpdateBusinesserBaseInfo' parameterClass='MadouBaseInfos'>
+    <update id='UpdateMadouBaseInfo' parameterClass='MadouBaseInfos'>
       UPDATE MadouBaseInfos
       SET
       <isNotEmpty prepend="," property="AgeRange">AgeRange=#AgeRange#</isNotEmpty>
       <isNotEmpty prepend="," property="Occupation">Occupation=#Occupation#</isNotEmpty>
       <isNotEmpty prepend="," property="ImageStyle">ImageStyle=#ImageStyle#</isNotEmpty>
       <isNotEmpty prepend="," property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
-
-
       WHERE
       [MadouBaseInfoKey] = #MadouBaseInfoKey#
     </update>
 
-    <delete id='DeleteBusinesserBaseInfo' parameterClass='MadouBaseInfos'>
+    <delete id='DeleteMadouBaseInfo' parameterClass='MadouBaseInfos'>
       DELETE FROM  MadouBaseInfos
       WHERE
       [MadouBaseInfoKey] = #MadouBaseInfoKey#
     </delete>
 
     <!--动态查询语句-->
-    <select id="SelectBusinesserBaseInfoList" parameterClass="MadouBaseInfos"  resultMap="FB_MadouBaseInfosResult">
+    <select id="SelectMadouBaseInfoList" parameterClass="MadouBaseInfos"  resultMap="FB_MadouBaseInfosResult">
       <![CDATA[SELECT 
           MadouBaseInfoKey,
           Nick,
          AgeRange,
          Occupation,
          ImageStyle,
-         JoinDate
+         JoinDate,
+         ExpectedSalary,
+         Remark,
+         Wechart,
+         Hight,
+         Weight,
+         AreaRegion,
+         ImageTools,
+         WangLevel,          
+         IsGive,
+         ImagePath,
+         Score
          ]]>
       <dynamic prepend="">
         <isEqual prepend="" property="IsStartPager" compareValue="true">
@@ -84,11 +99,10 @@
           FROM  MadouBaseInfos
           WHERE 1=1
           <isNotEmpty prepend="AND" property="AgeRange"  > AgeRange=#AgeRange#</isNotEmpty>
-          <isNotEmpty prepend="AND" property="JoinDate"> JoinDate=#JoinDate#</isNotEmpty>
           <isNotEmpty prepend="AND"  property="ImageStyle">ImageStyle=#ImageStyle#</isNotEmpty>
-
+          )T
         </isEqual>
-        )T
+
         <isEqual prepend="" property="IsStartPager" compareValue="false">
           FROM  MadouBaseInfos
         </isEqual>
@@ -96,7 +110,6 @@
       where 1=1
       <dynamic >
         <isNotEmpty prepend="AND" property="AgeRange"  >AgeRange=#AgeRange#</isNotEmpty>
-        <isNotEmpty prepend="AND" property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
         <isNotEmpty prepend="AND"  property="ImageStyle">ImageStyle=#ImageStyle#</isNotEmpty>
         <isGreaterThan prepend="AND" property="StartRecordIndex" compareValue="0">
           <![CDATA[RowNumber>=#StartRecordIndex#]]>
@@ -108,17 +121,16 @@
 
     </select>
 
-    <select id="SelectBusinesserBaseInfoCount" parameterClass="MadouBaseInfos" resultClass="int">
+    <select id="SelectMadouBaseInfoCount" parameterClass="MadouBaseInfos" resultClass="int">
       Select count(*)
       FROM  MadouBaseInfos
       WHERE 1=1
       <dynamic >
         <isNotEmpty prepend="AND" property="AgeRange" compareValue="0">AgeRange=#AgeRange#</isNotEmpty>
-        <isNotEmpty prepend="AND" property="JoinDate">JoinDate=#JoinDate#</isNotEmpty>
       </dynamic>
     </select>
 
-    <select id="SelectBusinesserBaseInfoByKey" parameterClass="MadouBaseInfos" resultMap="FB_MadouBaseInfosResult">
+    <select id="SelectMadouBaseInfoByKey" parameterClass="MadouBaseInfos" resultMap="FB_MadouBaseInfosResult">
       Select
       MadouBaseInfoKey,
       Nick,
@@ -126,13 +138,23 @@
       Occupation,
       ImageStyle,
       JoinDate,
-      QQNumber
+      ExpectedSalary,
+      Remark,
+      Wechart,
+      Hight,
+      Weight,
+      AreaRegion,
+      ImageTools,
+      WangLevel,
+      IsGive,
+      ImagePath,
+      Score
       FROM  MadouBaseInfos
       WHERE MadouBaseInfoKey=#MadouBaseInfoKey#
     </select>
 
 
-    <select id="SelectBusinesserBaseInfoByNick" parameterClass="MadouBaseInfos" resultMap="FB_MadouBaseInfosResult">
+    <select id="SelectMadouBaseInfoByNick" parameterClass="MadouBaseInfos" resultMap="FB_MadouBaseInfosResult">
       Select
       MadouBaseInfoKey,
       Nick,
@@ -140,7 +162,16 @@
       Occupation,
       ImageStyle,
       JoinDate,
-      QQNumber
+      ExpectedSalary,
+      Remark,
+      Wechart,
+      Hight,
+      Weight,
+      AreaRegion,
+      WangLevel,
+      IsGive,
+      ImagePath,
+      Score
       FROM  MadouBaseInfos
       WHERE Nick=#Nick#
     </select>

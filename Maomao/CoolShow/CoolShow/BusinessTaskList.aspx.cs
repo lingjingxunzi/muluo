@@ -7,11 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace CoolShow.UI
 {
-    public partial class BusinessTaskList : System.Web.UI.Page
+    public partial class BusinessTaskList : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+            }
         }
     }
 }

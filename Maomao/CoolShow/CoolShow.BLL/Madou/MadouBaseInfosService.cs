@@ -3,39 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CoolShow.BLL.Interface.Madou;
+using CoolShow.Common;
+using CoolShow.DAL.Interface.Madou;
+using CoolShow.DAL.Madou;
+using CoolShow.Model.Madou;
 
 namespace CoolShow.BLL.Madou
 {
-    public class MadouBaseInfosService:IMadouBaseInfosService
+    public class MadouBaseInfosService : IMadouBaseInfosService
     {
-        Common.ResultMessage IService<Model.Madou.MadouBaseInfos>.Insert(Model.Madou.MadouBaseInfos entity)
+        IMadouBaseInfosDao _madouBaseInfosDao = new MadouBaseInfosDao();
+        ResultMessage IService<MadouBaseInfos>.Insert(MadouBaseInfos entity)
         {
             throw new NotImplementedException();
         }
 
-        Common.ResultMessage IService<Model.Madou.MadouBaseInfos>.Update(Model.Madou.MadouBaseInfos entity)
+        ResultMessage IService<MadouBaseInfos>.Update(MadouBaseInfos entity)
         {
             throw new NotImplementedException();
         }
 
-        Common.ResultMessage IService<Model.Madou.MadouBaseInfos>.Delete(int id)
+        ResultMessage IService<MadouBaseInfos>.Delete(int id)
         {
-            throw new NotImplementedException();
+            return _madouBaseInfosDao.Delete(id);
         }
 
-        Model.Madou.MadouBaseInfos IService<Model.Madou.MadouBaseInfos>.FindById(int id)
+        MadouBaseInfos IService<MadouBaseInfos>.FindById(int id)
         {
-            throw new NotImplementedException();
+            return _madouBaseInfosDao.FindById(id);
         }
 
-        IList<Model.Madou.MadouBaseInfos> IService<Model.Madou.MadouBaseInfos>.FindAll(Model.Madou.MadouBaseInfos condition)
+        IList<MadouBaseInfos> IService<MadouBaseInfos>.FindAll(MadouBaseInfos condition)
         {
-            throw new NotImplementedException();
+            return _madouBaseInfosDao.FindAll(condition);
         }
 
-        int IService<Model.Madou.MadouBaseInfos>.GetCount(Model.Madou.MadouBaseInfos codition)
+        int IService<MadouBaseInfos>.GetCount(MadouBaseInfos codition)
         {
-            throw new NotImplementedException();
+            return _madouBaseInfosDao.GetCount(codition);
         }
     }
 }

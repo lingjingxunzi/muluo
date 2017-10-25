@@ -7,11 +7,24 @@ using System.Web.UI.WebControls;
 
 namespace CoolShow.UI
 {
-    public partial class BusinessTaskEdit : System.Web.UI.Page
+    public partial class BusinessTaskEdit : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                
+            }
+        }
 
+        protected void ddlTaskStyleChanged(object sender, EventArgs e)
+        {
+            switch (ddlTaskStyle.SelectedValue)
+            {
+                case "":
+                    break;
+                    
+            }
         }
     }
 }

@@ -72,6 +72,13 @@
     <Content Include="Maps\Business\BusinesserBaseInfos.xml" />
     <Content Include="Maps\Madou\MadouBaseInfos.xml" />
     <Content Include="Maps\Madou\MadouOrders.xml" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\layer_mobile\layer.js" />
+    <Content Include="Scripts\layer_mobile\need\layer.css" />
+    <Content Include="Styles\business-task-edit.css" />
+    <Content Include="Styles\madou-review-common.css" />
+    <Content Include="Styles\madou-review-item.css" />
+    <Content Include="Styles\madou-square-sigel.css" />
     <Content Include="Styles\madousquare-list.css" />
     <Content Include="Styles\Published.css" />
     <Content Include="Styles\Site.css" />
@@ -89,6 +96,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ashx\BusinessLoginHandler.ashx.cs">
+      <DependentUpon>BusinessLoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\PopularMadou.ashx.cs">
+      <DependentUpon>PopularMadou.ashx</DependentUpon>
+    </Compile>
     <Compile Include="BusinessBaseInfoCommit.aspx.cs">
       <DependentUpon>BusinessBaseInfoCommit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +202,12 @@
     <Content Include="properties.config" />
     <Content Include="providers.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\BusinessLoginHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\PopularMadou.ashx" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
@@ -197,7 +216,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51529</DevelopmentServerPort>
+          <DevelopmentServerPort>50542</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

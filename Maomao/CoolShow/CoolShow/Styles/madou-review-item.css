@@ -1,0 +1,80 @@
+﻿.deanmdcltop
+{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+.deanmdbox
+{
+    border: 1px solid #eaeaea;
+}
+.deanmdcl
+{
+    width: 471px;
+    border-right: 1px solid #eaeaea;
+    float: left;
+    height: 530px;
+}
+.deancolumn_p
+{
+    height: 43px;
+    line-height: 43px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #eaeaea;
+}
+.deancolumn_p span.deancolum_span
+{
+    padding: 0 10px;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    width: 90px;
+    background: #f5f5f5;
+    font-size: 14px;
+    color: #333;
+    border-right: 1px solid #eaeaea;
+}
+.pcb em
+{
+    color: #666;
+}
+
+.deanmotetl {
+    width: 370px;
+    float: left;
+}
+
+.deanmotepic {
+    width: 370px;
+    height: 555px;
+}
+
+.deanmotepic ul li img {
+    width: 370px;
+    height: 555px;
+}
+.deanmotespics{}
+
+.deanmotespics ul li {
+    float: left;
+    width: 92.5px;
+    cursor: pointer;
+}
+
+.deanmotespics ul li img {
+    width: 92.5px;
+    height: 120px;
+    opacity: 0.6;
+}
+
+.deanmotespics ul li.cur img {
+    opacity: 1;
+}
+
+B_face .opt .W_btn_b {
+    width: 48px;
+    padding: 0;
+    overflow: hidden;
+}

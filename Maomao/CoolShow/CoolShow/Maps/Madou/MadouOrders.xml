@@ -3,7 +3,7 @@
 
   <!--实体类映射-->
   <alias>
-    <typeAlias alias="MadouOrders" type="CoolShow.Model.Business.MadouOrders,CoolShow.Model"/>
+    <typeAlias alias="MadouOrders" type="CoolShow.Model.Madou.MadouOrders,CoolShow.Model"/>
   </alias>
 
   <!--字段对应-->
@@ -25,14 +25,13 @@
   <!--动态sql语句-->
   <statements>
     <!-- Insert statement.-->
-    <insert id='InsertBusinesserBaseInfo' parameterClass='MadouOrders'>
+    <insert id='InsertMadouOrderBaseInfo' parameterClass='MadouOrders'>
       INSERT INTO MadouOrders
       (
       OrderDate,
       OrderAmout,
       OrderNumber,
-      OrderStatus,
-      QQNumber,
+      OrderStatus 
       StoreName
       )
       VALUES
@@ -40,15 +39,14 @@
       #OrderDate#,
       #OrderAmout#,
       #OrderNumber#,
-      #OrderStatus#,
-      #QQNumber#,
+      #OrderStatus# 
       #StoreName#
        
       )
     </insert>
 
 
-    <update id='UpdateBusinesserBaseInfo' parameterClass='MadouOrders'>
+    <update id='UpdateMadouOrderBaseInfo' parameterClass='MadouOrders'>
       UPDATE MadouOrders
       SET
       <isNotEmpty prepend="," property="OrderAmout">OrderAmout=#OrderAmout#</isNotEmpty>
@@ -61,14 +59,14 @@
       [MadouOrderKey] = #MadouOrderKey#
     </update>
 
-    <delete id='DeleteBusinesserBaseInfo' parameterClass='MadouOrders'>
+    <delete id='DeleteMadouOrderBaseInfo' parameterClass='MadouOrders'>
       DELETE FROM  MadouOrders
       WHERE
       [MadouOrderKey] = #MadouOrderKey#
     </delete>
 
     <!--动态查询语句-->
-    <select id="SelectBusinesserBaseInfoList" parameterClass="MadouOrders"  resultMap="FB_MadouOrdersResult">
+    <select id="SelectMadouOrderBaseInfoList" parameterClass="MadouOrders"  resultMap="FB_MadouOrdersResult">
       <![CDATA[SELECT 
           MadouOrderKey,
           OrderDate,
@@ -107,7 +105,7 @@
 
     </select>
 
-    <select id="SelectBusinesserBaseInfoCount" parameterClass="MadouOrders" resultClass="int">
+    <select id="SelectMadouOrderBaseInfoCount" parameterClass="MadouOrders" resultClass="int">
       Select count(*)
       FROM  MadouOrders
       WHERE 1=1
@@ -117,29 +115,27 @@
       </dynamic>
     </select>
 
-    <select id="SelectBusinesserBaseInfoByKey" parameterClass="MadouOrders" resultMap="FB_MadouOrdersResult">
+    <select id="SelectMadouOrderBaseInfoByKey" parameterClass="MadouOrders" resultMap="FB_MadouOrdersResult">
       Select
       MadouOrderKey,
       OrderDate,
       OrderAmout,
       StoreName,
       OrderNumber,
-      OrderStatus,
-      QQNumber
+      OrderStatus 
       FROM  MadouOrders
       WHERE MadouOrderKey=#MadouOrderKey#
     </select>
 
 
-    <select id="SelectBusinesserBaseInfoByOrderDate" parameterClass="MadouOrders" resultMap="FB_MadouOrdersResult">
+    <select id="SelectMadouOrderBaseInfoByOrderDate" parameterClass="MadouOrders" resultMap="FB_MadouOrdersResult">
       Select
       MadouOrderKey,
       OrderDate,
       OrderAmout,
       StoreName,
       OrderNumber,
-      OrderStatus,
-      QQNumber
+      OrderStatus 
       FROM  MadouOrders
       WHERE OrderDate=#OrderDate#
     </select>

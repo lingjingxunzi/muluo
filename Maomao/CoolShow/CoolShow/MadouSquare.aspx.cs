@@ -24,6 +24,8 @@ namespace CoolShow.UI
         {
             var condition = GetQueryCondition();
             var madouList = _madouBaseService.FindAll(condition);
+            this.repList.DataSource = madouList;
+            this.repList.DataBind(); 
         }
 
         private MadouBaseInfos GetQueryCondition()

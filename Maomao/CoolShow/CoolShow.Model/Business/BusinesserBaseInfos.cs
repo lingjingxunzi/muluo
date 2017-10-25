@@ -14,6 +14,7 @@ namespace CoolShow.Model.Business
         public string StoreUrl { get; set; }
         public DateTime JoinDate { get; set; }
         public string QQNumber { get; set; }
+        public string LoginCode { get; set; }
         /// <summary>
         /// 账户状态 0、1、2
         /// </summary>

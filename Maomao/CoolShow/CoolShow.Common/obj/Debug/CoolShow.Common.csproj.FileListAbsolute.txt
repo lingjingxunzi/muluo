@@ -3,3 +3,9 @@ E:\WorkSpace\CoolShow\CoolShow.Common\bin\Debug\CoolShow.Common.pdb
 E:\WorkSpace\CoolShow\CoolShow.Common\bin\Debug\log4net.dll
 E:\WorkSpace\CoolShow\CoolShow.Common\obj\Debug\CoolShow.Common.dll
 E:\WorkSpace\CoolShow\CoolShow.Common\obj\Debug\CoolShow.Common.pdb
+D:\Maomao\muluo\Maomao\CoolShow\CoolShow.Common\bin\Debug\CoolShow.Common.dll
+D:\Maomao\muluo\Maomao\CoolShow\CoolShow.Common\bin\Debug\CoolShow.Common.pdb
+D:\Maomao\muluo\Maomao\CoolShow\CoolShow.Common\bin\Debug\log4net.dll
+D:\Maomao\muluo\Maomao\CoolShow\CoolShow.Common\obj\Debug\CoolShow.Common.csprojResolveAssemblyReference.cache
+D:\Maomao\muluo\Maomao\CoolShow\CoolShow.Common\obj\Debug\CoolShow.Common.dll
+D:\Maomao\muluo\Maomao\CoolShow\CoolShow.Common\obj\Debug\CoolShow.Common.pdb

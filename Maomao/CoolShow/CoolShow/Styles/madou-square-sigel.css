@@ -1,0 +1,30 @@
+﻿
+.deanmadoulist{ width:1180px;}
+.deanmadoulist ul{ width:1200px;}
+.deanmadoulist ul li{ width:190px; float:left; margin:0 20px 20px 0; background:#fff; position:relative; overflow:hidden; }
+.deanmadoulist ul li:hover{box-shadow:1px 3px 3px 2px #efefef;}
+.deanmadoupic{ width:190px; height:220px;}
+.deanmadoupic img{ width:190px; height:220px;-webkit-transition: all .4s;  -ms-transition: all .4s;  -moz-transition: all .4s;  -o-transition: all .4s;  transition: all .4s;}
+.deanmadoulist ul li:hover img{    -webkit-transform: scale(.89);  -moz-transform: scale(.89);  -ms-transform: scale(.89);  transform: scale(.89);}
+.deanmadouinfos{ padding:10px 15px;}
+.deanmadoutitle{ height:30px; line-height:30px;}
+.deanmadouname{ width:100px; float:left; height:30px; overflow:hidden;}
+.deanmadouname a{ font-size:18px; color:#333;}
+.deanmadouname a:hover{ color:#F0424E; text-decoration:underline;}
+.deanmadouzhiye{ float:right; font-size:14px; color:#999;}
+.deanmadouzhiye span{ color:#F0424E; padding-left:3px;}
+.deanmadouinfo{ height:25px; line-height:25px; font-size:15px; color:#999; font-family:Georgia, "Times New Roman", Times, serif;}
+.deanmdl{ width:120px; float:left;}
+.deanmdl span{ color:#F0424E; font-size:14px;}
+.deanmdr{ float:right;}
+.deanmdr span{color:#F0424E;}
+.deanbtn{display: block;    width: 70px;   height: 27px;  line-height: 27px;  background: #F0424E;  font-size: 14px;  color: #fff;  text-align: center;  border-radius: 3px;  background: ;  position: absolute;  bottom: 10px;  right: -120px;
+    -ms-transition: all .4s;  -moz-transition: all .4s;  -o-transition: all .4s;  -webkit-transition: all .4s;  transition: all .4s;}
+.deanmadoulist ul li:hover .deanbtn{right:10px;}
+.deanluntan_left .mn{ width:1180px; padding:0; background:none;}
+.deanluntan_left{ width:1180px; float:none;}
+.deanluntan_right{ display:none;}
+.deanjstopr{ width:1083px;}
+.mbm { margin-bottom:25px!important;}
+.ttp{ margin-bottom: 0; background: #fff!important; padding: 15px 5px 15px 5px;border: 1px solid #eaeaea;border-bottom: 0;}
+    

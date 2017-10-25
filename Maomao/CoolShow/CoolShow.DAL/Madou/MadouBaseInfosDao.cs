@@ -28,17 +28,17 @@ namespace CoolShow.DAL.Madou
 
         MadouBaseInfos IDao<MadouBaseInfos>.FindById(int id)
         {
-            throw new NotImplementedException();
+            return Mapper.Instance().QueryForObject<MadouBaseInfos>("SelectMadouBaseInfoByKey", id);
         }
 
         IList<MadouBaseInfos> IDao<MadouBaseInfos>.FindAll(MadouBaseInfos condition)
         {
-            return Mapper.Instance().QueryForList<MadouBaseInfos>("SelectBusinesserBaseInfoList", condition);
+            return Mapper.Instance().QueryForList<MadouBaseInfos>("SelectMadouBaseInfoList", condition);
         }
 
         int IDao<MadouBaseInfos>.GetCount(MadouBaseInfos codition)
         {
-            return Mapper.Instance().QueryForObject<int>("SelectBusinesserBaseInfoCount", codition);
+            return Mapper.Instance().QueryForObject<int>("SelectMadouBaseInfoCount", codition);
         }
     }
 }
